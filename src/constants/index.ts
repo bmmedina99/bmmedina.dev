@@ -22,7 +22,7 @@ export const EXPERIENCES: Experience[] = [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
       'Relizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
-      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficiente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
+      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
     ],
     technologies: [
       'WSUS',
