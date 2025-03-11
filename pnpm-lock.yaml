@@ -35,6 +35,9 @@ importers:
       sharp:
         specifier: 0.33.5
         version: 0.33.5
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
