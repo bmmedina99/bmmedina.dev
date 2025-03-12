@@ -9,13 +9,7 @@ function Form() {
     >
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
         <div className='space-y-2'>
-          <label
-            htmlFor='name'
-            className='label'
-          >
-            {' '}
-            Nombre{' '}
-          </label>
+          <label htmlFor='name'>Nombre</label>
           <input
             type='text'
             id='name'
@@ -25,13 +19,7 @@ function Form() {
           />
         </div>
         <div className='space-y-2'>
-          <label
-            htmlFor='email'
-            className='label'
-          >
-            {' '}
-            Correo electrónico{' '}
-          </label>
+          <label htmlFor='email'>Correo electrónico</label>
           <input
             type='email'
             id='email'
@@ -42,7 +30,7 @@ function Form() {
         </div>
       </div>
       <div className='space-y-2'>
-        <label htmlFor='subject'> Asunto </label>
+        <label htmlFor='subject'>Asunto</label>
         <input
           type='text'
           id='subject'
@@ -52,7 +40,7 @@ function Form() {
         />
       </div>
       <div className='space-y-2'>
-        <label htmlFor='message'> Mensaje </label>
+        <label htmlFor='message'>Mensaje</label>
         <textarea
           id='message'
           name='message'
@@ -64,7 +52,7 @@ function Form() {
       </div>
       <div className='max-w-2xl mx-auto space-y-4 text-center'>
         <p className='text-xs md:text-sm text-[#b2b2ff] text-pretty font-semibold'>
-          Toda la inhtmlFormación del formulario se enviará a mi correo personal
+          Toda la información del formulario se enviará a mi correo personal
           y se utilizará únicamente para responder. Al rellenar el formulario es
           consiente que se manejen sus datos con este fin.
         </p>
