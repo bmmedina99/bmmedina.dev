@@ -159,6 +159,8 @@ export const PROFILE: Profile = {
   ],
 }
 
+export const CHARACTER_LIMIT = 1000
+
 export const SOCIAL_LINK: Social[] = [
   {
     id: 0,
