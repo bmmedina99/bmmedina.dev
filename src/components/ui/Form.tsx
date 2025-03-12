@@ -1,23 +1,37 @@
+import { MESSAGE_CHARACTER_LIMIT, SUBJECT_CHARACTER_LIMIT } from '@/constants'
 import { useRef, useState } from 'react'
 import Icon from '../ui/Icon'
-import { CHARACTER_LIMIT } from '@/constants'
 
 function Form() {
-  const [characterCount, setCharacterCount] = useState(0)
+  const [sujectCharacterCount, setSubjectCharacterCount] = useState(0)
+  const [messageCharacterCount, setMessageCharacterCount] = useState(0)
   const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
   }
 
-  const characterCounter = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const subjectCharacterCounter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const words = e.target.value
     const characters = words.length
-    setCharacterCount(characters)
+    setSubjectCharacterCount(characters)
 
-    if (characters > CHARACTER_LIMIT) {
-      e.target.value = words.slice(0, CHARACTER_LIMIT)
-      setCharacterCount(CHARACTER_LIMIT)
+    if (characters > SUBJECT_CHARACTER_LIMIT) {
+      e.target.value = words.slice(0, SUBJECT_CHARACTER_LIMIT)
+      setSubjectCharacterCount(SUBJECT_CHARACTER_LIMIT)
+    }
+  }
+
+  const messageCharacterCounter = (
+    e: React.ChangeEvent<HTMLTextAreaElement>,
+  ) => {
+    const words = e.target.value
+    const characters = words.length
+    setMessageCharacterCount(characters)
+
+    if (characters > MESSAGE_CHARACTER_LIMIT) {
+      e.target.value = words.slice(0, MESSAGE_CHARACTER_LIMIT)
+      setMessageCharacterCount(MESSAGE_CHARACTER_LIMIT)
     }
   }
 
@@ -49,15 +63,20 @@ function Form() {
           />
         </div>
       </div>
-      <div className='space-y-2'>
+      <div className='space-y-2 relative'>
         <label htmlFor='subject'>Asunto</label>
         <input
           type='text'
           id='subject'
           name='subject'
           placeholder='Asunto del mensaje'
+          className='pr-20'
+          onChange={subjectCharacterCounter}
           required
         />
+        <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
+          {sujectCharacterCount}/{SUBJECT_CHARACTER_LIMIT}
+        </div>
       </div>
       <div className='space-y-2 relative'>
         <label htmlFor='message'>Mensaje</label>
@@ -65,13 +84,13 @@ function Form() {
           id='message'
           name='message'
           placeholder='¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible.'
-          className='min-h-[120px] md:min-h-[160px] pr-10'
+          className='min-h-[120px] md:min-h-[160px] pr-20'
           autoCapitalize='sentences'
-          onChange={characterCounter}
+          onChange={messageCharacterCounter}
           required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
-          {characterCount}/{CHARACTER_LIMIT}
+          {messageCharacterCount}/{MESSAGE_CHARACTER_LIMIT}
         </div>
       </div>
       <div className='max-w-2xl mx-auto space-y-4 text-center'>
