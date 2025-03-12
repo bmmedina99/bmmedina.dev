@@ -19,13 +19,14 @@
     "@astrojs/react": "4.2.1",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "5.1.4",
+    "@emailjs/browser": "4.4.1",
     "astro": "5.2.5",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "sharp": "0.33.5",
-    "zod": "^3.24.2"
+    "zod": "3.24.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
