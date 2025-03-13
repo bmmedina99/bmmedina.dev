@@ -1,4 +1,5 @@
 import { MESSAGE_CHARACTER_LIMIT, SUBJECT_CHARACTER_LIMIT } from '@/constants'
+import type React from 'react'
 import { useRef, useState } from 'react'
 import Icon from '../ui/Icon'
 
@@ -11,28 +12,20 @@ function Form() {
     e.preventDefault()
   }
 
-  const subjectCharacterCounter = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const words = e.target.value
-    const characters = words.length
-    setSubjectCharacterCount(characters)
-
-    if (characters > SUBJECT_CHARACTER_LIMIT) {
-      e.target.value = words.slice(0, SUBJECT_CHARACTER_LIMIT)
-      setSubjectCharacterCount(SUBJECT_CHARACTER_LIMIT)
-    }
-  }
-
-  const messageCharacterCounter = (
-    e: React.ChangeEvent<HTMLTextAreaElement>,
+  const handleCharacterCounter = <
+    T extends HTMLInputElement | HTMLTextAreaElement,
+  >(
+    e: React.ChangeEvent<T>,
+    charaterLimit: number,
+    setCharacterCount: (count: number) => void,
   ) => {
     const words = e.target.value
     const characters = words.length
-    setMessageCharacterCount(characters)
 
-    if (characters > MESSAGE_CHARACTER_LIMIT) {
-      e.target.value = words.slice(0, MESSAGE_CHARACTER_LIMIT)
-      setMessageCharacterCount(MESSAGE_CHARACTER_LIMIT)
-    }
+    if (characters > charaterLimit)
+      e.target.value = words.slice(0, charaterLimit)
+
+    setCharacterCount(characters > charaterLimit ? charaterLimit : characters)
   }
 
   return (
@@ -71,7 +64,13 @@ function Form() {
           name='subject'
           placeholder='Asunto del mensaje'
           className='pr-20'
-          onChange={subjectCharacterCounter}
+          onChange={(e) =>
+            handleCharacterCounter(
+              e,
+              SUBJECT_CHARACTER_LIMIT,
+              setSubjectCharacterCount,
+            )
+          }
           required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
@@ -86,7 +85,13 @@ function Form() {
           placeholder='¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible.'
           className='min-h-[120px] md:min-h-[160px] pr-20'
           autoCapitalize='sentences'
-          onChange={messageCharacterCounter}
+          onChange={(e) =>
+            handleCharacterCounter(
+              e,
+              MESSAGE_CHARACTER_LIMIT,
+              setMessageCharacterCount,
+            )
+          }
           required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
