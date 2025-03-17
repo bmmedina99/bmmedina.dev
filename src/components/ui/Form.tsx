@@ -1,4 +1,5 @@
-import { MESSAGE_CHARACTER_LIMIT, SUBJECT_CHARACTER_LIMIT } from '@/constants'
+import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
+import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
 import Icon from '../ui/Icon'
@@ -10,6 +11,23 @@ function Form() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    const form = formRef.current
+    if (form === null) return
+
+    emailjs
+      .sendForm(`${EMAILJS_DATA.SERVICE}`, `${EMAILJS_DATA.TEMPLATE}`, form, {
+        publicKey: `${EMAILJS_DATA.PUBLICKEY}`,
+      })
+      .then(
+        () => {
+          console.log('Email sent!')
+          form.reset()
+        },
+        (error) => {
+          console.log('Failed...', error.text)
+        },
+      )
   }
 
   const handleCharacterCounter = <
@@ -67,14 +85,14 @@ function Form() {
           onChange={(e) =>
             handleCharacterCounter(
               e,
-              SUBJECT_CHARACTER_LIMIT,
+              CHARACTER_LIMITS.SUBJECT,
               setSubjectCharacterCount,
             )
           }
           required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
-          {sujectCharacterCount}/{SUBJECT_CHARACTER_LIMIT}
+          {sujectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
         </div>
       </div>
       <div className='space-y-2 relative'>
@@ -88,14 +106,14 @@ function Form() {
           onChange={(e) =>
             handleCharacterCounter(
               e,
-              MESSAGE_CHARACTER_LIMIT,
+              CHARACTER_LIMITS.MESSAGE,
               setMessageCharacterCount,
             )
           }
           required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
-          {messageCharacterCount}/{MESSAGE_CHARACTER_LIMIT}
+          {messageCharacterCount}/{CHARACTER_LIMITS.MESSAGE}
         </div>
       </div>
       <div className='max-w-2xl mx-auto space-y-4 text-center'>
