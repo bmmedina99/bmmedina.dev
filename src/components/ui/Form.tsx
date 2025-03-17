@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
 import Icon from '../ui/Icon'
+import { Toaster, toast } from 'sonner'
 
 function Form() {
   const [sujectCharacterCount, setSubjectCharacterCount] = useState(0)
@@ -21,11 +22,11 @@ function Form() {
       })
       .then(
         () => {
-          console.log('Email sent!')
+          toast.success('Mensaje enviado correctamente')
           form.reset()
         },
         (error) => {
-          console.log('Failed...', error.text)
+          toast.error(`Error al enviar el mensaje: ${error}`)
         },
       )
   }
