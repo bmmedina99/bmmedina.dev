@@ -159,7 +159,7 @@ export const PROFILE: Profile = {
   ],
 }
 
-export const CHARACTER_LIMITS ={
+export const CHARACTER_LIMITS = {
   SUBJECT: 100,
   MESSAGE: 1000,
 }

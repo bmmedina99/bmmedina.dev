@@ -2,7 +2,7 @@ import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
-import { Toaster, toast } from 'sonner'
+import { toast } from 'sonner'
 import Icon from '../ui/Icon'
 
 function Form() {
