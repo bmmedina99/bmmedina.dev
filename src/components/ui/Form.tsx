@@ -2,12 +2,13 @@ import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
-import Icon from '../ui/Icon'
 import { Toaster, toast } from 'sonner'
+import Icon from '../ui/Icon'
 
 function Form() {
   const [sujectCharacterCount, setSubjectCharacterCount] = useState(0)
   const [messageCharacterCount, setMessageCharacterCount] = useState(0)
+  const [isSending, setIsSending] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -15,6 +16,8 @@ function Form() {
 
     const form = formRef.current
     if (form === null) return
+
+    setIsSending(true)
 
     emailjs
       .sendForm(`${EMAILJS_DATA.SERVICE}`, `${EMAILJS_DATA.TEMPLATE}`, form, {
@@ -26,9 +29,12 @@ function Form() {
           form.reset()
         },
         (error) => {
-          toast.error(`Error al enviar el mensaje: ${error}`)
+          toast.error(`Error al enviar el mensaje: ${error.text}`)
         },
       )
+      .finally(() => {
+        setIsSending(false)
+      })
   }
 
   const handleCharacterCounter = <
@@ -126,9 +132,10 @@ function Form() {
         <button
           type='submit'
           className='btn mx-auto'
+          disabled={isSending}
         >
           <Icon name='send' />
-          <span>Contáctame</span>
+          <span>{isSending ? 'Enviando mensaje...' : 'Contáctame'}</span>
         </button>
       </div>
     </form>
