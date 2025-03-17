@@ -159,6 +159,17 @@ export const PROFILE: Profile = {
   ],
 }
 
+export const CHARACTER_LIMITS ={
+  SUBJECT: 100,
+  MESSAGE: 1000,
+}
+
+export const EMAILJS_DATA = {
+  SERVICE: 'service_utjo0pk',
+  TEMPLATE: 'template_oneg9l4',
+  PUBLICKEY: 'GbhPtGaxs-b16fbSK',
+}
+
 export const SOCIAL_LINK: Social[] = [
   {
     id: 0,
