@@ -6,5 +6,10 @@ import Form from '../ui/Form'
 
 <Section name="Contactáme" label="Contactáme">
   <Form client:visible />
-  <Toaster client:visible position='bottom-center' richColors />
+  <Toaster
+    client:visible
+    position="bottom-center"
+    richColors
+    toastOptions={{ style: { textAlign: "center", textWrap: "pretty" } }}
+  />
 </Section>

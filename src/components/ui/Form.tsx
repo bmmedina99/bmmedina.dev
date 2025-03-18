@@ -1,4 +1,5 @@
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
+import { formSchema } from '@/schemas'
 import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
@@ -11,11 +12,21 @@ function Form() {
   const [isSending, setIsSending] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const form = formRef.current
     if (form === null) return
+
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
+
+    const result = formSchema.safeParse(data)
+    if (!result.success) {
+      const { message } = result.error.errors[0]
+      toast.warning(message)
+      return
+    }
 
     setIsSending(true)
 
@@ -25,11 +36,13 @@ function Form() {
       })
       .then(
         () => {
-          toast.success('Mensaje enviado correctamente')
+          toast.success(
+            'El mensaje ha sido enviado correctamente. ¡Muchas gracias por contactarme!',
+          )
           form.reset()
         },
         (error) => {
-          toast.error(`Error al enviar el mensaje: ${error.text}`)
+          toast.error(`Error al enviar mensaje: ${error.text}`)
         },
       )
       .finally(() => {
@@ -67,7 +80,6 @@ function Form() {
             id='name'
             name='name'
             placeholder='Tu nombre'
-            required
           />
         </div>
         <div className='space-y-2'>
@@ -77,7 +89,6 @@ function Form() {
             id='email'
             name='email'
             placeholder='tu@correo.com'
-            required
           />
         </div>
       </div>
@@ -96,7 +107,6 @@ function Form() {
               setSubjectCharacterCount,
             )
           }
-          required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
           {sujectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
@@ -117,7 +127,6 @@ function Form() {
               setMessageCharacterCount,
             )
           }
-          required
         />
         <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
           {messageCharacterCount}/{CHARACTER_LIMITS.MESSAGE}
@@ -134,7 +143,10 @@ function Form() {
           className='btn mx-auto'
           disabled={isSending}
         >
-          <SvgIcon name='send' variant='icon'/>
+          <SvgIcon
+            name='send'
+            variant='icon'
+          />
           <span>{isSending ? 'Enviando mensaje...' : 'Contáctame'}</span>
         </button>
       </div>
