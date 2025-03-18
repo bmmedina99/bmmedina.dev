@@ -4,8 +4,7 @@ import { PROFILE } from '@/constants'
 import { slugify } from '@/utils'
 import Section from '../Section.astro'
 import { Badge } from '../ui/Badge'
-import Icon from '../ui/Icon'
-import Skills from '../ui/Skills'
+import SvgIcon from '../ui/SvgIcon'
 ---
 
 <Section name="Sobre mí" label="Información personal">
@@ -44,11 +43,11 @@ import Skills from '../ui/Skills'
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="cv_bmmedina.pdf" download class="btn">
-          <Icon name="download" />
+          <SvgIcon name="download" variant='icon'/>
           <span>Descagar CV</span>
         </a>
         <button id="contactMe" class="btn">
-          <Icon name="contact" />
+          <SvgIcon name="contact" variant='icon'/>
           <span>Contáctame</span>
         </button>
       </div>
@@ -65,7 +64,7 @@ import Skills from '../ui/Skills'
           {
             PROFILE.techSkills.map((tech) => (
               <li class="flex flex-col items-center">
-                <Skills name={slugify(tech)} width={48} height={48} />
+                <SvgIcon name={slugify(tech)} width={48} height={48} variant='skill'/>
                 <p class="mt-2 text-sm">{tech}</p>
               </li>
             ))

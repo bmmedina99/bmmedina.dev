@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser'
 import type React from 'react'
 import { useRef, useState } from 'react'
 import { toast } from 'sonner'
-import Icon from '../ui/Icon'
+import SvgIcon from './SvgIcon'
 
 function Form() {
   const [sujectCharacterCount, setSubjectCharacterCount] = useState(0)
@@ -134,7 +134,7 @@ function Form() {
           className='btn mx-auto'
           disabled={isSending}
         >
-          <Icon name='send' />
+          <SvgIcon name='send' variant='icon'/>
           <span>{isSending ? 'Enviando mensaje...' : 'Contáctame'}</span>
         </button>
       </div>

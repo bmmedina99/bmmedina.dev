@@ -1,7 +1,7 @@
 import { EXPERIENCES } from '@/constants'
 import { useCallback, useState } from 'react'
-import Icon from './Icon'
 import { Badge } from './Badge'
+import SvgIcon from './SvgIcon'
 
 export default function ExperienceDetails() {
   const [expanded, setExpanded] = useState(EXPERIENCES.length - 1)
@@ -38,9 +38,15 @@ export default function ExperienceDetails() {
                 </div>
                 <span className='text-[#c084fc]'>
                   {expanded === experience.id ? (
-                    <Icon name='menu-collapse' />
+                    <SvgIcon
+                      name='menu-collapse'
+                      variant='icon'
+                    />
                   ) : (
-                    <Icon name='menu-expand' />
+                    <SvgIcon
+                      name='menu-expand'
+                      variant='icon'
+                    />
                   )}
                 </span>
               </div>
@@ -67,14 +73,20 @@ export default function ExperienceDetails() {
                 <ul className='flex flex-wrap gap-4'>
                   <li>
                     <p className='flex items-center gap-2 text-[#00ffaa]'>
-                      <Icon name='location' />
+                      <SvgIcon
+                        name='location'
+                        variant='icon'
+                      />
                       <span>{experience.location}</span>
                     </p>
                   </li>
                   {experience.website && (
                     <li>
                       <p className='flex items-center gap-2 text-[#22d2f0]'>
-                        <Icon name='website' />
+                        <SvgIcon
+                          name='website'
+                          variant='icon'
+                        />
                         <a
                           href={experience.website.link}
                           target='_blank'

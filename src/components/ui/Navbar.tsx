@@ -1,7 +1,7 @@
 import { NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
 import { capitalLetter, scrollSection, scrollToTop, slugify } from '@/utils'
 import { useCallback, useEffect, useRef, useState } from 'react'
-import Icon from './Icon'
+import SvgIcon from './SvgIcon'
 
 export default function Navbar() {
   const [isShowScrollTop, setIsShowScrollTop] = useState(false)
@@ -69,7 +69,10 @@ export default function Navbar() {
           aria-label='Abrir menu'
           aria-expanded={isMenuOpen}
         >
-          <Icon name='menu' />
+          <SvgIcon
+            name='menu'
+            variant='icon'
+          />
         </button>
       </div>
 
@@ -83,7 +86,10 @@ export default function Navbar() {
           onClick={() => setIsMenuOpen(false)}
           aria-label='Cerrar menu'
         >
-          <Icon name='menu-close' />
+          <SvgIcon
+            name='menu-close'
+            variant='icon'
+          />
         </button>
         <ul className='flex flex-col gap-4 p-4'>
           {NAV_ITEMS.map((item) => (
@@ -108,7 +114,10 @@ export default function Navbar() {
         className={`fixed bottom-6 right-6 text-[#22d2f0] border border-[#22d2f0] shadow-lg shadow-[#22d2f0]/50 rounded-full p-3 transition-opacity duration-300 z-20 ${isShowScrollTop ? 'visible opacity-100' : 'invisible opacity-0'}`}
         onClick={scrollToTop}
       >
-        <Icon name='scroll-up' />
+        <SvgIcon
+          name='scroll-up'
+          variant='icon'
+        />
       </button>
     </nav>
   )
