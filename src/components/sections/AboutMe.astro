@@ -1,11 +1,10 @@
 ---
 import { Image } from 'astro:assets'
-import { PROFILE_IMG, SOFT_SKILLS, TECH_SKILLS } from '@/constants'
+import { PROFILE } from '@/constants'
 import { slugify } from '@/utils'
 import Section from '../Section.astro'
 import { Badge } from '../ui/Badge'
-import Skills from '../ui/Skills'
-import Icon from '../ui/Icon'
+import SvgIcon from '../ui/SvgIcon'
 ---
 
 <Section name="Sobre mí" label="Información personal">
@@ -15,7 +14,7 @@ import Icon from '../ui/Icon'
     >
       <div class="clear-left"></div>
       <Image
-        src={PROFILE_IMG}
+        src={PROFILE.image}
         alt="Brandon Medina - Desarrollador Web Full Stack"
         class="profile-img float-left mr-4 object-cover"
         width={192}
@@ -44,11 +43,11 @@ import Icon from '../ui/Icon'
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="cv_bmmedina.pdf" download class="btn">
-          <Icon name="download" />
+          <SvgIcon name="download" variant='icon'/>
           <span>Descagar CV</span>
         </a>
         <button id="contactMe" class="btn">
-          <Icon name="contact" />
+          <SvgIcon name="contact" variant='icon'/>
           <span>Contáctame</span>
         </button>
       </div>
@@ -63,9 +62,9 @@ import Icon from '../ui/Icon'
         </h3>
         <ul class="flex flex-wrap gap-2 justify-center">
           {
-            TECH_SKILLS.map((tech) => (
+            PROFILE.techSkills.map((tech) => (
               <li class="flex flex-col items-center">
-                <Skills name={slugify(tech)} width={48} height={48} />
+                <SvgIcon name={slugify(tech)} width={48} height={48} variant='skill'/>
                 <p class="mt-2 text-sm">{tech}</p>
               </li>
             ))
@@ -79,7 +78,7 @@ import Icon from '../ui/Icon'
         >
           Habilidades blandas
         </h3>
-        <Badge items={SOFT_SKILLS} />
+        <Badge items={PROFILE.softSkills} />
       </section>
       <section aria-labelledby="education-heading">
         <h3
@@ -89,39 +88,28 @@ import Icon from '../ui/Icon'
           Estudios
         </h3>
         <ul class="space-y-4">
-          <li
-            class="p-4 mb-2 cursor-pointer bg-[#12042d]/60 border border-[#3f007d] rounded-lg"
-          >
-            <div class="flex justify-between items-center">
-              <h4 class="text-sm font-semibold tracking-wide">
-                <span class="text-[#c084fc]"
-                  >Formación Profesional de Grado Superior, Desarrollo de
-                  Aplicaciones Multiplataforma</span
-                > &bull; CES Fuencarral
-              </h4>
-            </div>
-            <p class="text-xs tracking-wide">sep. 2019 - mar. 2021</p>
-          </li>
-          <li
-            class="p-4 mb-2 cursor-pointer bg-[#12042d]/60 border border-[#3f007d] rounded-lg"
-          >
-            <div class="flex justify-between items-center">
-              <h4 class="text-sm font-semibold tracking-wide">
-                <span class="text-[#c084fc]"
-                  >Formación Profesional de Grado Medio, Sistemas
-                  Microinformáticos y Redes</span
-                > &bull; CES Fuencarral
-              </h4>
-            </div>
-            <p class="text-xs tracking-wide">sep. 2019 - mar. 2021</p>
-          </li>
+          {
+            PROFILE.studies.map((study) => (
+              <li class="p-4 mb-2 cursor-pointer bg-[#12042d]/60 border border-[#3f007d] rounded-lg">
+                <div class="flex justify-between items-center">
+                  <h4 class="text-sm font-semibold tracking-wide">
+                    <span class="text-[#c084fc]">{study.title}</span> &bull;{" "}
+                    {study.institution}
+                  </h4>
+                </div>
+                <time datetime={study.date} class="text-xs tracking-wide block">
+                  {study.startDate} - {study.endDate}
+                </time>
+              </li>
+            ))
+          }
         </ul>
       </section>
     </div>
   </div>
 </Section>
 <script is:inline>
-  document.getElementById('contactMe')?.addEventListener('click', () => {
-    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })
-  })
+  document.getElementById("contactMe")?.addEventListener("click", () => {
+    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+  });
 </script>

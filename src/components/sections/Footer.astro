@@ -1,5 +1,6 @@
 ---
-import Skills from '../ui/Skills'
+import { SOCIAL_LINK } from '@/constants'
+import SvgIcon from '../ui/SvgIcon'
 ---
 
 <footer
@@ -10,42 +11,22 @@ import Skills from '../ui/Skills'
   </h3>
   <nav aria-label="Redes Sociales">
     <ul class="flex justify-center space-x-6">
-      <li>
-        <a
-          href="https://github.com/username"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center"
-          aria-label="GitHub"
-        >
-          <Skills name="git-github" width={32} height={32} />
-          <span class="mt-2 text-sm">GitHub</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://linkedin.com/in/username"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center"
-          aria-label="LinkedIn"
-        >
-          <Skills name="linkedin" width={32} height={32} />
-          <span class="mt-2 text-sm">LinkedIn</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://instagram.com/username"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center"
-          aria-label="Instagram"
-        >
-          <Skills name="instagram" width={32} height={32} />
-          <span class="mt-2 text-sm">Instagram</span>
-        </a>
-      </li>
+      {
+        SOCIAL_LINK.map((social) => (
+          <li class="transform transition-transform hover:scale-110 hover:text-[#b2b2ff]">
+            <a
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-col items-center"
+              aria-label={social.name}
+            >
+              <SvgIcon name={social.icon} width={32} height={32} variant='skill'/>
+              <span class="mt-2 text-sm">{social.name}</span>
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </footer>

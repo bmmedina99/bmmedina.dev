@@ -1,6 +1,6 @@
 # 🚀 Porfolio Personal
 
-¡Bienvenidos a mi porfolio! He diseñado y desarrollado este proyecto para destacar mis habilidades como desarrollador web y mostrar los proyectos en los que he trabajado. Es una combinación de diseño práctico, animaciones interactivas y una experiencia de usuario mejorada.
+¡Bienvenidos a mi porfolio! He diseñado y desarrollado este proyecto para destacar mis habilidades como desarrollador web y mostrar los proyectos en los que he trabajado.
 
 ## Tecnologías utilizadas
 
@@ -8,14 +8,17 @@
 - **[React](https://react.dev/):** Librería para crear interfaces de usuario dinámicas y reactivas.
 - **[TypeScript](https://www.typescriptlang.org/):** JavaScript fuertemente tipado para un desarrollo más sólido.
 - **[TailwindCSS](https://tailwindcss.com/):** Framework CSS para un diseño rápido y personalizable.
+- **[Sonner](https://sonner.emilkowal.ski/getting-started):** Biblioteca para notificaciones "toast" en aplicaciones React.
+- **[EmailJS](https://www.emailjs.com/docs/tutorial/overview/):** Servicio para enviar emails directamente desde el cliente sin necesidad de backend.
+- **[Zod](https://zod.dev):** Librería de validación y parseo de datos en JavaScript/TypeScript
 - **[Three.js](https://threejs.org/):** Librería para renderizado de gráficos 3D en la web.
 
 ## Características principales
 
-- Diseño visual claro y moderno, inspirado en el espacio.
-- SEO optimizado para mejorar la visibilidad en motores de búsqueda.
-- Completamente responsive para dispositivos móviles, tablets y escritorio.
-- Código modular y organizado para simplificar el mantenimiento y la escalabilidad.
+- Diseño visual moderno, inspirado en el tema del espacio.
+- SEO optimizado para aumentar la visibilidad en buscadores.
+- Totalmente adaptable para dispositivos móviles, tablets y escritorio.
+- Código modular y organizado para facilitar el mantenimiento y la escalabilidad.
 
 ## Cómo usar
 

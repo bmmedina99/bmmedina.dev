@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import { PROJECTS } from '@/constants'
 import Section from '../Section.astro'
 import { Badge } from '../ui/Badge'
-import Icon from '../ui/Icon'
+import SvgIcon from '../ui/SvgIcon'
 ---
 
 <Section name="Proyectos" label="Proyectos destacados">
@@ -11,7 +11,11 @@ import Icon from '../ui/Icon'
     {
       PROJECTS.map((project) => (
         <article class="bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md hover:border-[#7042f8] transition-colors overflow-hidden">
-          <Image src={project.image} alt={project.title} class={"aspect-video, object-contain"} />
+          <Image
+            src={project.image}
+            alt={project.title}
+            class={"aspect-video, object-contain"}
+          />
           <div class="p-6 space-y-4">
             <header>
               <h3 class="text-2xl font-semibold">{project.title}</h3>
@@ -26,7 +30,7 @@ import Icon from '../ui/Icon'
                   rel="noopener noreferrer"
                   class="btn"
                 >
-                  <Icon name="github" />
+                  <SvgIcon name="github" variant="icon" />
                   <span>Código</span>
                 </a>
               )}
@@ -37,7 +41,7 @@ import Icon from '../ui/Icon'
                   rel="noopener noreferrer"
                   class="btn"
                 >
-                  <Icon name="website" />
+                  <SvgIcon name="website" variant="icon" />
                   <span>Demo</span>
                 </a>
               )}

@@ -1,63 +1,15 @@
 ---
+import { Toaster } from 'sonner'
 import Section from '../Section.astro'
+import Form from '../ui/Form'
 ---
 
 <Section name="Contactáme" label="Contactáme">
-  <form action="" method="post" class="space-y-4">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-      <div class="space-y-2">
-        <label for="name" class="label"> Nombre </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Tu nombre"
-          required
-        />
-      </div>
-      <div class="space-y-2">
-        <label for="email" class="label"> Correo electrónico </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="tu@correo.com"
-          required
-        />
-      </div>
-    </div>
-    <div class="space-y-2">
-      <label for="subject"> Asunto </label>
-      <input
-        type="text"
-        id="subject"
-        name="subject"
-        placeholder="Asunto del mensaje"
-        required
-      />
-    </div>
-    <div class="space-y-2">
-      <label for="message"> Mensaje </label>
-      <textarea
-        id="message"
-        name="message"
-        placeholder="¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible."
-        required
-        class="min-h-[100px] md:min-h-[150px] pr-20"
-        autocapitalize="sentences"></textarea>
-    </div>
-    <div class="max-w-2xl mx-auto space-y-4 text-center">
-      <p class="text-xs md:text-sm text-[#b2b2ff] text-pretty font-semibold">
-        Toda la información del formulario se enviará a mi correo personal y se
-        utilizará únicamente para responder. Al rellenar el formulario es
-        consiente que se manejen sus datos con este fin.
-      </p>
-      <button
-        type="submit"
-        class="px-4 py-2 border border-[#3f007d] hover:bg-[#3f007d]/60 text-[#b2b2ff] rounded-md transition-colors"
-      >
-        Enviar mensaje
-      </button>
-    </div>
-  </form>
+  <Form client:visible />
+  <Toaster
+    client:visible
+    position="bottom-center"
+    richColors
+    toastOptions={{ style: { textAlign: "center", textWrap: "pretty" } }}
+  />
 </Section>

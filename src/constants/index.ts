@@ -1,6 +1,6 @@
+import ProfileImg from '@/assets/profile.png'
 import Temporal from '@/assets/projects/temporal.png'
-import type { Experience, Project } from '@/types'
-import Profile from '@/assets/profile.png'
+import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
 
@@ -22,7 +22,7 @@ export const EXPERIENCES: Experience[] = [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
       'Relizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
-      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficiente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
+      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
     ],
     technologies: [
       'WSUS',
@@ -117,26 +117,76 @@ export const PROJECTS: Project[] = [
   },
 ]
 
-export const PROFILE_IMG: ImageMetadata = Profile
+export const PROFILE: Profile = {
+  image: ProfileImg,
+  techSkills: [
+    'Next.js',
+    'Astro',
+    'React',
+    'TypeScript',
+    'Node.js',
+    'NestJS',
+    'Python',
+    'TailwindCSS',
+    'PostgreSQL',
+    'Git & Github',
+  ],
+  softSkills: [
+    'Trabajo en equipo',
+    'Comunicación efectiva',
+    'Adaptabilidad',
+    'Pensamiento crítico',
+    'Gestión del tiempo',
+    'Resolución de problemas',
+  ],
+  studies: [
+    {
+      title:
+        'Formación Profesional de Grado Superior, Desarrollo de Aplicaciones Multiplataforma',
+      institution: 'CES Fuencarral',
+      date: '2019-09',
+      startDate: 'sep. 2019',
+      endDate: 'mar. 2021',
+    },
+    {
+      title:
+        'Formación Profesional de Grado Medio, Sistemas Microinformáticos y Redes',
+      institution: 'CES Fuencarral',
+      date: '2017-09',
+      startDate: 'sep. 2017',
+      endDate: 'mar. 2019',
+    },
+  ],
+}
 
-export const TECH_SKILLS = [
-  'Next.js',
-  'Astro',
-  'React',
-  'TypeScript',
-  'Node.js',
-  'NestJS',
-  'Python',
-  'TailwindCSS',
-  'PostgreSQL',
-  'Git & Github',
-]
+export const CHARACTER_LIMITS = {
+  SUBJECT: 100,
+  MESSAGE: 1000,
+}
 
-export const SOFT_SKILLS = [
-  'Trabajo en equipo',
-  'Comunicación efectiva',
-  'Adaptabilidad',
-  'Pensamiento crítico',
-  'Gestión del tiempo',
-  'Resolución de problemas',
+export const EMAILJS_DATA = {
+  SERVICE: 'service_utjo0pk',
+  TEMPLATE: 'template_oneg9l4',
+  PUBLICKEY: 'GbhPtGaxs-b16fbSK',
+}
+
+export const SOCIAL_LINK: Social[] = [
+  {
+    id: 0,
+    name: 'GitHub',
+    icon: 'git-github',
+    link: 'https://github.com/bmmedina99',
+  },
+  {
+    id: 1,
+    name: 'LinkedIn',
+    icon: 'linkedin',
+    link: 'https://www.linkedin.com/in/bmmedina99/',
+  },
+  {
+    id: 2,
+    name: 'Instagram',
+    icon: 'instagram',
+    link: 'https://www.instagram.com/bmmedina99/',
+  },
 ]
