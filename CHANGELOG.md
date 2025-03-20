@@ -1,3 +1,13 @@
+# [0.7.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.6.0...v0.7.0) (2025-03-20)
+
+
+### Features
+
+* **about:** :sparkles: Add <time> element for study dates ([2b54701](https://github.com/bmmedina99/bmmedina.dev/commit/2b54701d1cd2985dfc977c7d2cb980dfa4dc000b))
+* **contact:** :sparkle: Enhance form functionality and dependencies ([#35](https://github.com/bmmedina99/bmmedina.dev/issues/35)) ([936a46f](https://github.com/bmmedina99/bmmedina.dev/commit/936a46f507e57e8a7f5c1b169a60d365e90c901c))
+* **contact:** :sparkles: Add new icon to button submit ([d9c1002](https://github.com/bmmedina99/bmmedina.dev/commit/d9c100226242622f4f729ce100b207e5226090b6))
+* **contact:** :sparkles: Add validation using Zod for contact form ([48ff735](https://github.com/bmmedina99/bmmedina.dev/commit/48ff7351eb797a9a47a9cfedc1b29c86190aa76d))
+
 # [0.6.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.5.1...v0.6.0) (2025-03-06)
 
 
