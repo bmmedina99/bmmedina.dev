@@ -46,7 +46,7 @@ import SvgIcon from '../ui/SvgIcon'
           <SvgIcon name="download" variant='icon'/>
           <span>Descagar CV</span>
         </a>
-        <button id="contactMe" class="btn">
+        <button id="contact-me" class="btn">
           <SvgIcon name="contact" variant='icon'/>
           <span>Contáctame</span>
         </button>
@@ -108,8 +108,3 @@ import SvgIcon from '../ui/SvgIcon'
     </div>
   </div>
 </Section>
-<script is:inline>
-  document.getElementById("contactMe")?.addEventListener("click", () => {
-    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
-  });
-</script>
