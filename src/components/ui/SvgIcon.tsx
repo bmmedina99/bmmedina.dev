@@ -1,11 +1,11 @@
-interface Props {
+interface SVGProps {
   name: string
   width?: number
   height?: number
   variant: 'icon' | 'skill'
 }
 
-const SvgIcon = ({ name, width = 24, height = 24, variant }: Props) => {
+const SvgIcon = ({ name, width = 24, height = 24, variant }: SVGProps) => {
   const basePath = variant === 'icon' ? 'svg/icons.svg' : 'svg/skills.svg'
 
   const attributes =

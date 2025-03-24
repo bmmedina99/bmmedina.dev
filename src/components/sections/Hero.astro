@@ -1,5 +1,5 @@
 ---
-import { scrollSection } from '@/utils'
+import Button from '../ui/Button'
 import Navbar from '../ui/Navbar'
 import SvgIcon from '../ui/SvgIcon'
 ---
@@ -23,12 +23,12 @@ import SvgIcon from '../ui/SvgIcon'
     </h2>
   </header>
   <Navbar client:visible />
-  <button
-    id="scrolldown"
-    type="button"
-    class="absolute bottom-8 flex items-center w-6 h-10 rounded-full border-2 border-[#22d2f0] animate-bounce"
-    aria-label="Ir a la sección de experiencia"
+  <Button
+    client:visible
+    className="absolute bottom-8 flex items-center w-6 h-10 rounded-full border-2 border-[#22d2f0] animate-bounce"
+    ariaLabel="Ir a la sección de experiencia"
+    section="experiencia"
   >
-    <SvgIcon name="scroll-down" variant='icon'/>
-  </button>
+    <SvgIcon name="scroll-down" variant="icon" />
+  </Button>
 </section>

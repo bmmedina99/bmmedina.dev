@@ -147,7 +147,7 @@ function Form() {
             name='send'
             variant='icon'
           />
-          <span>{isSending ? 'Enviando mensaje...' : 'Contáctame'}</span>
+          <span>{isSending ? 'Enviando mensaje...' : 'Enviar mensaje'}</span>
         </button>
       </div>
     </form>
