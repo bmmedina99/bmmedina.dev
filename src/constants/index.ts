@@ -165,9 +165,9 @@ export const CHARACTER_LIMITS = {
 }
 
 export const EMAILJS_DATA = {
-  SERVICE: 'service_utjo0pk',
-  TEMPLATE: 'template_oneg9l4',
-  PUBLICKEY: 'GbhPtGaxs-b16fbSK',
+  SERVICE: import.meta.env.PUBLIC_EMAILJS_SERVICE,
+  TEMPLATE: import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
+  PUBLICKEY: import.meta.env.PUBLIC_EMAILJS_PUBLICKEY,
 }
 
 export const SOCIAL_LINK: Social[] = [

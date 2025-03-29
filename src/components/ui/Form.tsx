@@ -1,7 +1,6 @@
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import { formSchema } from '@/schemas'
 import emailjs from '@emailjs/browser'
-import type React from 'react'
 import { useRef, useState } from 'react'
 import { toast } from 'sonner'
 import SvgIcon from './SvgIcon'
@@ -147,7 +146,7 @@ function Form() {
             name='send'
             variant='icon'
           />
-          <span>{isSending ? 'Enviando mensaje...' : 'Contáctame'}</span>
+          <span>{isSending ? 'Enviando mensaje...' : 'Enviar mensaje'}</span>
         </button>
       </div>
     </form>
