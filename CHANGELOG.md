@@ -1,3 +1,15 @@
+## [0.7.1](https://github.com/bmmedina99/bmmedina.dev/compare/v0.7.0...v0.7.1) (2025-03-29)
+
+
+### Bug Fixes
+
+* **porfolio:** :bug: Correct ID naming in HTML for consistency ([c71962e](https://github.com/bmmedina99/bmmedina.dev/commit/c71962e11b7b9edeaf1cdcfc56993ae9d175e903))
+
+
+### Performance Improvements
+
+* **porfolio:** :zap: Create Button.tsx component with scroll-section ([3618dfd](https://github.com/bmmedina99/bmmedina.dev/commit/3618dfd0b2af2df13483555fa8d10c14372fa19d))
+
 # [0.7.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.6.0...v0.7.0) (2025-03-20)
 
 
