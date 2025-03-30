@@ -11,7 +11,7 @@ export const NAV_ITEMS = [
   { id: '02', label: 'proyectos' },
   { id: '03', label: 'sobre mí' },
   { id: '04', label: 'contactáme' },
-]
+] as const
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -23,8 +23,8 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
-      'Relizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
-      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
+      'Realizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
+      'Utilicé los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
     ],
     technologies: [
       'WSUS',
@@ -48,7 +48,7 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Gestioné datos mediante las herramientas de Qlik Sense y Qlik View, además del desarrollo de funciones específicas para visualizar los datos de forma concreta.',
       'Desarrollé un programa en Python para extraer datos blob de una base de datos específica y convertirlos a formatos de archivo (PNG, JPG, PDF).',
-      'Automaticé el proceso de transferencia de archivos al servidor a través de SFTP, mejorando la productividad reduciendo 2 horas.',
+      'Automaticé el proceso de transferencia de archivos al servidor a través de SFTP, mejorando la productividad y reduciendo 2 horas del proceso.',
     ],
     technologies: [
       'Python',
@@ -89,9 +89,9 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Toma de decisiones sobre escalado de incidencias, contactando con las respectivas guardias según la criticidad de los problemas detectados.',
       'Participé en la mejora y reestructuración de un programa existente, logrando disminuir el tiempo de ejecución de una tarea crítica de 1 hora a 15 minutos.',
-      'Monitoreo aplicaciones bajo monitores transaccionales Tuxedo y servidores de aplicaciones.',
+      'Monitoreo de aplicaciones bajo monitores transaccionales Tuxedo y servidores de aplicaciones.',
       'Registro detallado de problemas y soluciones en herramientas de ticketing usando BMC Remedy, contribuyendo a la base de conocimiento del equipo.',
-      'Capacidad para trabajar en equipo, comunicando de manera clara y efectiva con diferentes departamentos.',
+      'Colaboración efectiva en equipo y comunicación clara con diferentes departamentos.',
     ],
     technologies: [
       'Control-M',
@@ -121,8 +121,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     image: GrayGorilla,
     title: 'Gray Gorilla Fitness',
-    description:
-      'Tienda de accesorios de gimnasio que trabaja con Amazon FBA.',
+    description: 'Tienda de accesorios de gimnasio que trabaja con Amazon FBA.',
     technologies: ['En desarrollo'],
     type: 'Backend',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
@@ -186,13 +185,13 @@ export const PROFILE: Profile = {
 export const CHARACTER_LIMITS = {
   SUBJECT: 100,
   MESSAGE: 1000,
-}
+} as const
 
 export const EMAILJS_DATA = {
   SERVICE: import.meta.env.PUBLIC_EMAILJS_SERVICE,
   TEMPLATE: import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
   PUBLICKEY: import.meta.env.PUBLIC_EMAILJS_PUBLICKEY,
-}
+} as const
 
 export const SOCIAL_LINK: Social[] = [
   {
