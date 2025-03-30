@@ -39,6 +39,12 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
+      '@fontsource/archivo-narrow':
+        specifier: 5.2.5
+        version: 5.2.5
+      '@fontsource/open-sans':
+        specifier: 5.2.5
+        version: 5.2.5
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.3(typescript@5.8.2))
@@ -569,6 +575,12 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/archivo-narrow@5.2.5':
+    resolution: {integrity: sha512-4jRDlFjtQYAJzRbBN9lDJ73sDaL5u3e34ogQfz81DsYav0iGjrs3xlehteG7c5zk2l6/YiukOihC3iosdjXLNg==}
+
+  '@fontsource/open-sans@5.2.5':
+    resolution: {integrity: sha512-f0Ww6H+LB6GXA8UCgqs90h4djVttu3quH/1+wkfUY8b09mG1ESn4ACRBHYY78bsoeDXpaCyZh7eoGROBWplvAQ==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -3630,6 +3642,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.1':
     optional: true
+
+  '@fontsource/archivo-narrow@5.2.5': {}
+
+  '@fontsource/open-sans@5.2.5': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
