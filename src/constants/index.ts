@@ -1,5 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import Temporal from '@/assets/images/projects/temporal.png'
+import Finance from '@/assets/images/projects/project-finance.png'
+import GrayGorilla from '@/assets/images/projects/project-graygorillafitness.png'
+import Japanese from '@/assets/images/projects/project-japanese.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
@@ -106,11 +108,33 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: 0,
-    image: Temporal,
-    title: 'Projecto de ejemplo',
+    image: Japanese,
+    title: 'Aprende Japonés',
     description:
-      'Descripción temporal para la muestra de un proyecto en el porfolio, esto será una descripción breve y explicativa.',
-    technologies: ['Astro', 'React', 'TypeScript', 'TailwindCSS'],
+      'Aplicación web para aprender japonés, un tipo quest sobre Hiragana y Katakana.',
+    technologies: ['En desarrollo'],
+    type: 'Frontend',
+    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
+    demoURL: 'https://bmmedina.dev',
+  },
+  {
+    id: 1,
+    image: GrayGorilla,
+    title: 'Gray Gorilla Fitness',
+    description:
+      'Tienda de accesorios de gimnasio que trabaja con Amazon FBA.',
+    technologies: ['En desarrollo'],
+    type: 'Backend',
+    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
+    demoURL: 'https://bmmedina.dev',
+  },
+  {
+    id: 2,
+    image: Finance,
+    title: 'Finanzas Personales',
+    description:
+      'Aplicación web para gestionar finanzas personales, con registro de ingresos y gastos.',
+    technologies: ['En desarrollo'],
     type: 'Full Stack',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
     demoURL: 'https://bmmedina.dev',
