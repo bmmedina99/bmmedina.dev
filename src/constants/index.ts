@@ -1,5 +1,5 @@
-import ProfileImg from '@/assets/profile.png'
-import Temporal from '@/assets/projects/temporal.png'
+import ProfileImg from '@/assets/images/profile.png'
+import Temporal from '@/assets/images/projects/temporal.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
