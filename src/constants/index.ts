@@ -109,7 +109,9 @@ export const PROJECTS: Project[] = [
   {
     id: 0,
     image: Japanese,
-    title: 'Aprende Japonés',
+    title: 'Aprende Japonés (Hiragana y Katakana)',
+    subtitle:
+      'Aplicación interactiva para dominar los silabarios japonés de forma práctica.',
     description:
       'Aplicación web para aprender japonés, un tipo quest sobre Hiragana y Katakana.',
     technologies: ['En desarrollo'],
@@ -120,7 +122,8 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     image: GrayGorilla,
-    title: 'Gray Gorilla Fitness',
+    title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
+    subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
     description: 'Tienda de accesorios de gimnasio que trabaja con Amazon FBA.',
     technologies: ['En desarrollo'],
     type: 'Backend',
@@ -130,9 +133,11 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     image: Finance,
-    title: 'Finanzas Personales',
+    title: 'Finanzas Personales (Gestión de gastos)',
+    subtitle:
+      'Herramienta intuitiva para el control y seguimiento de tus finanzas personales.',
     description:
-      'Aplicación web para gestionar finanzas personales, con registro de ingresos y gastos.',
+      'Controla tus finanzas con esta herramienta. Diseñada para simplificar la gestión de tus gastos, ofrece análisis detallados y gráficos claros sobre tus finanzas.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',

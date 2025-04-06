@@ -14,6 +14,7 @@ export interface Project {
   id: number
   image: ImageMetadata
   title: string
+  subtitle: string
   description: string
   technologies: string[]
   type: string
