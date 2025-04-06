@@ -6,10 +6,6 @@ html {
   @apply scroll-smooth scroll-pt-20
 }
 
-body {
-  font-family: 'Open Sans Variable', sans-serif;
-}
-
 ::selection {
   @apply bg-[#6347ff]/40
 }
