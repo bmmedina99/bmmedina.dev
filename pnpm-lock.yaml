@@ -20,6 +20,12 @@ importers:
       '@emailjs/browser':
         specifier: 4.4.1
         version: 4.4.1
+      '@fontsource/onest':
+        specifier: 5.2.7
+        version: 5.2.7
+      '@fontsource/orbitron':
+        specifier: 5.2.5
+        version: 5.2.5
       '@react-three/fiber':
         specifier: 9.1.2
         version: 9.1.2(@types/react@19.0.14)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(three@0.175.0)
@@ -38,19 +44,22 @@ importers:
       react-dom:
         specifier: 19.0.0
         version: 19.0.0(react@19.0.0)
+      schema-dts:
+        specifier: 1.1.5
+        version: 1.1.5
+      sonner:
+        specifier: 2.0.3
+        version: 2.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       three:
         specifier: 0.175.0
         version: 0.175.0
+      zod:
+        specifier: 3.24.2
+        version: 3.24.2
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
-      '@fontsource/onest':
-        specifier: 5.2.7
-        version: 5.2.7
-      '@fontsource/orbitron':
-        specifier: 5.2.5
-        version: 5.2.5
       '@semantic-release/changelog':
         specifier: 6.0.3
         version: 6.0.3(semantic-release@24.2.3(typescript@5.8.3))
@@ -75,27 +84,18 @@ importers:
       postcss:
         specifier: 8.5.3
         version: 8.5.3
-      schema-dts:
-        specifier: 1.1.5
-        version: 1.1.5
       semantic-release:
         specifier: 24.2.3
         version: 24.2.3(typescript@5.8.3)
       sharp:
         specifier: 0.33.5
         version: 0.33.5
-      sonner:
-        specifier: 2.0.3
-        version: 2.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17
       typescript:
         specifier: 5.8.3
         version: 5.8.3
-      zod:
-        specifier: 3.24.2
-        version: 3.24.2
 
 packages:
 
