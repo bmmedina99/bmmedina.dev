@@ -1,6 +1,6 @@
 import ProfileImg from '@/assets/images/profile.png'
-import GrayGorillaillaillaillaillailla from '@/assets/accesoriossgimnasio.png.png.png.png.png.png'
-import Financees/projects/app-finafinafinafinafinafinanzasnpersonales.png
+import Finance from '@/assets/images/projects/app-finanzas-personales.png'
+import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
 import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
@@ -122,7 +122,8 @@ export const PROJECTS: Project[] = [
     image: GrayGorilla,
     title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
     subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
-    description: 'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
+    description:
+      'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
     technologies: ['En desarrollo'],
     type: 'Backend',
   },
