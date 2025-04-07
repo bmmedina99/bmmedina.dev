@@ -20,11 +20,13 @@
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "5.1.5",
     "@emailjs/browser": "4.4.1",
+    "@react-three/fiber": "9.1.2",
     "astro": "5.2.6",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "three": "0.175.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -35,6 +37,7 @@
     "@semantic-release/npm": "12.0.1",
     "@types/react": "19.0.14",
     "@types/react-dom": "19.0.6",
+    "@types/three": "0.175.0",
     "autoprefixer": "10.4.21",
     "postcss": "8.5.3",
     "schema-dts": "1.1.5",
@@ -47,6 +50,10 @@
   },
   "packageManager": "pnpm@10.7.1",
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
