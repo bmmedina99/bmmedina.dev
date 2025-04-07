@@ -1,6 +1,6 @@
 import ProfileImg from '@/assets/images/profile.png'
-import Finance from '@/assets/images/projects/app-finanzas-personales.png'
-import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
+import GrayGorillaillaillaillaillailla from '@/assets/accesoriossgimnasio.png.png.png.png.png.png'
+import Financees/projects/app-finafinafinafinafinafinanzasnpersonales.png
 import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
@@ -116,8 +116,6 @@ export const PROJECTS: Project[] = [
       'Elige hiragana, katakana o ambos para evaluar tu conocimiento mediante pruebas visuales. ¿Listo para el desafío?',
     technologies: ['En desarrollo'],
     type: 'Frontend',
-    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
-    demoURL: 'https://bmmedina.dev',
   },
   {
     id: 1,
@@ -127,8 +125,6 @@ export const PROJECTS: Project[] = [
     description: 'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
     technologies: ['En desarrollo'],
     type: 'Backend',
-    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
-    demoURL: 'https://bmmedina.dev',
   },
   {
     id: 2,
@@ -140,8 +136,6 @@ export const PROJECTS: Project[] = [
       'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos con análisis y gráficos claros.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
-    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
-    demoURL: 'https://bmmedina.dev',
   },
 ]
 
