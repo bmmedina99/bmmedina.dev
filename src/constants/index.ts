@@ -1,7 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import Finance from '@/assets/images/projects/project-finance.png'
-import GrayGorilla from '@/assets/images/projects/project-graygorillafitness.png'
-import Japanese from '@/assets/images/projects/project-japanese.png'
+import Finance from '@/assets/images/projects/app-finanzas-personales.png'
+import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
+import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
     subtitle:
       'Aplicación interactiva para dominar los silabarios japonés de forma práctica.',
     description:
-      'Aplicación web para aprender japonés, un tipo quest sobre Hiragana y Katakana.',
+      'Elige hiragana, katakana o ambos para evaluar tu conocimiento mediante pruebas visuales. ¿Listo para el desafío?',
     technologies: ['En desarrollo'],
     type: 'Frontend',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
     image: GrayGorilla,
     title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
     subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
-    description: 'Tienda de accesorios de gimnasio que trabaja con Amazon FBA.',
+    description: 'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
     technologies: ['En desarrollo'],
     type: 'Backend',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
@@ -135,9 +135,9 @@ export const PROJECTS: Project[] = [
     image: Finance,
     title: 'Finanzas Personales (Gestión de gastos)',
     subtitle:
-      'Herramienta intuitiva para el control y seguimiento de tus finanzas personales.',
+      'Herramienta para el control y seguimiento de tus finanzas personales.',
     description:
-      'Controla tus finanzas con esta herramienta. Diseñada para simplificar la gestión de tus gastos, ofrece análisis detallados y gráficos claros sobre tus finanzas.',
+      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos con análisis y gráficos claros.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
     githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
