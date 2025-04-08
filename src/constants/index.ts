@@ -6,6 +6,8 @@ import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
 
+export const STARTS_COUNT = 1000
+
 export const NAV_ITEMS = [
   { id: '01', label: 'experiencia' },
   { id: '02', label: 'proyectos' },

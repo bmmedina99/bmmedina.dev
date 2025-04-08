@@ -5,6 +5,7 @@ import Experience from '@/components/sections/Experience.astro'
 import Footer from '@/components/sections/Footer.astro'
 import Hero from '@/components/sections/Hero.astro'
 import Projects from '@/components/sections/Projects.astro'
+import StarFieldBackground from '@/components/ui/StarFieldBackground'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -12,6 +13,7 @@ import Layout from '../layouts/Layout.astro'
   title="Brandon Medina - Desarrollador Web Full Stack | bmmedina"
   description="Desarrollador Web Full Stack autodidacta con más de 3 años de experiencia, enfocado en automatizar y mejorar procesos para crear soluciones tecnológicas."
 >
+  <StarFieldBackground client:visible/>
   <Hero />
   <Experience />
   <Projects />
