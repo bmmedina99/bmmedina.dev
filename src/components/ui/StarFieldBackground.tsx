@@ -1,6 +1,6 @@
 import { STARTS_COUNT } from '@/constants'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { useMemo, useRef } from 'react'
+import { Suspense, useMemo, useRef } from 'react'
 import { AdditiveBlending, type Points, TextureLoader } from 'three'
 
 function StarField() {
@@ -40,6 +40,7 @@ function StarField() {
           count={starsPositions.length / 3}
           array={starsPositions}
           itemSize={3}
+          args={[starsPositions, 3]}
         />
       </bufferGeometry>
       <pointsMaterial
@@ -57,7 +58,9 @@ function StarFieldBackground() {
   return (
     <div className='w-full h-auto fixed inset-0 z-[-1]'>
       <Canvas camera={{ position: [0, 0, 1] }}>
-        <StarField />
+        <Suspense fallback={null}>
+          <StarField />
+        </Suspense>
       </Canvas>
     </div>
   )
