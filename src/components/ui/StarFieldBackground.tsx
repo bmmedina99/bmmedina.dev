@@ -5,7 +5,7 @@ import { AdditiveBlending, type Points, TextureLoader } from 'three'
 
 function StarField() {
   const starsRef = useRef<Points>(null)
-  const starsTexture = useLoader(TextureLoader, 'star.png')
+  const starsTexture = useLoader(TextureLoader, '/images/star.png')
 
   const starsPositions = useMemo(() => {
     const positions = new Float32Array(STARTS_COUNT * 3)
