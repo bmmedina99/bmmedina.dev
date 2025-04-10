@@ -2,7 +2,7 @@
   "name": "bmmedina.dev",
   "description": "bmmedina.dev - A personal portfolio where I showcase my web development skills and projects using cutting-edge technologies.",
   "type": "module",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "scripts": {
     "dev": "astro dev --port=4000",
     "build": "astro build",
@@ -50,6 +50,10 @@
   },
   "packageManager": "pnpm@10.8.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild",
+      "sharp"
+    ]
   }
 }

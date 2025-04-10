@@ -1,3 +1,29 @@
+# [0.8.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.7.1...v0.8.0) (2025-04-10)
+
+
+### Bug Fixes
+
+* **projects:** :bug: correct assets import error ([a1deb8c](https://github.com/bmmedina99/bmmedina.dev/commit/a1deb8c9281eb403a4db6fb0d3d0840cf1c557f9))
+* **seo:** :bug: Update OG and JSON-LD URLs image to use absolute paths ([99ecf3f](https://github.com/bmmedina99/bmmedina.dev/commit/99ecf3fae4cc5458ce1b67aabdfcebe151f91a3b))
+
+
+### Features
+
+* **fonts:** :sparkles: add [@fontsource](https://github.com/fontsource) and apply new font across project ([#38](https://github.com/bmmedina99/bmmedina.dev/issues/38)) ([f1bcb33](https://github.com/bmmedina99/bmmedina.dev/commit/f1bcb337714e8fd1fc513313277e8dc278723983))
+* **porfolio:** ✨ add starfield simulation and optimize assets ([#39](https://github.com/bmmedina99/bmmedina.dev/issues/39)) ([d4cc21a](https://github.com/bmmedina99/bmmedina.dev/commit/d4cc21ac776b92fb7e7f07bc8bf55f6c9556850d))
+* **project:** :sparkles: Add 3 new projects in development ([455e6b0](https://github.com/bmmedina99/bmmedina.dev/commit/455e6b0a510499bbd8b24f74370c3cd4ae26663a))
+* **projects:** :bento: update projects images ([e11977f](https://github.com/bmmedina99/bmmedina.dev/commit/e11977f11636e8040620d3466c8bea4c35378cc3))
+* **projects:** :sparkles: Add 3 new images to showcase projects ([75baaca](https://github.com/bmmedina99/bmmedina.dev/commit/75baaca70b38a9197d4d7b4101ce44e6a0953582))
+* **projects:** :sparkles: add subtitle field to Project interface ([bbb0ecc](https://github.com/bmmedina99/bmmedina.dev/commit/bbb0ecc31f8968c633a728111cff3a48331b9c07))
+
+
+### Performance Improvements
+
+* **about:** :zap: Optimize CV PDF by reducing file size ([38232b9](https://github.com/bmmedina99/bmmedina.dev/commit/38232b9f12e2c590a6dc4c06439ce80f0bdf2766))
+* **images:** :zap: Optimize images by reducing file size ([93c7270](https://github.com/bmmedina99/bmmedina.dev/commit/93c7270e8ef8e435ed2979e026d05d831e87afc8))
+* **images:** :zap: Optimize images for favicon ([0e5a70b](https://github.com/bmmedina99/bmmedina.dev/commit/0e5a70b8301ebf19b626dec8e39ed5eeec9f728b))
+* **seo:** :mag: Optimize Open Graph image for better performance ([95c1801](https://github.com/bmmedina99/bmmedina.dev/commit/95c18019c774a6b62222fc138623e4e05decb8e8))
+
 ## [0.7.1](https://github.com/bmmedina99/bmmedina.dev/compare/v0.7.0...v0.7.1) (2025-03-29)
 
 
