@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .gradient-text {
   @apply bg-gradient-to-r from-[#c084fc] via-[#22d2f0] to-[#00ffaa] text-transparent bg-clip-text tracking-wide
 }
@@ -20,7 +19,6 @@
 .btn:disabled {
   @apply opacity-50 cursor-not-allowed shadow-none
 }
-
 
 label {
   @apply block text-xl font-medium text-[#cbd5e1] select-none
