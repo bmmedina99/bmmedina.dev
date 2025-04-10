@@ -2,34 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply scroll-smooth scroll-pt-20
-}
-
-::selection {
-  @apply bg-[#6347ff]/40
-}
-
-::-webkit-scrollbar {
-  @apply w-3
-}
-
-::-webkit-scrollbar-thumb {
-   @apply bg-gradient-to-b from-[#c084fc] via-[#22d2f0] to-[#00ffaa] rounded-md border-4 border-solid border-[#030014]
-}
-
-.main-section {
-  @apply relative px-6 mt-24 mb-12 md:px-12
-}
-
-.gradient-text {
-  @apply bg-gradient-to-r from-[#c084fc] via-[#22d2f0] to-[#00ffaa] text-transparent bg-clip-text tracking-wide
-}
-
-.badge {
-  @apply bg-[#12042d]/40 text-[#b2b2ff] text-sm font-medium px-2.5 py-1 rounded-xl border border-[#7042f8]
-}
-
 .btn {
   @apply flex items-center justify-center gap-2 px-4 py-2 border border-[#3f007d] text-[#b2b2ff] rounded-md transition-all select-none transform;
   box-shadow: 0 4px 6px -1px hsla(270, 100%, 25%, 0.5), 0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
@@ -43,7 +15,6 @@ html {
 .btn:disabled {
   @apply opacity-50 cursor-not-allowed shadow-none
 }
-
 
 label {
   @apply block text-xl font-medium text-[#cbd5e1] select-none
