@@ -20,3 +20,20 @@ const { ...head } = Astro.props
     </main>
   </body>
 </html>
+<style is:global>
+  html {
+    @apply scroll-smooth scroll-pt-20;
+  }
+
+  ::selection {
+    @apply bg-[#6347ff]/40;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-[#c084fc] via-[#22d2f0] to-[#00ffaa] rounded-md border-4 border-solid border-[#030014];
+  }
+</style>

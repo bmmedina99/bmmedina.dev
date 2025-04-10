@@ -2,32 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply scroll-smooth scroll-pt-20
-}
-
-::selection {
-  @apply bg-[#6347ff]/40
-}
-
-::-webkit-scrollbar {
-  @apply w-3
-}
-
-::-webkit-scrollbar-thumb {
-   @apply bg-gradient-to-b from-[#c084fc] via-[#22d2f0] to-[#00ffaa] rounded-md border-4 border-solid border-[#030014]
-}
-
-.main-section {
-  @apply relative px-6 mt-24 mb-12 md:px-12
-}
 
 .gradient-text {
   @apply bg-gradient-to-r from-[#c084fc] via-[#22d2f0] to-[#00ffaa] text-transparent bg-clip-text tracking-wide
-}
-
-.badge {
-  @apply bg-[#12042d]/40 text-[#b2b2ff] text-sm font-medium px-2.5 py-1 rounded-xl border border-[#7042f8]
 }
 
 .btn {
