@@ -1,35 +1,41 @@
 import { STARTS_COUNT } from '@/constants'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
-import { Suspense, useMemo, useRef } from 'react'
-import { AdditiveBlending, type Points, TextureLoader } from 'three'
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
+import { TextureLoader } from 'three'
+import type { Points } from 'three/src/objects/Points.js'
 
 function StarField() {
   const starsRef = useRef<Points>(null)
   const starsTexture = useLoader(TextureLoader, '/images/star.png')
 
+  const [startsCount, setStartsCount] = useState(STARTS_COUNT)
+
+  useEffect(() => {
+    if (window.innerWidth < 768) setStartsCount(STARTS_COUNT / 2)
+  }, [])
+
   const starsPositions = useMemo(() => {
-    const positions = new Float32Array(STARTS_COUNT * 3)
-    for (let i = 0; i < STARTS_COUNT; i++) {
+    const positions = new Float32Array(startsCount * 3)
+    for (let i = 0; i < startsCount; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 100
       positions[i * 3 + 1] = (Math.random() - 0.5) * 100
       positions[i * 3 + 2] = (Math.random() - 0.5) * 100
     }
     return positions
-  }, [])
+  }, [startsCount])
 
   useFrame(() => {
     if (!starsRef.current) return
-    const starsAtrributesPosition =
-      starsRef.current.geometry.attributes.position
+    const positions = starsRef.current.geometry.attributes.position
+      .array as Float32Array
 
-    for (let i = 0; i < STARTS_COUNT; i++) {
+    for (let i = 0; i < startsCount; i++) {
       const i3 = i * 3
-      starsAtrributesPosition.array[i3 + 2] += 0.05
-      if (starsAtrributesPosition.array[i3 + 2] > 50) {
-        starsAtrributesPosition.array[i3 + 2] = -50
-      }
+      positions[i3 + 2] += 0.05
+
+      if (positions[i3 + 2] > 50) positions[i3 + 2] = -50
     }
-    starsAtrributesPosition.needsUpdate = true
+    starsRef.current.geometry.attributes.position.needsUpdate = true
   })
 
   return (
@@ -38,9 +44,7 @@ function StarField() {
         <bufferAttribute
           attach='attributes-position'
           count={starsPositions.length / 3}
-          array={starsPositions}
-          itemSize={3}
-          args={[starsPositions, 3]}
+          args={[starsPositions, 3, true]}
         />
       </bufferGeometry>
       <pointsMaterial
@@ -48,7 +52,6 @@ function StarField() {
         map={starsTexture}
         transparent
         depthWrite={false}
-        blending={AdditiveBlending}
       />
     </points>
   )
