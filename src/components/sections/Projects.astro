@@ -7,19 +7,17 @@ import SvgIcon from '../ui/SvgIcon'
 ---
 
 <Section name="Proyectos" label="Proyectos destacados">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
     {
       PROJECTS.map((project) => (
         <article class="bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md hover:border-[#7042f8] transition-colors overflow-hidden">
           <Image
             src={project.image}
-            alt={project.title}
-            class={"aspect-video, object-contain"}
+            alt={`Proyecto ${project.title}: ${project.subtitle}`}
+            class={"rounded-md"}
           />
           <div class="p-6 space-y-4">
-            <header>
-              <h3 class="text-2xl font-semibold">{project.title}</h3>
-            </header>
+            <h3 class="text-xl font-semibold">{project.title}</h3>
             <p class="text-[#cbd5e1] text-pretty">{project.description}</p>
             <Badge items={project.technologies} />
             <div class="flex gap-4">

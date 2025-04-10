@@ -17,7 +17,7 @@ import SvgIcon from '../ui/SvgIcon'
       <Image
         src={PROFILE.image}
         alt="Brandon Medina - Desarrollador Web Full Stack"
-        class="profile-img float-left mr-4 object-cover"
+        class="float-left object-cover mr-4 profile-img"
         width={192}
         height={192}
       />
@@ -62,11 +62,11 @@ import SvgIcon from '../ui/SvgIcon'
       <section aria-labelledby="tech-skills-heading">
         <h3
           id="tech-skills-heading"
-          class="mb-4 text-2xl font-semibold text-[#cbd5e1]"
+          class="mb-4 text-xl font-semibold text-[#cbd5e1]"
         >
           Habilidades técnicas
         </h3>
-        <ul class="flex flex-wrap gap-2 justify-center">
+        <ul class="flex flex-wrap justify-center gap-2">
           {
             PROFILE.techSkills.map((tech) => (
               <li class="flex flex-col items-center">
@@ -85,7 +85,7 @@ import SvgIcon from '../ui/SvgIcon'
       <section aria-labelledby="soft-skills-heading">
         <h3
           id="soft-skills-heading"
-          class="mb-4 text-2xl font-semibold text-[#cbd5e1]"
+          class="mb-4 text-xl font-semibold text-[#cbd5e1]"
         >
           Habilidades blandas
         </h3>
@@ -94,7 +94,7 @@ import SvgIcon from '../ui/SvgIcon'
       <section aria-labelledby="education-heading">
         <h3
           id="education-heading"
-          class="mb-4 text-2xl font-semibold text-[#cbd5e1]"
+          class="mb-4 text-xl font-semibold text-[#cbd5e1]"
         >
           Estudios
         </h3>
@@ -102,13 +102,13 @@ import SvgIcon from '../ui/SvgIcon'
           {
             PROFILE.studies.map((study) => (
               <li class="p-4 mb-2 cursor-pointer bg-[#12042d]/60 border border-[#3f007d] rounded-lg">
-                <div class="flex justify-between items-center">
+                <div class="flex items-center justify-between">
                   <h4 class="text-sm font-semibold tracking-wide">
                     <span class="text-[#c084fc]">{study.title}</span> &bull;{" "}
                     {study.institution}
                   </h4>
                 </div>
-                <time datetime={study.date} class="text-xs tracking-wide block">
+                <time datetime={study.date} class="block text-xs tracking-wide">
                   {study.startDate} - {study.endDate}
                 </time>
               </li>

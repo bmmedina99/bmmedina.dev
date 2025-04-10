@@ -1,15 +1,19 @@
-import ProfileImg from '@/assets/profile.png'
-import Temporal from '@/assets/projects/temporal.png'
+import ProfileImg from '@/assets/images/profile.png'
+import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
+import Finance from '@/assets/images/projects/app-finanzas-personales.png'
+import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
+
+export const STARTS_COUNT = 1000
 
 export const NAV_ITEMS = [
   { id: '01', label: 'experiencia' },
   { id: '02', label: 'proyectos' },
   { id: '03', label: 'sobre mí' },
   { id: '04', label: 'contactáme' },
-]
+] as const
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -21,8 +25,8 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
-      'Relizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
-      'Hacía uso de los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
+      'Realizaba seguimiento y análisis de los equipos de la empresa para garantizar su correcto funcionamiento y mantenimiento.',
+      'Utilicé los programas Lansweeper y WSUS para gestionar eficientemente el inventario de hardware y software, así como para la aplicación de parches y actualizaciones en la red.',
     ],
     technologies: [
       'WSUS',
@@ -46,7 +50,7 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Gestioné datos mediante las herramientas de Qlik Sense y Qlik View, además del desarrollo de funciones específicas para visualizar los datos de forma concreta.',
       'Desarrollé un programa en Python para extraer datos blob de una base de datos específica y convertirlos a formatos de archivo (PNG, JPG, PDF).',
-      'Automaticé el proceso de transferencia de archivos al servidor a través de SFTP, mejorando la productividad reduciendo 2 horas.',
+      'Automaticé el proceso de transferencia de archivos al servidor a través de SFTP, mejorando la productividad y reduciendo 2 horas del proceso.',
     ],
     technologies: [
       'Python',
@@ -87,9 +91,9 @@ export const EXPERIENCES: Experience[] = [
     description: [
       'Toma de decisiones sobre escalado de incidencias, contactando con las respectivas guardias según la criticidad de los problemas detectados.',
       'Participé en la mejora y reestructuración de un programa existente, logrando disminuir el tiempo de ejecución de una tarea crítica de 1 hora a 15 minutos.',
-      'Monitoreo aplicaciones bajo monitores transaccionales Tuxedo y servidores de aplicaciones.',
+      'Monitoreo de aplicaciones bajo monitores transaccionales Tuxedo y servidores de aplicaciones.',
       'Registro detallado de problemas y soluciones en herramientas de ticketing usando BMC Remedy, contribuyendo a la base de conocimiento del equipo.',
-      'Capacidad para trabajar en equipo, comunicando de manera clara y efectiva con diferentes departamentos.',
+      'Colaboración efectiva en equipo y comunicación clara con diferentes departamentos.',
     ],
     technologies: [
       'Control-M',
@@ -106,14 +110,35 @@ export const EXPERIENCES: Experience[] = [
 export const PROJECTS: Project[] = [
   {
     id: 0,
-    image: Temporal,
-    title: 'Projecto de ejemplo',
+    image: Japanese,
+    title: 'Aprende Japonés (Hiragana y Katakana)',
+    subtitle:
+      'Aplicación interactiva para dominar los silabarios japonés de forma práctica.',
     description:
-      'Descripción temporal para la muestra de un proyecto en el porfolio, esto será una descripción breve y explicativa.',
-    technologies: ['Astro', 'React', 'TypeScript', 'TailwindCSS'],
+      'Elige hiragana, katakana o ambos para evaluar tu conocimiento mediante pruebas visuales. ¿Listo para el desafío?',
+    technologies: ['En desarrollo'],
+    type: 'Frontend',
+  },
+  {
+    id: 1,
+    image: GrayGorilla,
+    title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
+    subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
+    description:
+      'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
+    technologies: ['En desarrollo'],
+    type: 'Backend',
+  },
+  {
+    id: 2,
+    image: Finance,
+    title: 'Finanzas Personales (Gestión de gastos)',
+    subtitle:
+      'Herramienta para el control y seguimiento de tus finanzas personales.',
+    description:
+      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos con análisis y gráficos claros.',
+    technologies: ['En desarrollo'],
     type: 'Full Stack',
-    githubURL: 'https://github.com/bmmedina99/bmmedina.dev',
-    demoURL: 'https://bmmedina.dev',
   },
 ]
 
@@ -162,13 +187,13 @@ export const PROFILE: Profile = {
 export const CHARACTER_LIMITS = {
   SUBJECT: 100,
   MESSAGE: 1000,
-}
+} as const
 
 export const EMAILJS_DATA = {
   SERVICE: import.meta.env.PUBLIC_EMAILJS_SERVICE,
   TEMPLATE: import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
   PUBLICKEY: import.meta.env.PUBLIC_EMAILJS_PUBLICKEY,
-}
+} as const
 
 export const SOCIAL_LINK: Social[] = [
   {

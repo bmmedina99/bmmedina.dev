@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import techSkills from '@/assets/svg/tech-skills.svg'
 import Section from '../Section.astro'
 import ExperienceDetails from '../ui/Details'
 ---
@@ -7,8 +8,8 @@ import ExperienceDetails from '../ui/Details'
 <Section name="Experiencia" label="Experiencia profesional">
   <ExperienceDetails client:visible />
   <Image
-    class={"absolute top-0 right-0 object-contain opacity-40 -z-10"}
-    src={"/svg/tech-skills-orbit.svg"}
+    class={"absolute top-0 right-0 object-contain opacity-40"}
+    src={techSkills}
     alt={"Ilustración de habilidades técnicas"}
     aria-hidden="true"
     width={600}
