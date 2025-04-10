@@ -1,3 +1,10 @@
+## [0.8.1](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.0...v0.8.1) (2025-04-10)
+
+
+### Bug Fixes
+
+* **sections:** :bug: adjust font size for mobile in heading ([e4ad84b](https://github.com/bmmedina99/bmmedina.dev/commit/e4ad84b1e6734952cf9ba72087827b79cb012017))
+
 # [0.8.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.7.1...v0.8.0) (2025-04-10)
 
 
