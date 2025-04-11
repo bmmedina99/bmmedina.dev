@@ -1,4 +1,4 @@
-import { scrollSection } from '@/utils'
+import { scrollSection, slugify } from '@/utils'
 
 interface ButtonProps {
   children: React.ReactNode
@@ -13,7 +13,7 @@ const Button = ({ children, className, ariaLabel, section }: ButtonProps) => {
       type='button'
       className={className}
       aria-label={ariaLabel}
-      onClick={() => scrollSection(`#${section}`)}
+      onClick={() => scrollSection(`#${slugify(section)}`)}
     >
       {children}
     </button>
