@@ -1,3 +1,10 @@
+## [0.8.2](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.1...v0.8.2) (2025-04-11)
+
+
+### Performance Improvements
+
+* **projects:** :zap: add explicit width and height to project images ([f99a28a](https://github.com/bmmedina99/bmmedina.dev/commit/f99a28a4418f36e17b4cf846bcb0de4edec7eaa3))
+
 ## [0.8.1](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.0...v0.8.1) (2025-04-10)
 
 
