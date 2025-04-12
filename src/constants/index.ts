@@ -1,7 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
-import Finance from '@/assets/images/projects/app-finanzas-personales.png'
-import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
+import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.jpg'
+import Finance from '@/assets/images/projects/app-finanzas-personales.jpg'
+import Japanese from '@/assets/images/projects/app-hiragana-katakana.jpg'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
