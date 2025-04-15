@@ -2,7 +2,7 @@
   "name": "bmmedina.dev",
   "description": "bmmedina.dev - A personal portfolio where I showcase my web development skills and projects using cutting-edge technologies.",
   "type": "module",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "scripts": {
     "dev": "astro dev --port=4000",
     "build": "astro build",

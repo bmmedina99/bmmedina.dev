@@ -1,3 +1,10 @@
+## [0.8.3](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.2...v0.8.3) (2025-04-15)
+
+
+### Bug Fixes
+
+* **build:** :bug: resolve issue generating duplicate css files ([d212bae](https://github.com/bmmedina99/bmmedina.dev/commit/d212baecf98b9dfc1fe3ff4f6f0d37e7cf31adae))
+
 ## [0.8.2](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.1...v0.8.2) (2025-04-11)
 
 
