@@ -214,4 +214,22 @@ export const SOCIAL_LINK: Social[] = [
     icon: 'instagram',
     link: 'https://www.instagram.com/bmmedina99/',
   },
+  {
+    id: 3,
+    name: 'Youtube',
+    icon: 'youtube',
+    link: 'https://www.youtube.com/@bmmedina99',
+  },
+  {
+    id: 4,
+    name: 'X (Twitter)',
+    icon: 'twitter',
+    link: 'https://x.com/bmmedina99',
+  },
+  {
+    id: 5,
+    name: 'Facebook',
+    icon: 'facebook',
+    link: 'https://www.facebook.com/bmmedina99',
+  },
 ]
