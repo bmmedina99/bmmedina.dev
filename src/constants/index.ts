@@ -1,7 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.png'
-import Finance from '@/assets/images/projects/app-finanzas-personales.png'
-import Japanese from '@/assets/images/projects/app-hiragana-katakana.png'
+import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.jpg'
+import Finance from '@/assets/images/projects/app-finanzas-personales.jpg'
+import Japanese from '@/assets/images/projects/app-hiragana-katakana.jpg'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
@@ -213,5 +213,23 @@ export const SOCIAL_LINK: Social[] = [
     name: 'Instagram',
     icon: 'instagram',
     link: 'https://www.instagram.com/bmmedina99/',
+  },
+  {
+    id: 3,
+    name: 'Youtube',
+    icon: 'youtube',
+    link: 'https://www.youtube.com/@bmmedina99',
+  },
+  {
+    id: 4,
+    name: 'X (Twitter)',
+    icon: 'twitter',
+    link: 'https://x.com/bmmedina99',
+  },
+  {
+    id: 5,
+    name: 'Facebook',
+    icon: 'facebook',
+    link: 'https://www.facebook.com/bmmedina99',
   },
 ]

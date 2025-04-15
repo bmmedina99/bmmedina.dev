@@ -1,10 +1,5 @@
 ---
 import Meta from '../components/Meta.astro'
-import '@fontsource/orbitron/600.css'
-import '@fontsource/orbitron/700.css'
-import '@fontsource/onest/400.css'
-import '@fontsource/onest/500.css'
-import '@fontsource/onest/600.css'
 import StarFieldBackground from '@/components/ui/StarFieldBackground'
 
 const { ...head } = Astro.props
@@ -22,20 +17,3 @@ const { ...head } = Astro.props
     <StarFieldBackground client:idle/>
   </body>
 </html>
-<style is:global>
-  html {
-    @apply scroll-smooth scroll-pt-20;
-  }
-
-  ::selection {
-    @apply bg-[#6347ff]/40;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-3;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gradient-to-b from-[#c084fc] via-[#22d2f0] to-[#00ffaa] rounded-md border-4 border-solid border-[#030014];
-  }
-</style>
