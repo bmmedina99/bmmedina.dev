@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth scroll-pt-20;
+}
+
+::selection {
+  @apply bg-[#6347ff]/40;
+}
+
+::-webkit-scrollbar {
+  @apply w-3;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-[#c084fc] via-[#22d2f0] to-[#00ffaa] rounded-md border-4 border-solid border-[#030014];
+}
+
 .btn {
   @apply flex items-center justify-center gap-2 px-4 py-2 border border-[#3f007d] text-[#b2b2ff] rounded-md transition-all select-none transform;
   box-shadow: 0 4px 6px -1px hsla(270, 100%, 25%, 0.5), 0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
