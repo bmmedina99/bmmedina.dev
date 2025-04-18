@@ -14,6 +14,8 @@ import SvgIcon from '../ui/SvgIcon'
           <Image
             src={project.image}
             alt={`Proyecto ${project.title}: ${project.subtitle}`}
+            widths={[578, 834, 1280]}
+            sizes="(max-width: 600px) 100vw, (max-width: 900px) 834px, 1280px"
             class={"rounded-md"}
             width={1280}
             height={720}
