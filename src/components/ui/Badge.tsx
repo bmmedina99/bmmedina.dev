@@ -1,4 +1,4 @@
-export const Badge = ({ items }: { items: string[] }) => {
+const Badge = ({ items }: { items: string[] }) => {
   return (
     <ul className='flex flex-wrap items-center justify-center gap-2 my-4'>
       {items.map((item) => (
@@ -12,3 +12,5 @@ export const Badge = ({ items }: { items: string[] }) => {
     </ul>
   )
 }
+
+export default Badge

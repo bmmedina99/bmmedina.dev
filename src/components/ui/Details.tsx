@@ -1,6 +1,6 @@
 import { EXPERIENCES } from '@/constants'
 import { useCallback, useState } from 'react'
-import { Badge } from './Badge'
+import Badge from './Badge'
 import SvgIcon from './SvgIcon'
 
 export default function ExperienceDetails() {
