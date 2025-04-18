@@ -51,15 +51,15 @@ export default function Navbar() {
         <ul className='hidden gap-8 md:flex'>
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
-              <Button
+              <a
+                href={`#${slugify(item.label)}`}
                 className={`flex items-center gap-2 hover:text-[#22d2f0] transition-colors ${active === item.label ? 'text-[#22d2f0]' : 'text-[#f6f6f6]'}`}
-                ariaLabel={`Ir a la sección ${item.label}`}
-                section={item.label}
+                aria-label={`Ir a la sección ${item.label}`}
               >
                 <span className='text-sm opacity-50'>&lt;</span>
                 <span className='text-lg'>{capitalLetter(item.label)}</span>
                 <span className='text-sm opacity-50'>/&gt;</span>
-              </Button>
+              </a>
             </li>
           ))}
         </ul>

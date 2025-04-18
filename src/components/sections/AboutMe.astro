@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import { PROFILE } from '@/constants'
 import { slugify } from '@/utils'
 import Section from '../Section.astro'
-import { Badge } from '../ui/Badge'
+import Badge from '../ui/Badge'
 import Button from '../ui/Button'
 import SvgIcon from '../ui/SvgIcon'
 ---
@@ -45,15 +45,14 @@ import SvgIcon from '../ui/SvgIcon'
           <SvgIcon name="download" variant="icon" />
           <span>Descagar CV</span>
         </a>
-        <Button
-          client:visible
-          className="btn"
-          ariaLabel="Ir a la sección de contacto"
-          section="contactame"
+        <a
+          href="#contactame"
+          class="btn"
+          aria-label="Ir a la sección de contacto"
         >
           <SvgIcon name="contact" variant="icon" />
           <span>Contáctame</span>
-        </Button>
+        </a>
       </div>
     </div>
     <div class="space-y-4">
