@@ -78,7 +78,7 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden fixed top-0 right-0 w-64 h-full p-4 transform transition-transform duration-300 backdrop-blur-md bg-gradient-to-r from-[#7042f8]/20 to-[#030014]/70 border-l border-[#7042f8]/40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`md:hidden fixed top-0 right-0 w-64 h-full p-4 transform transition-transform duration-300 backdrop-blur-md bg-linear-to-r from-[#7042f8]/20 to-[#030014]/70 border-l border-[#7042f8]/40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
         aria-label='Menú de navegación'
       >
         <button

@@ -18,11 +18,11 @@
   "dependencies": {
     "@astrojs/react": "4.2.4",
     "@astrojs/sitemap": "3.3.0",
-    "@astrojs/tailwind": "6.0.2",
     "@emailjs/browser": "4.4.1",
     "@fontsource/onest": "5.2.7",
     "@fontsource/orbitron": "5.2.5",
     "@react-three/fiber": "9.1.2",
+    "@tailwindcss/vite": "4.1.4",
     "astro": "5.7.3",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
@@ -45,7 +45,7 @@
     "postcss": "8.5.3",
     "semantic-release": "24.2.3",
     "sharp": "0.34.1",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.1.4",
     "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.8.0",
