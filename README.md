@@ -4,21 +4,49 @@
 
 ## Tecnologías utilizadas
 
-- **[Astro](https://astro.build/):** Framework moderno para construir sitios web rápidos y optimizados.
-- **[React](https://react.dev/):** Librería para crear interfaces de usuario dinámicas y reactivas.
-- **[TypeScript](https://www.typescriptlang.org/):** JavaScript fuertemente tipado para un desarrollo más sólido.
-- **[TailwindCSS](https://tailwindcss.com/):** Framework CSS para un diseño rápido y personalizable.
-- **[Sonner](https://sonner.emilkowal.ski/getting-started):** Biblioteca para notificaciones "toast" en aplicaciones React.
-- **[EmailJS](https://www.emailjs.com/docs/tutorial/overview/):** Servicio para enviar emails directamente desde el cliente sin necesidad de backend.
-- **[Zod](https://zod.dev):** Librería de validación y parseo de datos en JavaScript/TypeScript
-- **[Three.js](https://threejs.org/):** Librería para renderizado de gráficos 3D en la web.
+- **[Astro](https://astro.build/)**
+Framework SSG/ISR moderno que permite crear sitios de contenido rápidos, aplicaciones web potentes, API de servidor dinámico y todo lo demás.
+
+- **[TypeScript](https://www.typescriptlang.org/)**
+Aporta tipado estático a tu código Astro/React, mejorando la solidez, el autocompletado y la detección de errores durante el desarrollo.
+
+- **[React](https://react.dev/)**
+Mecanismo de interactividad en las secciones que lo necesita, como el menú de navegación, formulario y el fondo de estrellas.
+
+- **[TailwindCSS](https://tailwindcss.com/)**
+Framework de utilidades CSS para crear rápidamente sitios web modernos sin tener que abandonar el HTML.
+
+- **[Three.js](https://threejs.org/)**
+Biblioteca para renderizar el efecto 3D/espacial que adorna el fondo y refuerza la estética “viaje al espacio”.
+
+- **[Biome](https://biome.land/)**
+Linter y formatter rápido para JavaScript/TypeScript, ahorrando tiempo para desarrolladores y para el CI.
+
+- **[Zod](https://zod.dev/)**
+Validación y análisis de datos en el formulario de contacto, asegurando enviar únicamente consultas correctamente estructuradas.
+
+- **[EmailJS](https://www.emailjs.com/docs/tutorial/overview/)**
+Servicio cliente‑side para enviar correos desde el formulario sin necesidad de montar un backend.
+
+- **[Sonner](https://sonner.emilkowal.ski/getting-started)**
+Sistema de notificaciones “toast” que informa al usuario sobre el éxito o fallo en el envío de formularios.
 
 ## Características principales
 
-- Diseño visual moderno, inspirado en el tema del espacio.
-- SEO optimizado para aumentar la visibilidad en buscadores.
-- Totalmente adaptable para dispositivos móviles, tablets y escritorio.
-- Código modular y organizado para facilitar el mantenimiento y la escalabilidad.
+- **Diseño espacial y futurista:**
+Diseño visual moderno, inspirado en el espacio, junto a una tipografía futurista de temática espacial.
+
+- **Alto rendimiento y SEO‑friendly:**
+Sitio estático creado con Astro, tiempos de carga inferiores a 1s y estructura semántica mejorada para optimizar el SEO y la accesibilidad.
+
+- **Mobile‑first 100% responsive:**
+Componentes que emplean TailwindCSS para ajustarse automáticamente a cualquier tamaño de pantalla sin media queries manuales.
+
+- **Arquitectura modular (Astro + React + TypeScript):**
+Secciones y UI separadas en componentes reutilizables, lo que facilita el mantenimiento, la escalabilidad y la adición de nuevas funcionalidades.
+
+- **Imágenes optimizadas:**
+Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamaño para reducir el ancho de banda y prevenir cambios de diseño.
 
 ## Cómo usar
 
