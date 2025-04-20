@@ -19,7 +19,7 @@ Framework de utilidades CSS para crear rápidamente sitios web modernos sin tene
 - **[Three.js](https://threejs.org/)**
 Biblioteca para renderizar el efecto 3D/espacial que adorna el fondo y refuerza la estética “viaje al espacio”.
 
-- **[Biome](https://biome.land/)**
+- **[Biome](https://biomejs.dev/)**
 Linter y formatter rápido para JavaScript/TypeScript, ahorrando tiempo para desarrolladores y para el CI.
 
 - **[Zod](https://zod.dev/)**
