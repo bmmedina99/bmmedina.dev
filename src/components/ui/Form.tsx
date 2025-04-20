@@ -117,7 +117,7 @@ function Form() {
           id='message'
           name='message'
           placeholder='¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible.'
-          className='min-h-[120px] md:min-h-[160px] pr-20'
+          className='min-h-32 max-h-60 md:min-h-40 field-sizing-content pr-20'
           autoCapitalize='sentences'
           onChange={(e) =>
             handleCharacterCounter(

@@ -21,7 +21,7 @@ export default function ExperienceDetails() {
             <button
               type='button'
               id={`experience-header-${experience.id}`}
-              className='w-full bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md focus:outline-none focus:right-2 focus:-ring-[#6347ff] transition-colors'
+              className='w-full bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md focus:outline-hidden focus:right-2 focus:-ring-[#6347ff] transition-colors'
               onClick={() => handleExpand(experience.id)}
               aria-expanded={expanded === experience.id}
               aria-controls={`experience-detail-${experience.id}`}
