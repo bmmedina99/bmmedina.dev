@@ -10,7 +10,7 @@ import SvgIcon from '../ui/SvgIcon'
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
     {
       PROJECTS.map((project) => (
-        <article class="bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md hover:border-[#7042f8] transition-colors overflow-hidden">
+        <article class="max-w-md mx-auto bg-[#12042d]/60 border border-[#3f007d] p-6 space-y-6 rounded-md hover:border-[#7042f8] transition-colors overflow-hidden">
           <Image
             src={project.image}
             alt={`Proyecto ${project.title}: ${project.subtitle}`}
@@ -20,34 +20,41 @@ import SvgIcon from '../ui/SvgIcon'
             width={1280}
             height={720}
           />
-          <div class="p-6 space-y-4">
-            <h3 class="text-xl font-semibold">{project.title}</h3>
-            <p class="text-[#cbd5e1] text-pretty">{project.description}</p>
-            <Badge items={project.technologies} />
-            <div class="flex gap-4">
-              {project.githubURL && (
-                <a
-                  href={project.githubURL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn"
-                >
-                  <SvgIcon name="github" variant="icon" />
-                  <span>Código</span>
-                </a>
-              )}
-              {project.demoURL && (
-                <a
-                  href={project.demoURL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn"
-                >
-                  <SvgIcon name="website" variant="icon" />
-                  <span>Demo</span>
-                </a>
-              )}
-            </div>
+          <h3
+            class={`text-3xl font-extrabold text-center ${project.gradient} bg-clip-text text-transparent`}
+          >
+            {project.title}
+          </h3>
+          <p class="text-[#c084fc] font-semibold text-center text-pretty">
+            {project.subtitle}
+          </p>
+          <p class="text-[#cbd5e1] text-center text-pretty px-4">
+            {project.description}
+          </p>
+          <Badge items={project.technologies} />
+          <div class="flex justify-center gap-4">
+            {project.githubURL && (
+              <a
+                href={project.githubURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class={`font-medium text-white btn ${project.gradient} border-none`}
+              >
+                <SvgIcon name="github" variant="icon" />
+                <span>Código</span>
+              </a>
+            )}
+            {project.demoURL && (
+              <a
+                href={project.demoURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                <SvgIcon name="website" variant="icon" />
+                <span>Demo</span>
+              </a>
+            )}
           </div>
         </article>
       ))

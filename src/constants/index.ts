@@ -1,7 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.jpg'
-import Finance from '@/assets/images/projects/app-finanzas-personales.jpg'
-import Japanese from '@/assets/images/projects/app-hiragana-katakana.jpg'
+import Finance from '@/assets/images/projects/app-kointa.jpg'
+import GrayGorilla from '@/assets/images/projects/app-graygorillafitness.jpg'
+import Japanese from '@/assets/images/projects/app-kirakana.jpg'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
@@ -111,34 +111,38 @@ export const PROJECTS: Project[] = [
   {
     id: 0,
     image: Japanese,
-    title: 'Aprende Japonés (Hiragana y Katakana)',
-    subtitle:
-      'Aplicación interactiva para dominar los silabarios japonés de forma práctica.',
+    title: 'KiraKana',
+    subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
-      'Elige hiragana, katakana o ambos para evaluar tu conocimiento mediante pruebas visuales. ¿Listo para el desafío?',
+      'Elige hiragana, katakana o ambos y evalúa tu conocimiento con pruebas visuales. ¿Te atreves?',
     technologies: ['En desarrollo'],
     type: 'Frontend',
+    gradient: 'bg-gradient-to-r from-[#FF8A00] to-[#E52E71]',
+    githubURL: 'https://github.com/bmmedina99/kirakana.app',
   },
   {
     id: 1,
     image: GrayGorilla,
-    title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
-    subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
+    title: 'Gray Gorilla Fitness',
+    subtitle: 'Ecommerce de accesorios de gimnasio utilizando Amazon FBA.',
     description:
       'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
-    technologies: ['En desarrollo'],
-    type: 'Backend',
+    technologies: ['En reconstrucción'],
+    type: 'Frontend',
+    gradient: 'bg-gradient-to-r from-[#cbd5e1] to-[#cbd5e1]',
   },
   {
     id: 2,
     image: Finance,
-    title: 'Finanzas Personales (Gestión de gastos)',
+    title: 'Kointa Finance',
     subtitle:
       'Herramienta para el control y seguimiento de tus finanzas personales.',
     description:
-      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos con análisis y gráficos claros.',
+      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos y analiza los gráficos de manera fácil.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
+    gradient: 'bg-gradient-to-r from-[#27AE60] to-[#2D9CDB]',
+    githubURL: 'https://github.com/bmmedina99/kointa-finance',
   },
 ]
 

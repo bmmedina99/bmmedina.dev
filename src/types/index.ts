@@ -18,6 +18,7 @@ export interface Project {
   description: string
   technologies: string[]
   type: string
+  gradient: string
   githubURL?: string
   demoURL?: string
 }
