@@ -1,10 +1,7 @@
 ---
-import AboutMe from '@/components/sections/AboutMe.astro'
-import Contact from '@/components/sections/Contact.astro'
-import Experience from '@/components/sections/Experience.astro'
 import Footer from '@/components/sections/Footer.astro'
-import Hero from '@/components/sections/Hero.astro'
-import Projects from '@/components/sections/Projects.astro'
+import Header from '@/components/sections/Header.astro'
+import Main from '@/components/sections/Main.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -12,10 +9,8 @@ import Layout from '../layouts/Layout.astro'
   title="Brandon Medina - Desarrollador Web Full Stack | bmmedina"
   description="Brandon Medina, desarrollador web Full Stack con más de 3 años de experiencia en Next.js, Astro, React y Node.js. Enfocado en crear y optimizar sitios web."
 >
-  <Hero />
-  <Experience />
-  <Projects />
-  <AboutMe />
-  <Contact />
+  <a href='#main-content' class="sr-only focus:not-sr-only">Ir al contenido principal</a>
+  <Header />
+  <Main />
   <Footer />
 </Layout>

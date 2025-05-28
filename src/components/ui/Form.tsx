@@ -41,7 +41,7 @@ function Form() {
           form.reset()
         },
         (error) => {
-          toast.error(`Error al enviar mensaje: ${error.text}`)
+          toast.error(`Mensaje no enviado: ${error.text}`)
         },
       )
       .finally(() => {
@@ -71,13 +71,14 @@ function Form() {
       onSubmit={handleSubmit}
       className='space-y-4'
     >
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+      <div className='grid gap-4 md:grid-cols-2'>
         <div className='space-y-2'>
           <label htmlFor='name'>Nombre</label>
           <input
             type='text'
             id='name'
             name='name'
+            autoComplete='off'
             placeholder='Tu nombre'
           />
         </div>
@@ -87,11 +88,12 @@ function Form() {
             type='email'
             id='email'
             name='email'
+            autoComplete='off'
             placeholder='tu@correo.com'
           />
         </div>
       </div>
-      <div className='space-y-2 relative'>
+      <div className='relative space-y-2'>
         <label htmlFor='subject'>Asunto</label>
         <input
           type='text'
@@ -107,17 +109,17 @@ function Form() {
             )
           }
         />
-        <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
+        <div className='absolute text-xs bottom-5 right-5 text-periwinkle'>
           {sujectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
         </div>
       </div>
-      <div className='space-y-2 relative'>
+      <div className='relative space-y-2'>
         <label htmlFor='message'>Mensaje</label>
         <textarea
           id='message'
           name='message'
           placeholder='¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible.'
-          className='min-h-[120px] md:min-h-[160px] pr-20'
+          className='pr-20 min-h-32 max-h-60 md:min-h-40 field-sizing-content'
           autoCapitalize='sentences'
           onChange={(e) =>
             handleCharacterCounter(
@@ -127,19 +129,19 @@ function Form() {
             )
           }
         />
-        <div className='absolute bottom-4 right-4 text-[#b2b2ff] text-xs'>
+        <div className='absolute text-xs bottom-6 right-4 text-periwinkle'>
           {messageCharacterCount}/{CHARACTER_LIMITS.MESSAGE}
         </div>
       </div>
       <div className='max-w-2xl mx-auto space-y-4 text-center'>
-        <p className='text-xs md:text-sm text-[#b2b2ff] text-pretty font-semibold'>
+        <p className='text-xs font-semibold md:text-sm text-periwinkle text-pretty'>
           Toda la información del formulario se enviará a mi correo personal y
           se utilizará únicamente para responder. Al rellenar el formulario es
           consiente que se manejen sus datos con este fin.
         </p>
         <button
           type='submit'
-          className='btn mx-auto'
+          className='mx-auto btn'
           disabled={isSending}
         >
           <SvgIcon

@@ -1,19 +1,17 @@
 ---
-import Meta from '../components/Meta.astro'
 import StarFieldBackground from '@/components/ui/StarFieldBackground'
+import Meta from '../components/Meta.astro'
 
-const { ...head } = Astro.props
+const { ...meta } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="scroll-smooth scroll-pt-20">
   <head>
-    <Meta {...head} />
+    <Meta {...meta} />
   </head>
-  <body class="bg-[#030014] text-[#f6f6f6] font-content">
-    <main class="flex flex-col w-full h-full overflow-x-hidden">
-      <slot />
-    </main>
+  <body class="overflow-x-hidden bg-rich-black text-neutral-100 font-content">
+    <slot />
     <StarFieldBackground client:idle/>
   </body>
 </html>

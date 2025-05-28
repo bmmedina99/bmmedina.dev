@@ -1,7 +1,7 @@
 import ProfileImg from '@/assets/images/profile.png'
-import GrayGorilla from '@/assets/images/projects/app-accesorios-gimnasio.jpg'
-import Finance from '@/assets/images/projects/app-finanzas-personales.jpg'
-import Japanese from '@/assets/images/projects/app-hiragana-katakana.jpg'
+import GrayGorilla from '@/assets/images/projects/app-graygorillafitness.jpg'
+import Japanese from '@/assets/images/projects/app-kirakana.jpg'
+import Finance from '@/assets/images/projects/app-kointa.jpg'
 import type { Experience, Profile, Project, Social } from '@/types'
 
 export const SCROLL_OFFSET = 96
@@ -21,7 +21,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Soporte CAU',
     company: 'Empresarios Agrupados',
     startDate: 'Mar. 2019',
+    dateTimeStart: '2019-03',
     endDate: 'Ago. 2019',
+    dateTimeEnd: '2019-08',
     description: [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
@@ -46,7 +48,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Programador Junior',
     company: 'Asociación de Mutuas y A.T. (AMAT)',
     startDate: 'Nov. 2021',
+    dateTimeStart: '2021-11',
     endDate: 'Feb. 2022',
+    dateTimeEnd: '2022-02',
     description: [
       'Gestioné datos mediante las herramientas de Qlik Sense y Qlik View, además del desarrollo de funciones específicas para visualizar los datos de forma concreta.',
       'Desarrollé un programa en Python para extraer datos blob de una base de datos específica y convertirlos a formatos de archivo (PNG, JPG, PDF).',
@@ -67,7 +71,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Desarrollador Web Freelance',
     company: 'Gray Gorilla Fitness',
     startDate: 'Dec. 2021',
+    dateTimeStart: '2021-12',
     endDate: 'Oct. 2022',
+    dateTimeEnd: '2022-10',
     description: [
       'Desarrollé una página web personalizada para una compañía de accesorios de gimnasio que trabajaba con Amazon FBA.',
       'Implementé una interfaz clara y funcional para mostrar los productos, con redirección directa a Amazon para la compra, mejorando la experiencia del usuario.',
@@ -87,7 +93,9 @@ export const EXPERIENCES: Experience[] = [
     title: 'Operador de Sala',
     company: 'Izertis (Cliente: RSI)',
     startDate: 'Jul. 2022',
+    dateTimeStart: '2022-07',
     endDate: 'Presente',
+    dateTimeEnd: '2025-12',
     description: [
       'Toma de decisiones sobre escalado de incidencias, contactando con las respectivas guardias según la criticidad de los problemas detectados.',
       'Participé en la mejora y reestructuración de un programa existente, logrando disminuir el tiempo de ejecución de una tarea crítica de 1 hora a 15 minutos.',
@@ -111,34 +119,38 @@ export const PROJECTS: Project[] = [
   {
     id: 0,
     image: Japanese,
-    title: 'Aprende Japonés (Hiragana y Katakana)',
-    subtitle:
-      'Aplicación interactiva para dominar los silabarios japonés de forma práctica.',
+    title: 'KiraKana',
+    subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
-      'Elige hiragana, katakana o ambos para evaluar tu conocimiento mediante pruebas visuales. ¿Listo para el desafío?',
+      'Elige hiragana, katakana o ambos y evalúa tu conocimiento con pruebas visuales. ¿Te atreves?',
     technologies: ['En desarrollo'],
     type: 'Frontend',
+    gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
+    githubURL: 'https://github.com/bmmedina99/kirakana.app',
   },
   {
     id: 1,
     image: GrayGorilla,
-    title: 'Gray Gorilla Fitness (Ecommerce con Amazon FBA)',
-    subtitle: 'Ecommerce de accesorios de gimnasio con Amazon FBA.',
+    title: 'Gray Gorilla Fitness',
+    subtitle: 'Ecommerce de accesorios de gimnasio utilizando Amazon FBA.',
     description:
       'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
-    technologies: ['En desarrollo'],
-    type: 'Backend',
+    technologies: ['En reconstrucción'],
+    type: 'Frontend',
+    gradient: 'bg-gradient-to-r from-[#b2b8ca] to-[#787b85]',
   },
   {
     id: 2,
     image: Finance,
-    title: 'Finanzas Personales (Gestión de gastos)',
+    title: 'Kointa Finance',
     subtitle:
       'Herramienta para el control y seguimiento de tus finanzas personales.',
     description:
-      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos con análisis y gráficos claros.',
+      'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos y analiza los gráficos de manera fácil.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
+    gradient: 'bg-gradient-to-r from-emerald-600 to-sky-600',
+    githubURL: 'https://github.com/bmmedina99/kointa-finance',
   },
 ]
 

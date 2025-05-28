@@ -1,16 +1,26 @@
 ---
+import Wormhole from '@/assets/video/wormhole.webm'
 import { Toaster } from 'sonner'
 import Section from '../Section.astro'
 import Form from '../ui/Form'
 ---
 
-<Section name="Contactáme" label="Contactáme">
+<Section name="Contactáme" label="Formulario de contacto">
+  <video
+    muted
+    autoplay
+    loop
+    aria-hidden="true"
+    class="absolute inset-0 object-cover w-full h-full opacity-40 -z-10"
+  >
+    <source src={Wormhole} type="video/webm" />
+  </video>
   <Form client:visible />
   <Toaster
     client:visible
     position="bottom-center"
     richColors
-    theme='dark'
+    theme="dark"
     toastOptions={{ style: { textAlign: "center", textWrap: "pretty" } }}
   />
 </Section>

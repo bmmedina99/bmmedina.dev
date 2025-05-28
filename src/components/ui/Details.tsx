@@ -1,6 +1,6 @@
 import { EXPERIENCES } from '@/constants'
 import { useCallback, useState } from 'react'
-import { Badge } from './Badge'
+import Badge from './Badge'
 import SvgIcon from './SvgIcon'
 
 export default function ExperienceDetails() {
@@ -11,68 +11,68 @@ export default function ExperienceDetails() {
   }, [])
 
   return (
-    <div className='relative flex flex-col-reverse'>
-      {EXPERIENCES.map((experience) => (
+    <>
+      {[...EXPERIENCES].reverse().map((experience) => (
         <article
           key={experience.id}
           className='mb-4'
         >
-          <header>
-            <button
-              type='button'
-              id={`experience-header-${experience.id}`}
-              className='w-full bg-[#12042d]/60 border border-[#3f007d] p-4 rounded-md focus:outline-none focus:right-2 focus:-ring-[#6347ff] transition-colors'
-              onClick={() => handleExpand(experience.id)}
-              aria-expanded={expanded === experience.id}
-              aria-controls={`experience-detail-${experience.id}`}
-            >
-              <div className='flex items-center justify-between'>
-                <div className='text-left'>
-                  <h3 className='text-lg font-semibold tracking-wide'>
-                    <span className='text-[#c084fc]'>{experience.title}</span>{' '}
-                    &bull; {experience.company}
-                  </h3>
-                  <p className='text-sm tracking-wide'>
-                    {experience.startDate} - {experience.endDate}
-                  </p>
-                </div>
-                <span className='text-[#c084fc]'>
-                  {expanded === experience.id ? (
-                    <SvgIcon
-                      name='menu-collapse'
-                      variant='icon'
-                    />
-                  ) : (
-                    <SvgIcon
-                      name='menu-expand'
-                      variant='icon'
-                    />
-                  )}
-                </span>
+          <h3 className='sr-only'>
+            {experience.title} &bull; {experience.company}
+          </h3>
+          <button
+            type='button'
+            id={`experience-header-${experience.id}`}
+            className='w-full p-4 text-left transition-colors border rounded-md border-rebecca-purple bg-russian-violet/60 focus:outline-hidden focus:right-2 focus:ring-indigo-900'
+            onClick={() => handleExpand(experience.id)}
+            aria-expanded={expanded === experience.id}
+            aria-controls={`experience-detail-${experience.id}`}
+          >
+            <div className='flex items-center justify-between'>
+              <div className='[&>time]:text-sm [&>time]:text-gray-300'>
+                <p className='text-lg font-semibold tracking-wide'>
+                  <span className='text-violet-300'>{experience.title}</span>{' '}
+                  &bull; {experience.company}
+                </p>
+                <time dateTime={experience.dateTimeStart}>
+                  {experience.startDate}
+                </time>{' '}
+                -{' '}
+                <time dateTime={experience.dateTimeEnd}>
+                  {experience.endDate}
+                </time>
               </div>
-            </button>
-          </header>
-          <section
+              <span className='text-violet-300'>
+                {expanded === experience.id ? (
+                  <SvgIcon
+                    name='menu-collapse'
+                    variant='icon'
+                  />
+                ) : (
+                  <SvgIcon
+                    name='menu-expand'
+                    variant='icon'
+                  />
+                )}
+              </span>
+            </div>
+          </button>
+          <div
             id={`experience-detail-${experience.id}`}
             className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded === experience.id ? 'max-h-screen' : 'max-h-0'}`}
             aria-labelledby={`experience-header-${experience.id}`}
           >
             <div className='pt-4'>
-              <div className='bg-[#3f007d]/60 border border-[#12042d] rounded-md p-4'>
-                <ul className='pl-4 mb-4 list-disc'>
+              <div className='p-4 border rounded-md bg-rebecca-purple/40 border-russian-violet'>
+                <ul className='pl-4 space-y-2 text-gray-300 list-disc text-pretty'>
                   {experience.description.map((desc) => (
-                    <li
-                      key={desc}
-                      className='text-[#cbd5e1] text-pretty'
-                    >
-                      <p>{desc}</p>
-                    </li>
+                    <li key={desc}>{desc}</li>
                   ))}
                 </ul>
                 <Badge items={experience.technologies} />
                 <ul className='flex flex-wrap gap-4'>
                   <li>
-                    <p className='flex items-center gap-2 text-[#00ffaa]'>
+                    <p className='flex items-center gap-2 text-emerald-400'>
                       <SvgIcon
                         name='location'
                         variant='icon'
@@ -82,7 +82,7 @@ export default function ExperienceDetails() {
                   </li>
                   {experience.website && (
                     <li>
-                      <p className='flex items-center gap-2 text-[#22d2f0]'>
+                      <p className='flex items-center gap-2 text-sky-400'>
                         <SvgIcon
                           name='website'
                           variant='icon'
@@ -90,7 +90,7 @@ export default function ExperienceDetails() {
                         <a
                           href={experience.website.link}
                           target='_blank'
-                          rel='noopener noreferrer'
+                          rel='noopener noreferrer nofollow'
                           className='hover:underline'
                         >
                           {experience.website.text}
@@ -101,9 +101,9 @@ export default function ExperienceDetails() {
                 </ul>
               </div>
             </div>
-          </section>
+          </div>
         </article>
       ))}
-    </div>
+    </>
   )
 }

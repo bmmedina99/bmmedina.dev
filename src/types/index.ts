@@ -3,7 +3,9 @@ export interface Experience {
   title: string
   company: string
   startDate: string
+  dateTimeStart: string
   endDate: string
+  dateTimeEnd: string
   description: string[]
   technologies: string[]
   location: string
@@ -18,6 +20,7 @@ export interface Project {
   description: string
   technologies: string[]
   type: string
+  gradient: string
   githubURL?: string
   demoURL?: string
 }

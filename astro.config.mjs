@@ -1,30 +1,26 @@
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
-import tailwind from '@astrojs/tailwind'
+import tailwindcss from '@tailwindcss/vite'
 import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://bmmedina.dev',
-  integrations: [
-    react(),
-    tailwind({
-      applyBaseStyles: false,
-    }),
-    sitemap(),
-    robotsTxt(),
-  ],
+  integrations: [react(), sitemap(), robotsTxt()],
   vite: {
     build: {
+      chunkSizeWarningLimit: 800,
       rollupOptions: {
         output: {
           manualChunks(id) {
-            if (id.includes('node_modules/sonner')) return 'sonner'
-            if (id.includes('node_modules/three')) return 'three'
+            if (id.includes('node_modules/@react-three/fiber'))
+              return 'three-fiber'
+            if (id.includes('node_modules/three')) return 'three-core'
+            if (id.includes('node_modules/sonner')) return 'sonner-core'
           },
         },
       },
     },
+    plugins: [tailwindcss()],
   },
 })

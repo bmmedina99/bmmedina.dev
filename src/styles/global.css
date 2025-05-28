@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-rich-black: #030014;
+  --color-russian-violet: #12042d;
+  --color-rebecca-purple: #5230a3;
+  --color-periwinkle: #c7c7ff;
+
+  --font-title: Orbitron, sans-serif;
+  --font-content: Onest, sans-serif;
+}
+
+@layer base {
+  ::selection {
+    @apply bg-indigo-600/40;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-linear-to-b from-purple-400 via-sky-400 to-emerald-400 rounded-md border-4 border-solid border-rich-black;
+  }
+}
+
+@layer components {
+  label {
+    @apply block text-xl font-medium text-gray-300 select-none;
+  }
+
+  input,
+  textarea {
+    @apply bg-russian-violet/60 border border-rebecca-purple  rounded-lg text-periwinkle text-lg w-full px-3 py-2 mt-2 placeholder-periwinkle/40 focus:outline-hidden focus:ring-2 focus:ring-rebecca-purple resize-none;
+  }
+}
+
+@utility profile-img {
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+}
+
+@utility btn {
+  @apply flex items-center justify-center gap-2 px-4 py-2 border border-rebecca-purple  text-periwinkle rounded-md transition-all select-none transform;
+  box-shadow:
+    0 4px 6px -1px hsla(270, 100%, 25%, 0.5),
+    0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
+
+  &:hover {
+    @apply bg-indigo-900/40 translate-y-1;
+    box-shadow:
+      inset 0 4px 6px -1px hsla(270, 100%, 25%, 0.5),
+      inset 0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
+  }
+
+  &:disabled {
+    @apply opacity-50 cursor-not-allowed shadow-none;
+  }
+}
