@@ -1,3 +1,31 @@
+# [1.0.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.3...v1.0.0) (2025-05-28)
+
+
+### Bug Fixes
+
+* **experience:** :bug: fix click issue on details element ([6801f20](https://github.com/bmmedina99/bmmedina.dev/commit/6801f20dcaeb0dc5640bc3c5682c245ae13105fc))
+
+
+### chore
+
+* **porfolio:** :arrow_up: migrate to TailwindCSS v4 and remove CSS build deps  ([#44](https://github.com/bmmedina99/bmmedina.dev/issues/44)) ([a76dd39](https://github.com/bmmedina99/bmmedina.dev/commit/a76dd39d8b4e5e7f13dfcdaf36553070d79ee278))
+
+
+### Features
+
+* **404:** :sparkles: add custom 404 page for not found routes ([7b81479](https://github.com/bmmedina99/bmmedina.dev/commit/7b81479e58e6fc9772a47c5cd27cd866a00bd23e))
+* **projects:** :sparkles: enhance styling, links & images in project ([8087974](https://github.com/bmmedina99/bmmedina.dev/commit/80879741034b4e61320d320630f1fa274829d643))
+
+
+### Performance Improvements
+
+* **assets:** :iphone: add responsive widths and sizes to Image component ([5e94561](https://github.com/bmmedina99/bmmedina.dev/commit/5e9456145b45e89d5e26b218613e915ea22c31f9))
+
+
+### BREAKING CHANGES
+
+* **porfolio:** TailwindCSS v4 renames and restructures class names and configuration, requiring updates to all utility classes and the Tailwind config file.
+
 ## [0.8.3](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.2...v0.8.3) (2025-04-15)
 
 
