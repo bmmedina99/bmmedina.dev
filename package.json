@@ -1,6 +1,6 @@
 {
   "name": "bmmedina.dev",
-  "description": "bmmedina.dev - A personal portfolio where I showcase my web development skills and projects using cutting-edge technologies.",
+  "description": "bmmedina.dev - Porfolio personal en el que expongo mis habilidades en desarrollo web y mis proyectos realizados.",
   "type": "module",
   "version": "0.8.3",
   "scripts": {
@@ -16,38 +16,35 @@
     "url": "https://github.com/bmmedina99/bmmedina.dev.git"
   },
   "dependencies": {
-    "@astrojs/react": "4.2.4",
-    "@astrojs/sitemap": "3.3.0",
+    "@astrojs/react": "4.3.0",
+    "@astrojs/sitemap": "3.4.0",
     "@emailjs/browser": "4.4.1",
-    "@fontsource/onest": "5.2.7",
+    "@fontsource/onest": "5.2.8",
     "@fontsource/orbitron": "5.2.5",
     "@react-three/fiber": "9.1.2",
-    "astro": "5.7.3",
+    "astro": "5.8.0",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "schema-dts": "1.1.5",
     "sonner": "2.0.3",
-    "three": "0.175.0",
-    "zod": "3.24.3"
+    "three": "0.176.0",
+    "zod": "3.25.31"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/npm": "12.0.1",
-    "@tailwindcss/vite": "4.1.4",
-    "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
-    "@types/three": "0.175.0",
-    "semantic-release": "24.2.3",
+    "@tailwindcss/vite": "4.1.7",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.5",
+    "@types/three": "0.176.0",
+    "semantic-release": "24.2.5",
     "sharp": "0.34.1",
-    "tailwindcss": "4.1.4",
+    "tailwindcss": "4.1.7",
     "typescript": "5.8.3"
   },
-  "packageManager": "pnpm@10.8.0",
-  "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
-  }
+  "packageManager": "pnpm@10.11.0"
 }

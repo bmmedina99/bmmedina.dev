@@ -1,20 +1,22 @@
 ---
 import { slugify } from '@/utils'
 
-const { name, label } = Astro.props
+const { name, label, divclass } = Astro.props
 ---
 
 <section
   id={slugify(name)}
+  aria-labelledby={slugify(label)}
   aria-label={label}
   class="relative px-6 mt-24 mb-12 md:px-12"
 >
-  <div class="z-10 max-w-4xl mx-auto">
-    <h2
-      class="text-[#6347ff] text-3xl md:text-5xl font-semibold font-title tracking-wide mb-10 text-center uppercase"
-    >
-      {name}
-    </h2>
+  <h2
+    id={slugify(label)}
+    class="mb-10 text-3xl font-semibold tracking-wide text-center uppercase text-violet-500 md:text-5xl font-title"
+  >
+    {name}
+  </h2>
+  <div class:list={["max-w-4xl mx-auto space-y-4", { [divclass]: divclass }]}>
     <slot />
   </div>
 </section>

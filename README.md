@@ -1,4 +1,4 @@
-# 🚀 Porfolio Personal
+# Porfolio Personal
 
 ¡Bienvenidos a mi porfolio! He diseñado y desarrollado este proyecto para destacar mis habilidades como desarrollador web y mostrar los proyectos en los que he trabajado.
 
@@ -50,13 +50,13 @@ Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamañ
 
 ## Cómo usar
 
-1. Clona el repositorio:
+1. Clona el repositorio mediante SSH:
    ```bash
-   git clone https://github.com/bmmedina99/bmmedina.dev.git
+   git clone git@github.com:bmmedina99/bmmedina.dev.git
    ```
 2. Instala las dependencias:
    ```bash
-   pnpm install
+   pnpm i
    ```
 3. Inicia el servidor de desarrollo:
    ```bash
@@ -71,5 +71,6 @@ Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamañ
 - LinkedIn: [/in/bmmedina99](https://www.linkedin.com/in/bmmedina99/)
 - Instagram: [@bmmedina99](https://www.instagram.com/bmmedina99/)
 
-### Ajustes adicionales:
+## Ajustes:
+
 Si tienes alguna sugerencia en mente o un diseño que quieras destacar, avísame y lo adaptaré.

@@ -4,21 +4,22 @@ import SvgIcon from '../ui/SvgIcon'
 ---
 
 <footer
-  class="backdrop-blur-md bg-linear-to-r from-[#030014]/70 to-[#7042f8]/20 border-t border-[#7042f8]/40 px-6 py-6 space-y-4"
+  id="info-content"
+  class="px-6 py-6 space-y-4 backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
 >
-  <h3 class="text-[#cbd5e1] text-xl font-semibold text-center">
+  <p class="text-xl font-semibold text-center text-pretty">
     También puedes contactarme por estos medios:
-  </h3>
+  </p>
   <nav aria-label="Redes Sociales">
     <ul class="flex justify-center space-x-6">
       {
         SOCIAL_LINK.map((social) => (
-          <li class="transform transition-transform hover:scale-110 hover:text-[#b2b2ff]">
+          <li class="transition-transform transform hover:scale-110 hover:text-periwinkle">
             <a
               href={social.link}
               target="_blank"
-              rel="noopener noreferrer"
-              class="flex flex-col items-center"
+              rel="noopener noreferrer nofollow"
+              class="flex flex-col items-center justify-center text-center"
               aria-label={social.name}
             >
               <SvgIcon name={social.icon} width={32} height={32} variant='skill'/>

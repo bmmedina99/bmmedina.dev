@@ -59,7 +59,7 @@ function StarField() {
 
 function StarFieldBackground() {
   return (
-    <div className='w-full h-auto fixed inset-0 z-[-1]'>
+    <div className='fixed inset-0 size-auto -z-10'>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <StarField />

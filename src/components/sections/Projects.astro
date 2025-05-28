@@ -6,58 +6,58 @@ import Badge from '../ui/Badge'
 import SvgIcon from '../ui/SvgIcon'
 ---
 
-<Section name="Proyectos" label="Proyectos destacados">
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-    {
-      PROJECTS.map((project) => (
-        <article class="max-w-md mx-auto bg-[#12042d]/60 border border-[#3f007d] p-6 space-y-6 rounded-md hover:border-[#7042f8] transition-colors overflow-hidden">
-          <Image
-            src={project.image}
-            alt={`Proyecto ${project.title}: ${project.subtitle}`}
-            widths={[578, 834, 1280]}
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 834px, 1280px"
-            class={"rounded-md"}
-            width={1280}
-            height={720}
-          />
-          <h3
-            class={`text-3xl font-extrabold text-center ${project.gradient} bg-clip-text text-transparent`}
-          >
-            {project.title}
-          </h3>
-          <p class="text-[#c084fc] font-semibold text-center text-pretty">
-            {project.subtitle}
-          </p>
-          <p class="text-[#cbd5e1] text-center text-pretty px-4">
-            {project.description}
-          </p>
-          <Badge items={project.technologies} />
-          <div class="flex justify-center gap-4">
-            {project.githubURL && (
-              <a
-                href={project.githubURL}
-                target="_blank"
-                rel="noopener noreferrer"
-                class={`font-medium text-white btn ${project.gradient} border-none`}
-              >
-                <SvgIcon name="github" variant="icon" />
-                <span>Código</span>
-              </a>
-            )}
-            {project.demoURL && (
-              <a
-                href={project.demoURL}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-              >
-                <SvgIcon name="website" variant="icon" />
-                <span>Demo</span>
-              </a>
-            )}
-          </div>
-        </article>
-      ))
-    }
-  </div>
+<Section
+  name="Proyectos"
+  label="Proyectos destacados"
+  divclass="grid md:grid-cols-2 gap-x-4"
+>
+  {
+    PROJECTS.map((project) => (
+      <article class="max-w-md p-6 mx-auto space-y-6 overflow-hidden text-center transition-colors border rounded-md border-rebecca-purple bg-russian-violet/60 hover:border-rebecca-purple">
+        <Image
+          src={project.image}
+          alt={`Proyecto ${project.title}: ${project.subtitle}`}
+          widths={[578, 834, 1280]}
+          sizes="(max-width: 600px) 100vw, (max-width: 900px) 834px, 1280px"
+          class={"rounded-md"}
+          width={1280}
+          height={720}
+        />
+        <h3
+          class={`text-3xl font-extrabold ${project.gradient} bg-clip-text text-transparent`}
+        >
+          {project.title}
+        </h3>
+        <p class="font-semibold text-violet-300 text-pretty">
+          {project.subtitle}
+        </p>
+        <p class="px-4 text-gray-300 text-pretty">{project.description}</p>
+        <Badge items={project.technologies} />
+        <div class="flex justify-center gap-4">
+          {project.githubURL && (
+            <a
+              href={project.githubURL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class={`font-medium text-white btn ${project.gradient} border-none`}
+            >
+              <SvgIcon name="github" variant="icon" />
+              <span>Código</span>
+            </a>
+          )}
+          {project.demoURL && (
+            <a
+              href={project.demoURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn"
+            >
+              <SvgIcon name="website" variant="icon" />
+              <span>Demo</span>
+            </a>
+          )}
+        </div>
+      </article>
+    ))
+  }
 </Section>

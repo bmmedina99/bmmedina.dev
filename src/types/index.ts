@@ -3,7 +3,9 @@ export interface Experience {
   title: string
   company: string
   startDate: string
+  dateTimeStart: string
   endDate: string
+  dateTimeEnd: string
   description: string[]
   technologies: string[]
   location: string
