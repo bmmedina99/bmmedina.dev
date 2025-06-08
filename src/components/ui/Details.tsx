@@ -11,12 +11,9 @@ export default function ExperienceDetails() {
   }, [])
 
   return (
-    <>
+    <div className='space-y-4'>
       {[...EXPERIENCES].reverse().map((experience) => (
-        <article
-          key={experience.id}
-          className='mb-4'
-        >
+        <article key={experience.id}>
           <h3 className='sr-only'>
             {experience.title} &bull; {experience.company}
           </h3>
@@ -59,51 +56,47 @@ export default function ExperienceDetails() {
           </button>
           <div
             id={`experience-detail-${experience.id}`}
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${expanded === experience.id ? 'max-h-screen' : 'max-h-0'}`}
+            className={`overflow-hidden transition-[max-height_opacity] border rounded-md bg-rebecca-purple/40 border-russian-violet duration-300 ease-in-out ${expanded === experience.id ? 'max-h-screen mt-4 p-4' : 'max-h-0 opacity-0'}`}
             aria-labelledby={`experience-header-${experience.id}`}
           >
-            <div className='pt-4'>
-              <div className='p-4 border rounded-md bg-rebecca-purple/40 border-russian-violet'>
-                <ul className='pl-4 space-y-2 text-gray-300 list-disc text-pretty'>
-                  {experience.description.map((desc) => (
-                    <li key={desc}>{desc}</li>
-                  ))}
-                </ul>
-                <Badge items={experience.technologies} />
-                <ul className='flex flex-wrap gap-4'>
-                  <li>
-                    <p className='flex items-center gap-2 text-emerald-400'>
-                      <SvgIcon
-                        name='location'
-                        variant='icon'
-                      />
-                      <span>{experience.location}</span>
-                    </p>
-                  </li>
-                  {experience.website && (
-                    <li>
-                      <p className='flex items-center gap-2 text-sky-400'>
-                        <SvgIcon
-                          name='website'
-                          variant='icon'
-                        />
-                        <a
-                          href={experience.website.link}
-                          target='_blank'
-                          rel='noopener noreferrer nofollow'
-                          className='hover:underline'
-                        >
-                          {experience.website.text}
-                        </a>
-                      </p>
-                    </li>
-                  )}
-                </ul>
-              </div>
-            </div>
+            <ul className='pl-4 space-y-2 text-gray-300 list-disc text-pretty'>
+              {experience.description.map((desc) => (
+                <li key={desc}>{desc}</li>
+              ))}
+            </ul>
+            <Badge items={experience.technologies} />
+            <ul className='flex flex-wrap gap-4'>
+              <li>
+                <p className='flex items-center gap-2 text-emerald-400'>
+                  <SvgIcon
+                    name='location'
+                    variant='icon'
+                  />
+                  <span>{experience.location}</span>
+                </p>
+              </li>
+              {experience.website && (
+                <li>
+                  <p className='flex items-center gap-2 text-sky-400'>
+                    <SvgIcon
+                      name='website'
+                      variant='icon'
+                    />
+                    <a
+                      href={experience.website.link}
+                      target='_blank'
+                      rel='noopener noreferrer nofollow'
+                      className='hover:underline'
+                    >
+                      {experience.website.text}
+                    </a>
+                  </p>
+                </li>
+              )}
+            </ul>
           </div>
         </article>
       ))}
-    </>
+    </div>
   )
 }
