@@ -5,13 +5,13 @@ import SvgIcon from '../ui/SvgIcon'
 
 <footer
   id="info-content"
-  class="px-6 py-6 space-y-4 backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
+  class="px-6 py-6 space-y-4 overflow-x-hidden backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
 >
   <p class="text-xl font-semibold text-center text-pretty">
     También puedes contactarme por estos medios:
   </p>
   <nav aria-label="Redes Sociales">
-    <ul class="flex justify-center space-x-6">
+    <ul class="flex flex-wrap justify-center space-x-6 gap-y-4">
       {
         SOCIAL_LINK.map((social) => (
           <li class="transition-transform transform hover:scale-110 hover:text-periwinkle">

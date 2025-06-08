@@ -10,7 +10,7 @@ const { ...meta } = Astro.props
   <head>
     <Meta {...meta} />
   </head>
-  <body class="overflow-x-hidden bg-rich-black text-neutral-100 font-content">
+  <body class="antialiased bg-rich-black text-neutral-100 font-content">
     <slot />
     <StarFieldBackground client:idle/>
   </body>
