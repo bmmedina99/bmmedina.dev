@@ -1,24 +1,47 @@
-# build output
-dist/
-
-# generated types
-.astro/
-
-# dependencies
+# Dependencias
 node_modules/
-
-# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
+# Archivos de construcción de Astro
+dist/
+.astro/
+
+# Archivos de TypeScript
+*.tsbuildinfo
+
+# Archivos de entorno
 .env
-.env.production
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# macOS-specific files
-.DS_Store
+# Logs
+logs
+*.log
 
-# jetbrains setting folder
+# Cobertura de tests
+coverage/
+*.lcov
+
+# Archivos de IDE
+.vscode/
 .idea/
+*.swp
+*.swo
+
+# Archivos del sistema operativo
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Archivos de Netlify
+.netlify
