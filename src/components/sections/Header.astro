@@ -1,6 +1,9 @@
 ---
+import { NAV_ITEMS } from '@/constants'
 import Navbar from '../ui/Navbar'
 import SvgIcon from '../ui/SvgIcon'
+
+const { label } = NAV_ITEMS[0]
 ---
 
 <header
@@ -30,9 +33,9 @@ import SvgIcon from '../ui/SvgIcon'
   </section>
   <Navbar client:idle />
   <a
-    href="#experience"
+    href={`#${label}`}
     class="absolute flex items-center w-6 h-10 border-2 rounded-full bottom-8 border-sky-400 animate-bounce"
-    aria-label="Ir a la sección de experiencia"
+    aria-label={`Ir a la sección de ${label}`}
   >
     <SvgIcon name="scroll-down" variant="icon" />
   </a>
