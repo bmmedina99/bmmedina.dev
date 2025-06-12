@@ -25,6 +25,10 @@
 }
 
 @layer components {
+  section h1 {
+    font-size: inherit
+  }
+
   label {
     @apply block text-xl font-medium text-gray-300 select-none;
   }
