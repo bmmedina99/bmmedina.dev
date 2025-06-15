@@ -1,3 +1,4 @@
+import Wormhole from '@/assets/video/wormhole.webm'
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import { formSchema } from '@/schemas'
 import emailjs from '@emailjs/browser'
@@ -69,8 +70,19 @@ function Form() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className='space-y-4'
+      className='relative space-y-4'
     >
+      <video
+        muted
+        autoPlay
+        loop
+        className='absolute inset-0 object-cover rounded-md pointer-events-none size-full -z-10 opacity-40 bg-rich-black'
+      >
+        <source
+          src={Wormhole}
+          type='video/webm'
+        />
+      </video>
       <div className='grid gap-4 md:grid-cols-2'>
         <div className='space-y-2'>
           <label htmlFor='name'>Nombre</label>

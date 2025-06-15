@@ -1,20 +1,10 @@
 ---
-import Wormhole from '@/assets/video/wormhole.webm'
 import { Toaster } from 'sonner'
 import Section from '../Section.astro'
 import Form from '../ui/Form'
 ---
 
 <Section name="Contactáme" label="Formulario de contacto">
-  <video
-    muted
-    autoplay
-    loop
-    aria-hidden="true"
-    class="absolute inset-0 object-cover w-full h-full opacity-40 -z-10"
-  >
-    <source src={Wormhole} type="video/webm" />
-  </video>
   <Form client:idle />
   <Toaster
     client:visible
