@@ -18,44 +18,47 @@ import SvgIcon from '../ui/SvgIcon'
           src={project.image}
           alt={`Proyecto ${project.title}: ${project.subtitle}`}
           widths={[578, 834, 1280]}
-          sizes="(max-width: 600px) 100vw, (max-width: 900px) 834px, 1280px"
-          class={"rounded-md"}
-          width={1280}
-          height={720}
+          sizes="(min-width: 1060px) 390px, (min-width: 780px) calc(40.77vw - 34px), (min-width: 520px) 398px, calc(98vw - 92px)"
+          class="rounded-md"
         />
-            <h3 class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}>
-      {project.title}
-    </h3>
-    <p class="font-semibold text-violet-300 text-pretty">
-      {project.subtitle}
-    </p>
+        <h3
+          class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}
+        >
+          {project.title}
+        </h3>
+        <p class="font-semibold text-violet-300 text-pretty">
+          {project.subtitle}
+        </p>
         <p class="px-4 text-gray-300 text-pretty">{project.description}</p>
         <Badge items={project.technologies} />
         {(project.githubURL || project.demoURL) && (
-        <nav class="flex justify-center gap-4" aria-label="Enlaces del proyecto">
-          {project.githubURL && (
-            <a
-              href={project.githubURL}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class={`font-medium text-white btn ${project.gradient} border-none`}
-            >
-              <SvgIcon name="github" variant="icon" />
-              <span>Código</span>
-            </a>
-          )}
-          {project.demoURL && (
-            <a
-              href={project.demoURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn"
-            >
-              <SvgIcon name="website" variant="icon" />
-              <span>Demo</span>
-            </a>
-          )}
-        </nav>
+          <nav
+            class="flex justify-center gap-4"
+            aria-label="Enlaces del proyecto"
+          >
+            {project.githubURL && (
+              <a
+                href={project.githubURL}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                class={`font-medium text-white btn ${project.gradient} border-none`}
+              >
+                <SvgIcon name="github" variant="icon" />
+                <span>Código</span>
+              </a>
+            )}
+            {project.demoURL && (
+              <a
+                href={project.demoURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                <SvgIcon name="website" variant="icon" />
+                <span>Demo</span>
+              </a>
+            )}
+          </nav>
         )}
       </article>
     ))
