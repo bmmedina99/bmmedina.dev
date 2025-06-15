@@ -23,17 +23,16 @@ import SvgIcon from '../ui/SvgIcon'
           width={1280}
           height={720}
         />
-        <h3
-          class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}
-        >
-          {project.title}
-        </h3>
-        <p class="font-semibold text-violet-300 text-pretty">
-          {project.subtitle}
-        </p>
+            <h3 class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}>
+      {project.title}
+    </h3>
+    <p class="font-semibold text-violet-300 text-pretty">
+      {project.subtitle}
+    </p>
         <p class="px-4 text-gray-300 text-pretty">{project.description}</p>
         <Badge items={project.technologies} />
-        <div class="flex justify-center gap-4">
+        {(project.githubURL || project.demoURL) && (
+        <nav class="flex justify-center gap-4" aria-label="Enlaces del proyecto">
           {project.githubURL && (
             <a
               href={project.githubURL}
@@ -56,7 +55,8 @@ import SvgIcon from '../ui/SvgIcon'
               <span>Demo</span>
             </a>
           )}
-        </div>
+        </nav>
+        )}
       </article>
     ))
   }
