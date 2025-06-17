@@ -1,5 +1,4 @@
 ---
-import StarFieldBackground from '@/components/ui/StarFieldBackground'
 import Meta from '../components/Meta.astro'
 
 const { ...meta } = Astro.props
@@ -12,6 +11,5 @@ const { ...meta } = Astro.props
   </head>
   <body class="antialiased bg-rich-black text-neutral-100 font-content">
     <slot />
-    <StarFieldBackground client:idle/>
   </body>
 </html>
