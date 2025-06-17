@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets'
 import { PROFILE } from '@/constants'
 import { slugify } from '@/utils'
+import type { Fragment } from 'react'
 import Section from '../Section.astro'
 import Badge from '../ui/Badge'
 import SvgIcon from '../ui/SvgIcon'
@@ -10,37 +11,35 @@ import SvgIcon from '../ui/SvgIcon'
 <Section
   name="Sobre mí"
   label="Información personal"
-  divclass="grid gap-x-4 lg:grid-cols-2"
+  divclass="grid gap-4 lg:grid-cols-2"
 >
-  <div
-    class="space-y-4 [&>p]:text-lg [&>p]:text-pretty [&>p>strong]:text-violet-300 [&>p>strong]:font-medium"
-  >
-    <div class="clear-left"></div>
+  <div class="space-y-4 [&>p]:text-lg [&>p]:text-pretty">
     <Image
       src={PROFILE.image}
       alt="Brandon Medina - Desarrollador Web Full Stack"
-      class="float-left mb-0 mr-6 profile-img"
+      class="profile-img"
       width={192}
       height={192}
     />
     <p>
-      <strong>Desarrollador Web Full Stack</strong> con más de
-      <strong>3 años de experiencia</strong> en <strong>Next.js</strong>,
-      <strong>Astro</strong>, <strong>React</strong> y <strong>Node.js</strong>.
-      Durante mi trayectoria, desarrollé proyectos como el sitio web para
-      <strong>Gray Gorilla Fitness</strong> y automaticé tareas con <strong>Python</strong>.
+      <strong>Desarrollador Web Full Stack</strong> con más de 3 años de experiencia
+      especializado en <strong>Next.js</strong>, <strong>Astro</strong>, <strong
+        >React</strong
+      > y <strong>Node.js</strong>. Durante mi trayectoria, he desarrollado
+      proyectos como el sitio web para Gray Gorilla Fitness y automatizado
+      tareas con Python.
     </p>
     <p>
-      Disfruto investigar y trabajar de forma independiente; no obstante,
-      aprecio el <strong>trabajo en equipo</strong>. Actualmente, superviso y
-      coordino <strong>operadores en un entorno técnico</strong>, garantizando
-      la continuidad del servicio.
+      Disfruto investigando y trabajando de forma independiente; no obstante,
+      aprecio el <strong>trabajo colaborativo</strong>. Actualmente, superviso y
+      coordino operadores en un entorno técnico, garantizando la continuidad del
+      servicio.
     </p>
     <p>
-      Si tuviera que describirme en pocas palabras, diría que soy
-      <strong>analítico</strong>, <strong>metódico</strong> y <strong>resolutivo</strong>.
-      Fuera del ámbito laboral, me apasionan el ajedrez y la música clásica, aficiones
-      que potencian mis <strong>habilidades blandas</strong>.
+      Si tuviera que describirme en pocas palabras, diría que soy analítico,
+      metódico y resolutivo. Fuera del ámbito laboral, me apasionan el <strong
+        >ajedrez y la música clásica</strong
+      >, aficiones que potencian mis habilidades blandas.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="cv_bmmedina.pdf" download class="btn">
@@ -57,18 +56,20 @@ import SvgIcon from '../ui/SvgIcon'
       </a>
     </div>
   </div>
-  <aside class="space-y-4">
+  <div class="space-y-4">
     <section aria-labelledby="tech-skills-heading">
       <h3
         id="tech-skills-heading"
-        class="mb-4 text-xl font-semibold text-gray-300"
+        class="mb-4 text-xl font-semibold text-zinc-300"
       >
         Habilidades técnicas
       </h3>
-      <ul class="flex flex-wrap justify-center gap-2">
+      <ul
+        class="grid grid-cols-3 md:grid-cols-5 gap-2 [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:text-center"
+      >
         {
           PROFILE.techSkills.map((tech) => (
-            <li class="flex flex-col items-center">
+            <li>
               <SvgIcon
                 name={slugify(tech)}
                 width={48}
@@ -84,7 +85,7 @@ import SvgIcon from '../ui/SvgIcon'
     <section aria-labelledby="soft-skills-heading">
       <h3
         id="soft-skills-heading"
-        class="mb-4 text-xl font-semibold text-gray-300"
+        class="mb-4 text-xl font-semibold text-zinc-300"
       >
         Habilidades blandas
       </h3>
@@ -93,27 +94,24 @@ import SvgIcon from '../ui/SvgIcon'
     <section aria-labelledby="education-heading">
       <h3
         id="education-heading"
-        class="mb-4 text-xl font-semibold text-gray-300"
+        class="mb-4 text-xl font-semibold text-zinc-300"
       >
         Estudios
       </h3>
-      <ul class="space-y-4">
+      <ul class="space-y-2">
         {
           PROFILE.studies.map((study) => (
-            <li class="p-4 mb-2 border rounded-md cursor-pointer bg-russian-violet/60 border-rebecca-purple">
-              <div class="flex items-center justify-between">
-                <h4 class="text-sm font-semibold tracking-wide">
-                  <span class="text-violet-300">{study.title}</span> &bull;{" "}
-                  {study.institution}
-                </h4>
-              </div>
-              <time datetime={study.date} class="block text-xs tracking-wide">
-                {study.startDate} - {study.endDate}
-              </time>
+            <li class="p-4 mb-2 cursor-pointer card">
+              <h4 class="font-semibold text-violet-300 text-sm">
+                {study.title}
+              </h4>
+              <p class="text-xs text-gray-300">
+                {study.institution} • {study.startDate}-{study.endDate}
+              </p>
             </li>
           ))
         }
       </ul>
     </section>
-  </aside>
+  </div>
 </Section>

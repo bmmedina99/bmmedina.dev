@@ -1,10 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-  --color-rich-black: #030014;
-  --color-russian-violet: #12042d;
-  --color-rebecca-purple: #5230a3;
-  --color-periwinkle: #c7c7ff;
+  --color-rich-black: oklch(9.618% 0.0562 285.061);
+  --color-russian-violet: oklch(16.872% 0.07813 292.572);
+  --color-rebecca-purple: oklch(42.208% 0.17403 290.528);
+  --color-periwinkle: oklch(84.868% 0.07781 284.614);
+  --color-gris-claro: oklch(78.952% 0.02504 270.286);
+  --color-gris-oscuro: oklch(48.659% 0.0249 270.872);
 
   --font-title: Orbitron, sans-serif;
   --font-content: Onest, sans-serif;
@@ -12,50 +14,189 @@
 
 @layer base {
   ::selection {
-    @apply bg-indigo-600/40;
+    background-color: color-mix(
+      in oklab,
+      var(--color-indigo-600) 40%,
+      transparent
+    );
   }
 
   ::-webkit-scrollbar {
-    @apply w-3;
+    width: calc(var(--spacing) * 3);
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-linear-to-b from-purple-400 via-sky-400 to-emerald-400 rounded-md border-4 border-rich-black;
+    border-radius: var(--radius-md);
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+    border-color: var(--color-rich-black);
+    --tw-gradient-position: to bottom;
   }
 
-  section h1 {
-    font-size: inherit
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(var(--tw-gradient-stops));
+    --tw-gradient-from: var(--color-purple-400);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+    --tw-gradient-via: var(--color-sky-400);
+    --tw-gradient-via-stops: var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-to: var(--color-emerald-400);
+  }
+
+  strong {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-violet-300);
   }
 
   label {
-    @apply block text-xl font-medium text-gray-300 select-none;
+    margin-bottom: calc(var(--spacing) * 2);
+    display: block;
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
   }
 
   input,
   textarea {
-    @apply bg-russian-violet/60 border border-rebecca-purple rounded-md text-periwinkle text-lg w-full px-3 py-2 mt-2 placeholder-periwinkle/40 focus:outline-hidden focus:ring-2 focus:ring-rebecca-purple resize-none;
+    resize: none;
+    border-radius: var(--radius-md);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-rebecca-purple);
+    background-color: #12042d99;
+    width: 100%;
   }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    input,
+    textarea {
+      background-color: color-mix(
+        in oklab,
+        var(--color-russian-violet) 60%,
+        transparent
+      );
+    }
+  }
+
+  input,
+  textarea {
+    padding-inline: calc(var(--spacing) * 3);
+    padding-block: calc(var(--spacing) * 2);
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+    color: var(--color-periwinkle);
+  }
+
+  :is(input, textarea)::placeholder {
+    color: #c7c7ff66;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    :is(input, textarea)::placeholder {
+      color: color-mix(in oklab, var(--color-periwinkle) 40%, transparent);
+    }
+  }
+
+  :is(input, textarea):focus {
+    --tw-ring-shadow:var(--tw-ring-inset,)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color,currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+      var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    --tw-ring-color: var(--color-rebecca-purple);
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
+  @media (forced-colors: active) {
+    :is(input, textarea):focus {
+      outline-offset: 2px;
+      outline: 2px solid #0000;
+    }
+  }
+
+  video {
+    pointer-events: none;
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    z-index: calc(10 * -1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@utility counter {
+  position: absolute;
+  right: calc(var(--spacing) * 3);
+  bottom: calc(var(--spacing) * 3);
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  color: var(--color-periwinkle);
 }
 
 @utility profile-img {
   shape-outside: circle(50%);
   clip-path: circle(50%);
+  margin-right: calc(var(--spacing) * 6);
+  margin-bottom: calc(var(--spacing) * 0);
+  float: left;
+}
+
+@utility card {
+  border-radius: var(--radius-3xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-rebecca-purple);
+  background-color: color-mix(in oklab, var(--color-russian-violet) 60%, transparent);
 }
 
 @utility btn {
-  @apply flex items-center justify-center gap-2 px-4 py-2 border border-rebecca-purple  text-periwinkle rounded-md transition-all select-none transform;
-  box-shadow:
-    0 4px 6px -1px hsla(270, 100%, 25%, 0.5),
-    0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
+  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+  border-radius: var(--radius-md);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-rebecca-purple);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  color: var(--color-periwinkle);
+  transition-property: all;
+  transition-timing-function: var(
+    --tw-ease,
+    var(--default-transition-timing-function)
+  );
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  box-shadow: 0 4px 6px -1px #40008080, 0 2px 4px -1px #40008080;
 
   &:hover {
-    @apply bg-indigo-900/40 translate-y-1;
-    box-shadow:
-      inset 0 4px 6px -1px hsla(270, 100%, 25%, 0.5),
-      inset 0 2px 4px -1px hsla(270, 100%, 25%, 0.5);
+    --tw-translate-y: calc(var(--spacing) * 1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    background-color: color-mix(
+      in oklab,
+      var(--color-indigo-900) 40%,
+      transparent
+    );
+    box-shadow: inset 0 4px 6px -1px #40008080, inset 0 2px 4px -1px #40008080;
   }
 
   &:disabled {
-    @apply opacity-50 cursor-not-allowed shadow-none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+      var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }

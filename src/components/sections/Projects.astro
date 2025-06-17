@@ -13,13 +13,13 @@ import SvgIcon from '../ui/SvgIcon'
 >
   {
     PROJECTS.map((project) => (
-      <article class="max-w-md p-6 mx-auto space-y-6 overflow-hidden text-center transition-colors border rounded-md border-rebecca-purple bg-russian-violet/60 hover:border-rebecca-purple">
+      <article class="p-4 space-y-4 text-center card">
         <Image
           src={project.image}
           alt={`Proyecto ${project.title}: ${project.subtitle}`}
           widths={[578, 834, 1280]}
           sizes="(min-width: 1060px) 390px, (min-width: 780px) calc(40.77vw - 34px), (min-width: 520px) 398px, calc(98vw - 92px)"
-          class="rounded-md"
+          class="rounded-lg aspect-video"
         />
         <h3
           class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}
@@ -32,7 +32,7 @@ import SvgIcon from '../ui/SvgIcon'
         <p class="px-4 text-gray-300 text-pretty">{project.description}</p>
         <Badge items={project.technologies} />
         {(project.githubURL || project.demoURL) && (
-          <nav
+          <div
             class="flex justify-center gap-4"
             aria-label="Enlaces del proyecto"
           >
@@ -58,7 +58,7 @@ import SvgIcon from '../ui/SvgIcon'
                 <span>Demo</span>
               </a>
             )}
-          </nav>
+          </div>
         )}
       </article>
     ))

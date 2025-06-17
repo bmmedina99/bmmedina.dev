@@ -19,30 +19,20 @@ export default function ExperienceDetails() {
         >
           <button
             type='button'
-            className='w-full p-4 text-left transition-colors border rounded-md border-rebecca-purple bg-russian-violet/60 focus:right-2 focus:ring-indigo-900'
+            className='w-full p-4 text-left card'
             onClick={() => handleExpand(experience.id)}
             aria-expanded={expanded === experience.id}
             aria-controls={`experience-detail-${experience.id}`}
             aria-label={`${expanded === experience.id ? 'Contraer' : 'Expandir'} detalles de ${experience.title} en ${experience.company}`}
           >
-            <div className='flex items-center justify-between'>
+            <div className='flex items-start justify-between'>
               <div>
-                <h3 className='text-lg font-semibold tracking-wide'>
-                  <span className='text-violet-300'>{experience.title}</span>{' '}
-                  &bull; {experience.company}
+                <h3 className='text-xl font-semibold text-purple-300'>
+                  {experience.title}
                 </h3>
-                <time
-                  dateTime={experience.dateTimeStart}
-                  className='text-sm text-gray-300'
-                >
-                  {experience.startDate}
-                </time>
-                {' - '}
-                <time
-                  dateTime={experience.dateTimeEnd}
-                  className='text-sm text-gray-300'
-                >
-                  {experience.endDate}
+                <p className='text-gray-300'>{experience.company}</p>
+                <time className='text-sm text-gray-400'>
+                  {experience.startDate} - {experience.endDate}
                 </time>
               </div>
               <span
@@ -75,16 +65,15 @@ export default function ExperienceDetails() {
             </ul>
             <Badge items={experience.technologies} />
             <div className='flex flex-wrap justify-between gap-4 text-sm'>
-              <div className='flex items-center gap-2 text-emerald-400'>
+              <p className='flex items-center gap-2 text-emerald-400'>
                 <SvgIcon
                   name='location'
                   variant='icon'
                 />
                 <span>{experience.location}</span>
-              </div>
-
+              </p>
               {experience.website && (
-                <div className='flex items-center gap-2 text-sky-400'>
+                <p className='flex items-center gap-2 text-sky-400'>
                   <SvgIcon
                     name='website'
                     variant='icon'
@@ -93,12 +82,12 @@ export default function ExperienceDetails() {
                     href={experience.website.link}
                     target='_blank'
                     rel='noopener noreferrer nofollow'
-                    className='hover:underline focus:underline focus:outline-none'
+                    className='hover:underline'
                     aria-label={`Visitar sitio web de ${experience.company}`}
                   >
                     {experience.website.text}
                   </a>
-                </div>
+                </p>
               )}
             </div>
           </div>

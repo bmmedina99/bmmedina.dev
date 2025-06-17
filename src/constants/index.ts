@@ -21,9 +21,7 @@ export const EXPERIENCES: Experience[] = [
     title: 'Soporte CAU',
     company: 'Empresarios Agrupados',
     startDate: 'Mar. 2019',
-    dateTimeStart: '2019-03',
     endDate: 'Ago. 2019',
-    dateTimeEnd: '2019-08',
     description: [
       'Logré agilizar el trabajo y reducir el tiempo a la mitad de lo solicitado, optimizando los procesos y mejorando la productividad del equipo.',
       'Proveía asistencia técnica a los usuarios de la empresa, resolviendo problemas informáticos en sus equipos y actualizando programas.',
@@ -48,9 +46,7 @@ export const EXPERIENCES: Experience[] = [
     title: 'Programador Junior',
     company: 'Asociación de Mutuas y A.T. (AMAT)',
     startDate: 'Nov. 2021',
-    dateTimeStart: '2021-11',
     endDate: 'Feb. 2022',
-    dateTimeEnd: '2022-02',
     description: [
       'Gestioné datos mediante las herramientas de Qlik Sense y Qlik View, además del desarrollo de funciones específicas para visualizar los datos de forma concreta.',
       'Desarrollé un programa en Python para extraer datos blob de una base de datos específica y convertirlos a formatos de archivo (PNG, JPG, PDF).',
@@ -71,9 +67,7 @@ export const EXPERIENCES: Experience[] = [
     title: 'Desarrollador Web Freelance',
     company: 'Gray Gorilla Fitness',
     startDate: 'Dec. 2021',
-    dateTimeStart: '2021-12',
     endDate: 'Oct. 2022',
-    dateTimeEnd: '2022-10',
     description: [
       'Desarrollé una página web personalizada para una compañía de accesorios de gimnasio que trabajaba con Amazon FBA.',
       'Implementé una interfaz clara y funcional para mostrar los productos, con redirección directa a Amazon para la compra, mejorando la experiencia del usuario.',
@@ -93,9 +87,7 @@ export const EXPERIENCES: Experience[] = [
     title: 'Operador de Sala',
     company: 'Izertis (Cliente: RSI)',
     startDate: 'Jul. 2022',
-    dateTimeStart: '2022-07',
     endDate: 'Presente',
-    dateTimeEnd: '2025-12',
     description: [
       'Toma de decisiones sobre escalado de incidencias, contactando con las respectivas guardias según la criticidad de los problemas detectados.',
       'Participé en la mejora y reestructuración de un programa existente, logrando disminuir el tiempo de ejecución de una tarea crítica de 1 hora a 15 minutos.',
@@ -122,7 +114,7 @@ export const PROJECTS: Project[] = [
     title: 'KiraKana',
     subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
-      'Elige hiragana, katakana o ambos y evalúa tu conocimiento con pruebas visuales. ¿Te atreves?',
+      'Elige hiragana, katakana o ambos y evalúa tu conocimiento de japonés con pruebas visuales. ¿Te atreves?',
     technologies: ['En desarrollo'],
     type: 'Frontend',
     gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
@@ -137,7 +129,7 @@ export const PROJECTS: Project[] = [
       'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
     technologies: ['En reconstrucción'],
     type: 'Frontend',
-    gradient: 'bg-gradient-to-r from-[#b2b8ca] to-[#787b85]',
+    gradient: 'bg-gradient-to-r from-zinc-400 to-zinc-600',
   },
   {
     id: 2,
@@ -179,17 +171,15 @@ export const PROFILE: Profile = {
   studies: [
     {
       title:
-        'Formación Profesional de Grado Superior, Desarrollo de Aplicaciones Multiplataforma',
+        'Formación Profesional de Grado Superior Desarrollo de Aplicaciones Multiplataforma',
       institution: 'CES Fuencarral',
-      date: '2019-09',
       startDate: 'sep. 2019',
       endDate: 'mar. 2021',
     },
     {
       title:
-        'Formación Profesional de Grado Medio, Sistemas Microinformáticos y Redes',
+        'Formación Profesional de Grado Medio Sistemas Microinformáticos y Redes',
       institution: 'CES Fuencarral',
-      date: '2017-09',
       startDate: 'sep. 2017',
       endDate: 'mar. 2019',
     },

@@ -7,7 +7,7 @@ import { toast } from 'sonner'
 import SvgIcon from './SvgIcon'
 
 function Form() {
-  const [sujectCharacterCount, setSubjectCharacterCount] = useState(0)
+  const [subjectCharacterCount, setSubjectCharacterCount] = useState(0)
   const [messageCharacterCount, setMessageCharacterCount] = useState(0)
   const [isSending, setIsSending] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
@@ -38,11 +38,12 @@ function Form() {
         () => {
           toast.success(
             'El mensaje ha sido enviado correctamente. ¡Muchas gracias por contactarme!',
+            { duration: 2000 },
           )
           form.reset()
         },
         (error) => {
-          toast.error(`Mensaje no enviado: ${error.text}`)
+          toast.error(`Mensaje no enviado: ${error.text}`, { duration: 2000 })
         },
       )
       .finally(() => {
@@ -70,21 +71,10 @@ function Form() {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className='relative space-y-4'
+      className='relative p-6 space-y-6 card'
     >
-      <video
-        muted
-        autoPlay
-        loop
-        className='absolute inset-0 object-cover rounded-md pointer-events-none size-full -z-10 opacity-40 bg-rich-black'
-      >
-        <source
-          src={Wormhole}
-          type='video/webm'
-        />
-      </video>
       <div className='grid gap-4 md:grid-cols-2'>
-        <div className='space-y-2'>
+        <div>
           <label htmlFor='name'>Nombre</label>
           <input
             type='text'
@@ -94,7 +84,7 @@ function Form() {
             placeholder='Tu nombre'
           />
         </div>
-        <div className='space-y-2'>
+        <div>
           <label htmlFor='email'>Correo electrónico</label>
           <input
             type='email'
@@ -105,7 +95,7 @@ function Form() {
           />
         </div>
       </div>
-      <div className='relative space-y-2'>
+      <div className='relative'>
         <label htmlFor='subject'>Asunto</label>
         <input
           type='text'
@@ -121,17 +111,20 @@ function Form() {
             )
           }
         />
-        <div className='absolute text-xs bottom-5 right-5 text-periwinkle'>
-          {sujectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
+        <div
+          className='counter'
+          aria-hidden='true'
+        >
+          {subjectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
         </div>
       </div>
-      <div className='relative space-y-2'>
+      <div className='relative'>
         <label htmlFor='message'>Mensaje</label>
         <textarea
           id='message'
           name='message'
           placeholder='¿Tienes un proyecto, idea o trabajo en mente? Cuéntamelo y te responderé lo antes posible.'
-          className='pr-20 min-h-32 max-h-60 md:min-h-40 field-sizing-content'
+          className='pr-20 min-h-64 field-sizing-content'
           autoCapitalize='sentences'
           onChange={(e) =>
             handleCharacterCounter(
@@ -141,15 +134,18 @@ function Form() {
             )
           }
         />
-        <div className='absolute text-xs bottom-6 right-4 text-periwinkle'>
+        <div
+          className='counter'
+          aria-hidden='true'
+        >
           {messageCharacterCount}/{CHARACTER_LIMITS.MESSAGE}
         </div>
       </div>
-      <div className='max-w-2xl mx-auto space-y-4 text-center'>
-        <p className='text-xs font-semibold md:text-sm text-periwinkle text-pretty'>
+      <div className='space-y-4 text-center'>
+        <p className='text-xs font-medium md:text-sm text-periwinkle text-pretty'>
           Toda la información del formulario se enviará a mi correo personal y
-          se utilizará únicamente para responder. Al rellenar el formulario es
-          consiente que se manejen sus datos con este fin.
+          se usará solo para responder. Al darle a enviar mensaje consiente que
+          se manejen sus datos con este fin.
         </p>
         <button
           type='submit'
@@ -163,6 +159,17 @@ function Form() {
           <span>{isSending ? 'Enviando mensaje...' : 'Enviar mensaje'}</span>
         </button>
       </div>
+      <video
+        muted
+        autoPlay
+        loop
+        className='video'
+      >
+        <source
+          src={Wormhole}
+          type='video/webm'
+        />
+      </video>
     </form>
   )
 }

@@ -3,9 +3,7 @@ export interface Experience {
   title: string
   company: string
   startDate: string
-  dateTimeStart: string
   endDate: string
-  dateTimeEnd: string
   description: string[]
   technologies: string[]
   location: string
@@ -32,7 +30,6 @@ export interface Profile {
   studies: {
     title: string
     institution: string
-    date: string
     startDate: string
     endDate: string
   }[]

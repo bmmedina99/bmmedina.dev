@@ -5,29 +5,25 @@ import SvgIcon from '../ui/SvgIcon'
 
 <footer
   id="info-content"
-  class="px-6 py-6 space-y-4 overflow-x-hidden backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
+  class="p-6 space-y-4 overflow-x-hidden backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
 >
-  <p class="text-xl font-semibold text-center text-pretty">
+  <p class="text-lg md:text-xl font-medium text-center text-pretty">
     También puedes contactarme por estos medios:
   </p>
-  <nav aria-label="Redes Sociales">
-    <ul class="flex flex-wrap justify-center space-x-6 gap-y-4">
-      {
-        SOCIAL_LINK.map((social) => (
-          <li class="transition-transform transform hover:scale-110 hover:text-periwinkle">
-            <a
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              class="flex flex-col items-center justify-center text-center"
-              aria-label={social.name}
-            >
-              <SvgIcon name={social.icon} width={32} height={32} variant='skill'/>
-              <span class="mt-2 text-sm">{social.name}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
+  <div class="grid grid-cols-3 md:grid-cols-6 gap-y-4">
+    {
+      SOCIAL_LINK.map((social) => (
+        <a
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="flex flex-col items-center text-center hover:text-zinc-400 hover:-translate-y-1"
+          aria-label={social.name}
+        >
+          <SvgIcon name={social.icon} width={32} height={32} variant="skill" />
+          <span class="mt-2 text-sm">{social.name}</span>
+        </a>
+      ))
+    }
+  </div>
 </footer>
