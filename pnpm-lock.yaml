@@ -27,14 +27,14 @@ importers:
         specifier: 9.1.2
         version: 9.1.2(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(three@0.177.0)
       astro:
-        specifier: 5.9.2
-        version: 5.9.2(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)
+        specifier: 5.10.0
+        version: 5.10.0(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)
       astro-robots-txt:
         specifier: 1.0.0
         version: 1.0.0
       astro-seo-schema:
         specifier: 5.0.0
-        version: 5.0.0(astro@5.9.2(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3))(schema-dts@1.1.5)
+        version: 5.0.0(astro@5.10.0(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3))(schema-dts@1.1.5)
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -51,8 +51,8 @@ importers:
         specifier: 0.177.0
         version: 0.177.0
       zod:
-        specifier: 3.25.63
-        version: 3.25.63
+        specifier: 3.25.67
+        version: 3.25.67
     devDependencies:
       '@biomejs/biome':
         specifier: 1.9.4
@@ -1230,8 +1230,8 @@ packages:
       astro: ^5.0.0
       schema-dts: ^1.1.0
 
-  astro@5.9.2:
-    resolution: {integrity: sha512-K/zZlQOWMpamfLDOls5jvG7lrsjH1gkk3ESRZyZDCkVBtKHMF4LbjwCicm/iBb3mX3V/PerqRYzLbOy3/4JLCQ==}
+  astro@5.10.0:
+    resolution: {integrity: sha512-g/t54kVzQnFVijs+GbbbX/NBAFTl/3yNAEA/AQYq4FumLLVv7n4BIF+jKhcPGn9iFGyT1Cjvr7KB/qYyNvHEIg==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3345,8 +3345,8 @@ packages:
       typescript: ^4.9.4 || ^5.0.2
       zod: ^3
 
-  zod@3.25.63:
-    resolution: {integrity: sha512-3ttCkqhtpncYXfP0f6dsyabbYV/nEUW+Xlu89jiXbTBifUfjaSqXOG6JnQPLtqt87n7KAmnMqcjay6c0Wq0Vbw==}
+  zod@3.25.67:
+    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
 
   zustand@5.0.5:
     resolution: {integrity: sha512-mILtRfKW9xM47hqxGIxCv12gXusoY/xTSHBYApXozR0HmQv299whhBeeAcRy+KrPPybzosvJBCOmVjq6x12fCg==}
@@ -3437,7 +3437,7 @@ snapshots:
     dependencies:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
-      zod: 3.25.63
+      zod: 3.25.67
 
   '@astrojs/telemetry@3.3.0':
     dependencies:
@@ -4425,14 +4425,14 @@ snapshots:
   astro-robots-txt@1.0.0:
     dependencies:
       valid-filename: 4.0.0
-      zod: 3.25.63
+      zod: 3.25.67
 
-  astro-seo-schema@5.0.0(astro@5.9.2(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3))(schema-dts@1.1.5):
+  astro-seo-schema@5.0.0(astro@5.10.0(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3))(schema-dts@1.1.5):
     dependencies:
-      astro: 5.9.2(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)
+      astro: 5.10.0(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3)
       schema-dts: 1.1.5
 
-  astro@5.9.2(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3):
+  astro@5.10.0(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
@@ -4492,9 +4492,9 @@ snapshots:
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
-      zod: 3.25.63
-      zod-to-json-schema: 3.24.5(zod@3.25.63)
-      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.63)
+      zod: 3.25.67
+      zod-to-json-schema: 3.24.5(zod@3.25.67)
+      zod-to-ts: 1.2.0(typescript@5.8.3)(zod@3.25.67)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -6751,16 +6751,16 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-to-json-schema@3.24.5(zod@3.25.63):
+  zod-to-json-schema@3.24.5(zod@3.25.67):
     dependencies:
-      zod: 3.25.63
+      zod: 3.25.67
 
-  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.63):
+  zod-to-ts@1.2.0(typescript@5.8.3)(zod@3.25.67):
     dependencies:
       typescript: 5.8.3
-      zod: 3.25.63
+      zod: 3.25.67
 
-  zod@3.25.63: {}
+  zod@3.25.67: {}
 
   zustand@5.0.5(@types/react@19.1.8)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0)):
     optionalDependencies:

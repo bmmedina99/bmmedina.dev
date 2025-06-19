@@ -23,7 +23,7 @@
     "@fontsource/onest": "5.2.9",
     "@fontsource/orbitron": "5.2.6",
     "@react-three/fiber": "9.1.2",
-    "astro": "5.9.2",
+    "astro": "5.10.0",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "react": "19.1.0",
@@ -31,7 +31,7 @@
     "schema-dts": "1.1.5",
     "sonner": "2.0.5",
     "three": "0.177.0",
-    "zod": "3.25.63"
+    "zod": "3.25.67"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
