@@ -155,11 +155,16 @@
   border-style: var(--tw-border-style);
   border-width: 1px;
   border-color: var(--color-rebecca-purple);
-  background-color: color-mix(in oklab, var(--color-russian-violet) 60%, transparent);
+  background-color: color-mix(
+    in oklab,
+    var(--color-russian-violet) 60%,
+    transparent
+  );
 }
 
 @utility btn {
-  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
+    var(--tw-skew-x) var(--tw-skew-y);
   justify-content: center;
   align-items: center;
   gap: calc(var(--spacing) * 2);
