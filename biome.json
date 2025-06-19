@@ -1,5 +1,10 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "clientKind": "git",
+    "enabled": true,
+    "useIgnoreFile": true
+  },
   "files": {
     "ignoreUnknown": false,
     "ignore": ["dist/*", ".astro/*", "styles/*"]
@@ -16,10 +21,7 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
-      "a11y": {
-        "noSvgWithoutTitle": "off"
-      }
+      "recommended": true
     }
   },
   "javascript": {

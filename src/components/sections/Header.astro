@@ -1,23 +1,23 @@
 ---
+import { NAV_ITEMS } from '@/constants'
 import Navbar from '../ui/Navbar'
 import SvgIcon from '../ui/SvgIcon'
+
+const { label } = NAV_ITEMS[0]
 ---
 
-<header
-  id="home"
-  class="relative flex flex-col items-center justify-center min-h-dvh"
->
+<header id="home">
   <div
     aria-hidden="true"
     class="absolute overflow-hidden size-[600px] bg-linear-to-br from-rebecca-purple/40 to-transparent blur-3xl rounded-full animate-pulse"
   >
   </div>
   <section class="z-10 px-4 text-center uppercase text-balance">
-    <h1 class="text-4xl font-bold md:text-7xl font-title">
+    <h1>
       Brandon Medina
       <span class="sr-only">- Desarrollador Web Full Stack</span>
     </h1>
-    <p class="my-4 text-lg font-medium md:text-xl">
+    <p class="mb-8 text-lg md:text-xl">
       Desarrollador Web
       <span
         class="tracking-wide text-transparent bg-linear-to-r from-purple-400 via-sky-400 to-emerald-400 bg-clip-text"
@@ -28,11 +28,11 @@ import SvgIcon from '../ui/SvgIcon'
       <span class="text-emerald-400">Backend</span>
     </p>
   </section>
-  <Navbar client:visible />
+  <Navbar client:idle />
   <a
-    href="#experience"
-    class="absolute flex items-center w-6 h-10 border-2 rounded-full bottom-8 border-sky-400 animate-bounce"
-    aria-label="Ir a la sección de experiencia"
+    href={`#${label}`}
+    class="absolute flex items-center w-6 h-10 border-4 rounded-full bottom-8 border-sky-400 animate-bounce"
+    aria-label={`Ir a la sección de ${label}`}
   >
     <SvgIcon name="scroll-down" variant="icon" />
   </a>

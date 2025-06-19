@@ -3,11 +3,13 @@ import AboutMe from '@/components/sections/AboutMe.astro'
 import Contact from '@/components/sections/Contact.astro'
 import Experience from '@/components/sections/Experience.astro'
 import Projects from '@/components/sections/Projects.astro'
+import StarFieldBackground from '../ui/StarFieldBackground'
 ---
 
-<main id="main-content" class="relative z-10 flex flex-col size-full">
+<main id="main-content" class="relative flex flex-col size-full">
   <Experience />
   <Projects />
   <AboutMe />
   <Contact />
+  <StarFieldBackground client:idle />
 </main>

@@ -12,11 +12,11 @@ const { name, label, divclass } = Astro.props
 >
   <h2
     id={slugify(label)}
-    class="mb-10 text-3xl font-semibold tracking-wide text-center uppercase text-violet-500 md:text-5xl font-title"
+    class="mb-12 text-3xl font-semibold text-center text-violet-400 md:text-5xl font-title"
   >
     {name}
   </h2>
-  <div class:list={["max-w-4xl mx-auto space-y-4", { [divclass]: divclass }]}>
+  <div class:list={["max-w-4xl mx-auto space-y-6", { [divclass]: divclass }]}>
     <slot />
   </div>
 </section>

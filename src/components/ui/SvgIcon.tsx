@@ -24,6 +24,7 @@ const SvgIcon = ({ name, width = 24, height = 24, variant }: SVGProps) => {
       width={width}
       height={height}
       {...attributes}
+      aria-hidden='true'
     >
       <use href={`${basePath}#${name}`} />
     </svg>
