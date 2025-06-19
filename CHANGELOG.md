@@ -1,3 +1,26 @@
+# [1.1.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.0.0...v1.1.0) (2025-06-19)
+
+
+### Bug Fixes
+
+* **contact:** :children_crossing: improve video layout in contact section ([61713a7](https://github.com/bmmedina99/bmmedina.dev/commit/61713a7ccce22af7f325f04a342e9ae09a4ef47c))
+* **details:** :bug: correct height display on mobile ([53ff0df](https://github.com/bmmedina99/bmmedina.dev/commit/53ff0df92124f9ffef37945cf0000f67fc277219))
+* **footer:** :iphone: prevent overflow on mobile devices ([7384948](https://github.com/bmmedina99/bmmedina.dev/commit/73849480053a58610a04f6c851fc8cb52ed570a2))
+* **projects:** :bug: correct font-weight of section title ([cfd405e](https://github.com/bmmedina99/bmmedina.dev/commit/cfd405e86517c139c52baf817b75101e27064577))
+* **scroll:** :bug: correct internal scroll-down anchor to `#experiencia` ([45dad9f](https://github.com/bmmedina99/bmmedina.dev/commit/45dad9f8b2aa849932dc9c7ef354bb6317138f6d))
+
+
+### Features
+
+* **styles:** :lipstick: optimize font and dom size ([b2ca5e3](https://github.com/bmmedina99/bmmedina.dev/commit/b2ca5e346b52ced34d11630a07cd5c02e2e7d9ed))
+
+
+### Performance Improvements
+
+* **component:** :zap: optimize StarFieldBackground component ([6578bd0](https://github.com/bmmedina99/bmmedina.dev/commit/6578bd0a1916f1584111603fd0f95675ef2c23da))
+* **dom:** :zap: reduce DOM size by removing unnecessary HTML tags ([bc64180](https://github.com/bmmedina99/bmmedina.dev/commit/bc64180600fc706acaee68c28dcddd621bbbc43b))
+* **island:** :zap: optimize loading of Astro island components ([caaf07e](https://github.com/bmmedina99/bmmedina.dev/commit/caaf07e07f4a83cdf2a06213a3721ce91656e63e))
+
 # [1.0.0](https://github.com/bmmedina99/bmmedina.dev/compare/v0.8.3...v1.0.0) (2025-05-28)
 
 
