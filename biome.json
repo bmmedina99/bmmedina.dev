@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!**/dist/**/*", "!**/.astro/**/*"]
+    "includes": ["**", "!**/dist/**/*", "!**/.astro/**/*", "!**/styles/**/*"]
   },
   "formatter": {
     "enabled": true,
@@ -20,6 +20,10 @@
     "enabled": true,
     "rules": {
       "recommended": true,
+      "correctness": {
+        "noUnusedImports": "off",
+        "noUnusedVariables": "off"
+      },
       "style": {
         "noParameterAssign": "error",
         "useAsConstAssertion": "error",
