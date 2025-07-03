@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.1.0...v1.2.0) (2025-07-03)
+
+
+### Features
+
+* **styles:** :zap: adjust critical CSS properties ([91b80d1](https://github.com/bmmedina99/bmmedina.dev/commit/91b80d19b28321a6c5c7978d0f9436175403c2f0))
+
+
+### Performance Improvements
+
+* **styles:** :zap: fix FOUC and CLS issues ([5269499](https://github.com/bmmedina99/bmmedina.dev/commit/52694995b1e096d1637561fdc29ab3e36c4780fd))
+
 # [1.1.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.0.0...v1.1.0) (2025-06-19)
 
 
