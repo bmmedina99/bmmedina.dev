@@ -22,16 +22,16 @@
     "@emailjs/browser": "4.4.1",
     "@fontsource/onest": "5.2.9",
     "@fontsource/orbitron": "5.2.6",
-    "@react-three/fiber": "9.1.4",
-    "astro": "5.10.2",
+    "@react-three/fiber": "9.2.0",
+    "astro": "5.12.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "schema-dts": "1.1.5",
-    "sonner": "2.0.5",
+    "sonner": "2.0.6",
     "three": "0.178.0",
-    "zod": "3.25.69"
+    "zod": "4.0.5"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.2",
