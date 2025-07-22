@@ -1,8 +1,8 @@
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
-import robotsTxt from 'astro-robots-txt'
 import { defineConfig } from 'astro/config'
+import robotsTxt from 'astro-robots-txt'
 
 export default defineConfig({
   site: 'https://bmmedina.dev',
