@@ -1,5 +1,5 @@
-import { EXPERIENCES } from '@/constants'
 import { useCallback, useState } from 'react'
+import { EXPERIENCES } from '@/constants'
 import Badge from './Badge'
 import SvgIcon from './SvgIcon'
 
@@ -65,7 +65,7 @@ export default function ExperienceDetails() {
             </ul>
             <Badge items={experience.technologies} />
             <div className='flex flex-wrap justify-between gap-4 text-sm'>
-              <p className='flex items-center gap-2 text-emerald-400'>
+              <p className='flex items-center gap-2 text-emerald-200'>
                 <SvgIcon
                   name='location'
                   variant='icon'
@@ -73,7 +73,7 @@ export default function ExperienceDetails() {
                 <span>{experience.location}</span>
               </p>
               {experience.website && (
-                <p className='flex items-center gap-2 text-sky-400'>
+                <p className='flex items-center gap-2 text-cyan-200'>
                   <SvgIcon
                     name='website'
                     variant='icon'
