@@ -4,12 +4,8 @@
   --color-rich-black: oklch(9.618% 0.0562 285.061);
   --color-russian-violet: oklch(16.872% 0.07813 292.572);
   --color-rebecca-purple: oklch(42.208% 0.17403 290.528);
-  --color-periwinkle: oklch(84.868% 0.07781 284.614);
-  --color-gris-claro: oklch(78.952% 0.02504 270.286);
-  --color-gris-oscuro: oklch(48.659% 0.0249 270.872);
 
   --font-title: Orbitron, sans-serif;
-  --font-content: Onest, sans-serif;
 }
 
 @layer base {
@@ -19,6 +15,7 @@
       var(--color-indigo-600) 40%,
       transparent
     );
+    color: var(--color-neutral-100);
   }
 
   ::-webkit-scrollbar {

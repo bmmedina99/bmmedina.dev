@@ -128,9 +128,7 @@ const { title, description } = Astro.props
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Brandon Medina",
-    jobTitle: "Desarrollador Web Full Stack",
-    url: canonicalURL,
-    description: description,
+    url: "https://bmmedina.dev",
     image: "https://bmmedina.dev/images/profile.webp",
     sameAs: [
       "https://github.com/bmmedina99",
@@ -138,8 +136,13 @@ const { title, description } = Astro.props
       "https://www.instagram.com/bmmedina99/",
       "https://www.youtube.com/@bmmedina99",
       "https://x.com/bmmedina99",
-      "https://www.facebook.com/bmmedina99",
+      "https://www.facebook.com/bmmedina99"
     ],
+    jobTitle: "Desarrollador Web Full Stack",
+    worksFor: {
+      "@type": "Organization",
+      name: "Izertis"
+    },
     skills: [
       "Next.js",
       "Astro",

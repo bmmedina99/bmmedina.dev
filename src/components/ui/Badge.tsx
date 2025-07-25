@@ -4,7 +4,7 @@ const Badge = ({ items }: { items: string[] }) => {
       {items.map((item) => (
         <li
           key={item}
-          className='inline-block px-3 text-sm font-medium bg-indigo-900 rounded-full text-periwinkle'
+          className='me-2 px-2.5 py-0.5 text-xs font-medium bg-indigo-900 rounded-sm text-indigo-200'
         >
           {item}
         </li>

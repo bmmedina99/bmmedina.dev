@@ -1,9 +1,9 @@
-import Wormhole from '@/assets/video/wormhole.webm'
-import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
-import { formSchema } from '@/schemas'
 import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
 import { toast } from 'sonner'
+import Wormhole from '@/assets/video/wormhole.webm'
+import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
+import { formSchema } from '@/schemas'
 import SvgIcon from './SvgIcon'
 
 function Form() {
@@ -142,7 +142,7 @@ function Form() {
         </div>
       </div>
       <div className='space-y-4 text-center'>
-        <p className='text-xs font-medium md:text-sm text-periwinkle text-pretty'>
+        <p className='text-xs font-medium md:text-sm text-indigo-200 text-pretty'>
           Toda la información del formulario se enviará a mi correo personal y
           se usará solo para responder. Al darle a enviar mensaje consiente que
           se manejen sus datos con este fin.
