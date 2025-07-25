@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.0...v1.2.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* **json-ld:** :adhesive_bandage: adapt Person JSON-LD to correct properties ([15b7e60](https://github.com/bmmedina99/bmmedina.dev/commit/15b7e600f9888e142d664633e0fda08d6a0361c6))
+
 # [1.2.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.1.0...v1.2.0) (2025-07-03)
 
 
