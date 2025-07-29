@@ -56,7 +56,6 @@ export default function ExperienceDetails() {
           <div
             id={`experience-detail-${experience.id}`}
             className={`overflow-hidden transition-all duration-300 ease-in-out border rounded-md bg-rebecca-purple/40 border-russian-violet ${expanded === experience.id ? 'max-h-screen mt-4 p-4' : 'max-h-0 opacity-0'}`}
-            aria-label={`Detalles de la experiencia en ${experience.company}`}
           >
             <ul className='pl-4 space-y-2 text-gray-300 list-disc text-pretty'>
               {experience.description.map((desc) => (

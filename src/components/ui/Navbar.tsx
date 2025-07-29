@@ -1,6 +1,6 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
 import { capitalLetter, scrollSection, scrollToTop, slugify } from '@/utils'
-import { useCallback, useEffect, useRef, useState } from 'react'
 import SvgIcon from './SvgIcon'
 
 export default function Navbar() {
@@ -76,10 +76,8 @@ export default function Navbar() {
           />
         </button>
       </div>
-
       <div
         className={`md:hidden fixed top-0 right-0 w-64 h-full p-4 transform transition-transform duration-300 backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-        aria-label='Menú de navegación'
       >
         <button
           type='button'
