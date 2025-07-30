@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets'
+import techSkills from '@/assets/svg/tech-skills.svg'
 import { PROFILE } from '@/constants'
 import { slugify } from '@/utils'
-import type { Fragment } from 'react'
 import Section from '../Section.astro'
 import Badge from '../ui/Badge'
 import SvgIcon from '../ui/SvgIcon'
@@ -56,7 +56,15 @@ import SvgIcon from '../ui/SvgIcon'
       </a>
     </div>
   </div>
-  <div class="space-y-4">
+  <div class="relative space-y-4">
+    <Image
+      class={"absolute bottom-0 opacity-40 -z-10 select-none"}
+      src={techSkills}
+      alt={"Ilustración de habilidades técnicas"}
+      aria-hidden="true"
+      width={600}
+      height={600}
+    />
     <section aria-labelledby="tech-skills-heading">
       <h3
         id="tech-skills-heading"
@@ -102,7 +110,7 @@ import SvgIcon from '../ui/SvgIcon'
         {
           PROFILE.studies.map((study) => (
             <li class="p-4 mb-2 cursor-pointer card">
-              <h4 class="font-semibold text-violet-300 text-sm">
+              <h4 class="text-sm font-semibold text-violet-300">
                 {study.title}
               </h4>
               <p class="text-xs text-gray-300">
