@@ -91,7 +91,7 @@
     padding-block: calc(var(--spacing) * 2);
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
-    color: var(--color-periwinkle);
+    color: var(--color-indigo-200);
   }
 
   :is(input, textarea)::placeholder {
@@ -100,7 +100,7 @@
 
   @supports (color: color-mix(in lab, red, red)) {
     :is(input, textarea)::placeholder {
-      color: color-mix(in oklab, var(--color-periwinkle) 40%, transparent);
+      color: color-mix(in oklab, var(--color-indigo-200) 40%, transparent);
     }
   }
 
@@ -139,7 +139,7 @@
     bottom: calc(var(--spacing) * 3);
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-    color: var(--color-periwinkle);
+    color: var(--color-indigo-200);
   }
 
   .profile-img {
@@ -174,7 +174,7 @@
     border-color: var(--color-rebecca-purple);
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 2);
-    color: var(--color-periwinkle);
+    color: var(--color-indigo-200);
     transition-property: all;
     transition-timing-function: var(
       --tw-ease,
