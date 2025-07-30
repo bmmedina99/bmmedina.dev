@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.1...v1.2.2) (2025-07-30)
+
+
+### Bug Fixes
+
+* **a11y:** :bug: remove unsupported `aria-label` from block elements ([114e1f6](https://github.com/bmmedina99/bmmedina.dev/commit/114e1f6648036f79800e6c1adbf68670105358ba))
+* **styles:** :bug: correct color from periwinkle to indigo-200 ([462ab62](https://github.com/bmmedina99/bmmedina.dev/commit/462ab6293f1054b561d3c1be3e855e954051d730))
+
 ## [1.2.1](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.0...v1.2.1) (2025-07-25)
 
 
