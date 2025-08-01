@@ -113,7 +113,7 @@ function Form() {
         />
         <div
           className='counter'
-          aria-hidden='true'
+          aria-hidden='true' 
         >
           {subjectCharacterCount}/{CHARACTER_LIMITS.SUBJECT}
         </div>
