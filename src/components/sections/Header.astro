@@ -1,6 +1,7 @@
 ---
 import { NAV_ITEMS } from '@/constants'
 import Navbar from '../ui/Navigation'
+import ScrollToTop from '../ui/ScrollToTop.astro'
 import SvgIcon from '../ui/SvgIcon'
 
 const { label } = NAV_ITEMS[0]
@@ -29,6 +30,7 @@ const { label } = NAV_ITEMS[0]
     </p>
   </section>
   <Navbar client:idle />
+  <ScrollToTop />
   <a
     href={`#${label}`}
     class="absolute flex items-center w-6 h-10 border-4 rounded-full bottom-8 border-sky-400 animate-bounce"
