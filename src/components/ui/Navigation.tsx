@@ -1,24 +1,22 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
-import { capitalLetter, scrollSection, scrollToTop, slugify } from '@/utils'
+import { capitalLetter, scrollSection, slugify } from '@/utils'
 import SvgIcon from './SvgIcon'
 
 export default function Navbar() {
-  const [isShowScrollTop, setIsShowScrollTop] = useState(false)
   const [isNavbarFixed, setIsNavbarFixed] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [active, setActive] = useState('home')
   const initialOffsetTop = useRef<number | null>(null)
   const navRef = useRef<HTMLElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const handleScroll = useCallback(() => {
     const navTop = navRef.current?.offsetTop ?? 0
 
     if (initialOffsetTop.current === null) initialOffsetTop.current = navTop
+    if (inputRef.current?.checked) inputRef.current.checked = false
 
-    setIsMenuOpen(false)
     setIsNavbarFixed(window.scrollY >= (initialOffsetTop.current || 0))
-    setIsShowScrollTop(window.scrollY > window.innerHeight - SCROLL_OFFSET)
 
     let currentActiveSection = 'home'
     for (const item of NAV_ITEMS) {
@@ -36,17 +34,29 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true })
-
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
   return (
-    <nav
-      ref={navRef}
-      aria-label='Navegación principal'
-      className={`flex items-center justify-center px-8 py-4 mx-auto border rounded-full shadow-lg max-w-7xl backdrop-blur-md bg-rich-black/60 shadow-rebecca-purple/40 border-rebecca-purple/40 ${isNavbarFixed ? 'fixed' : 'relative z-10'}`}
-    >
-      <div>
+    <>
+      <input
+        ref={inputRef}
+        id='mobile-menu'
+        type='checkbox'
+        className='hidden peer'
+        aria-label='Abrir menú móvil'
+      />
+      <label
+        htmlFor='mobile-menu'
+        className='fixed inset-0 z-40 hidden backdrop-blur-sm peer-checked:block md:peer-checked:hidden'
+        aria-controls='mobile-menu'
+        aria-label='Cerrar menú móvil'
+      />
+      <nav
+        ref={navRef}
+        aria-label='Navegación principal'
+        className={`flex items-center justify-center px-8 py-4 mx-auto border rounded-full shadow-lg max-w-7xl h-16 backdrop-blur-md bg-rich-black/60 shadow-rebecca-purple/40 border-rebecca-purple/40 ${isNavbarFixed ? 'fixed top-0 z-40' : 'relative'}`}
+      >
         <ul className='hidden gap-8 md:flex'>
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
@@ -63,34 +73,29 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button
-          type='button'
-          className='md:hidden text-sky-400'
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label='Abrir menu'
-          aria-expanded={isMenuOpen}
+        <label
+          htmlFor='mobile-menu'
+          className='relative mb-0 cursor-pointer md:hidden text-sky-400'
         >
           <SvgIcon
             name='menu'
             variant='icon'
           />
-        </button>
-      </div>
-      <div
-        className={`md:hidden fixed top-0 right-0 w-64 h-full p-4 transform transition-transform duration-300 backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
-      >
-        <button
-          type='button'
-          className='p-2 text-sky-400'
-          onClick={() => setIsMenuOpen(false)}
-          aria-label='Cerrar menu'
+          <span className='sr-only'>Abrir menú</span>
+        </label>
+      </nav>
+      <div className='fixed top-0 right-0 z-50 w-48 h-full p-4 transition-transform duration-300 transform translate-x-full md:hidden backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20 peer-checked:translate-x-0'>
+        <label
+          htmlFor='mobile-menu'
+          className='relative mb-0 cursor-pointer text-sky-400'
         >
+          <span className='sr-only'>Cerrar menú</span>
           <SvgIcon
             name='menu-close'
             variant='icon'
           />
-        </button>
-        <ul className='flex flex-col gap-4 p-4'>
+        </label>
+        <ul className='flex flex-col gap-4 py-4'>
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
               <a
@@ -98,26 +103,12 @@ export default function Navbar() {
                 className={`flex items-center gap-2 hover:text-sky-400 transition-colors ${active === item.label ? 'text-sky-400' : 'text-neutral-100'}`}
                 aria-label={`Ir a la sección ${item.label}`}
               >
-                <span className='text-lg'>
-                  {capitalLetter(slugify(item.label))}.tsx
-                </span>
+                {capitalLetter(slugify(item.label))}.tsx
               </a>
             </li>
           ))}
         </ul>
       </div>
-
-      <button
-        type='button'
-        aria-label='Volver al principio'
-        className={`fixed bottom-6 right-6 text-sky-400 border border-sky-400 shadow-lg shadow-sky-400/50 rounded-full backdrop-blur-md p-3 transition-opacity duration-300 z-20 ${isShowScrollTop ? 'visible opacity-100' : 'invisible opacity-0'}`}
-        onClick={scrollToTop}
-      >
-        <SvgIcon
-          name='scroll-up'
-          variant='icon'
-        />
-      </button>
-    </nav>
+    </>
   )
 }
