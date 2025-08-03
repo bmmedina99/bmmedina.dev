@@ -44,9 +44,9 @@ export default function Navbar() {
     <nav
       ref={navRef}
       aria-label='Navegación principal'
-      className={`flex items-center w-full h-16 select-none z-50 ${isNavbarFixed ? 'fixed top-0 right-0' : 'relative'}`}
+      className={`flex items-center justify-center px-8 py-4 mx-auto border rounded-full shadow-lg max-w-7xl backdrop-blur-md bg-rich-black/60 shadow-rebecca-purple/40 border-rebecca-purple/40 ${isNavbarFixed ? 'fixed' : 'relative z-10'}`}
     >
-      <div className='flex items-center justify-center px-8 py-4 mx-auto border rounded-full shadow-lg max-w-7xl backdrop-blur-md bg-rich-black/60 shadow-rebecca-purple/40 border-rebecca-purple /40'>
+      <div>
         <ul className='hidden gap-8 md:flex'>
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
