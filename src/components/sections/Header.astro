@@ -1,6 +1,6 @@
 ---
 import { NAV_ITEMS } from '@/constants'
-import Navbar from '../ui/Navigation'
+import Navigation from '../ui/Navigation'
 import ScrollToTop from '../ui/ScrollToTop.astro'
 import SvgIcon from '../ui/SvgIcon'
 
@@ -29,7 +29,7 @@ const { label } = NAV_ITEMS[0]
       <span class="text-emerald-400">Backend</span>
     </p>
   </section>
-  <Navbar client:idle />
+  <Navigation client:idle />
   <ScrollToTop />
   <a
     href={`#${label}`}

@@ -3,7 +3,7 @@ import { NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
 import { capitalLetter, scrollSection, slugify } from '@/utils'
 import SvgIcon from './SvgIcon'
 
-export default function Navbar() {
+export default function Navigation() {
   const [isNavbarFixed, setIsNavbarFixed] = useState(false)
   const [active, setActive] = useState('home')
   const initialOffsetTop = useRef<number | null>(null)
