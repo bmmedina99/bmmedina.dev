@@ -9,7 +9,7 @@ import Icon from '../ui/Icon'
 <Section
   name="Proyectos"
   label="Proyectos destacados"
-  divclass="grid md:grid-cols-2 gap-x-4"
+  class="grid md:grid-cols-2 gap-x-4"
 >
   {
     PROJECTS.map((project) => (
@@ -22,7 +22,7 @@ import Icon from '../ui/Icon'
           class="rounded-lg aspect-video"
         />
         <h3
-          class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent`}
+          class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent font-title`}
         >
           {project.title}
         </h3>
