@@ -1,3 +1,10 @@
+export type Section =
+  | 'home'
+  | 'experiencia'
+  | 'proyectos'
+  | 'sobre mí'
+  | 'contactáme'
+
 export interface Experience {
   id: number
   title: string
