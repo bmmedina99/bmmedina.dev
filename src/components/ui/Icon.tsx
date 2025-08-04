@@ -1,11 +1,11 @@
-interface SVGProps {
+interface IconProps {
   name: string
   width?: number
   height?: number
   variant: 'icon' | 'skill'
 }
 
-const SvgIcon = ({ name, width = 24, height = 24, variant }: SVGProps) => {
+const Icon = ({ name, width = 24, height = 24, variant }: IconProps) => {
   const basePath = variant === 'icon' ? 'svg/icons.svg' : 'svg/skills.svg'
 
   const attributes =
@@ -31,4 +31,4 @@ const SvgIcon = ({ name, width = 24, height = 24, variant }: SVGProps) => {
   )
 }
 
-export default SvgIcon
+export default Icon

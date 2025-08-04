@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 import { EXPERIENCES } from '@/constants'
 import Badge from './Badge'
-import SvgIcon from './SvgIcon'
+import Icon from './Icon'
 
 export default function ExperienceDetails() {
   const [expanded, setExpanded] = useState(EXPERIENCES.length - 1)
@@ -40,12 +40,12 @@ export default function ExperienceDetails() {
                 aria-hidden='true'
               >
                 {expanded === experience.id ? (
-                  <SvgIcon
+                  <Icon
                     name='menu-collapse'
                     variant='icon'
                   />
                 ) : (
-                  <SvgIcon
+                  <Icon
                     name='menu-expand'
                     variant='icon'
                   />
@@ -65,7 +65,7 @@ export default function ExperienceDetails() {
             <Badge items={experience.technologies} />
             <div className='flex flex-wrap justify-between gap-4 text-sm'>
               <p className='flex items-center gap-2 text-emerald-200'>
-                <SvgIcon
+                <Icon
                   name='location'
                   variant='icon'
                 />
@@ -73,7 +73,7 @@ export default function ExperienceDetails() {
               </p>
               {experience.website && (
                 <p className='flex items-center gap-2 text-cyan-200'>
-                  <SvgIcon
+                  <Icon
                     name='website'
                     variant='icon'
                   />

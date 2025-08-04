@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import Wormhole from '@/assets/video/wormhole.webm'
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import { formSchema } from '@/schemas'
-import SvgIcon from './SvgIcon'
+import Icon from './Icon'
 
 function Form() {
   const [subjectCharacterCount, setSubjectCharacterCount] = useState(0)
@@ -152,7 +152,7 @@ function Form() {
           className='mx-auto btn'
           disabled={isSending}
         >
-          <SvgIcon
+          <Icon
             name='send'
             variant='icon'
           />
