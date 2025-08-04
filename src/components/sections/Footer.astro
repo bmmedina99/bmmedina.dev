@@ -1,6 +1,6 @@
 ---
 import { SOCIAL_LINK } from '@/constants'
-import SvgIcon from '../ui/SvgIcon'
+import Icon from '../ui/Icon'
 ---
 
 <footer
@@ -20,7 +20,7 @@ import SvgIcon from '../ui/SvgIcon'
           class="flex flex-col items-center text-center hover:text-zinc-400 hover:-translate-y-1"
           aria-label={social.name}
         >
-          <SvgIcon name={social.icon} width={32} height={32} variant="skill" />
+          <Icon name={social.icon} width={32} height={32} variant="skill" />
           <span class="mt-2 text-sm">{social.name}</span>
         </a>
       ))

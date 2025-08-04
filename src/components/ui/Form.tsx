@@ -4,7 +4,7 @@ import { toast } from 'sonner'
 import Wormhole from '@/assets/video/wormhole.webm'
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
 import { formSchema } from '@/schemas'
-import SvgIcon from './SvgIcon'
+import Icon from './Icon'
 
 function Form() {
   const [subjectCharacterCount, setSubjectCharacterCount] = useState(0)
@@ -23,7 +23,7 @@ function Form() {
 
     const result = formSchema.safeParse(data)
     if (!result.success) {
-      const { message } = result.error.errors[0]
+      const { message } = result.error.issues[0]
       toast.warning(message)
       return
     }
@@ -142,7 +142,7 @@ function Form() {
         </div>
       </div>
       <div className='space-y-4 text-center'>
-        <p className='text-xs font-medium md:text-sm text-indigo-200 text-pretty'>
+        <p className='text-xs font-medium text-indigo-200 md:text-sm text-pretty'>
           Toda la información del formulario se enviará a mi correo personal y
           se usará solo para responder. Al darle a enviar mensaje consiente que
           se manejen sus datos con este fin.
@@ -152,7 +152,7 @@ function Form() {
           className='mx-auto btn'
           disabled={isSending}
         >
-          <SvgIcon
+          <Icon
             name='send'
             variant='icon'
           />

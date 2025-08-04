@@ -7,7 +7,7 @@ export const formSchema = z.object({
       message: 'El nombre es obligatorio. Por favor, ingrese su nombre.',
     })
     .max(25, { message: 'El nombre no puede exceder los 50 caracteres.' }),
-  email: z.string().email({
+  email: z.email({
     message:
       'El correo electrónico ingresado no es válido. Asegúrese de utilizar el formato ejemplo@correo.com',
   }),
