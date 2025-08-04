@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.3...v1.2.4) (2025-08-04)
+
+
+### Bug Fixes
+
+* **sections:** :ambulance: correct bug causing incorrect section display ([c1f6c0f](https://github.com/bmmedina99/bmmedina.dev/commit/c1f6c0f983fc3ceb7b59d11123a4275236f0524d))
+
 ## [1.2.3](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.2...v1.2.3) (2025-08-04)
 
 
