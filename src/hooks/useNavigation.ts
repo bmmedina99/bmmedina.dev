@@ -1,0 +1,72 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
+import type { Section } from '@/types'
+import { slugify } from '@/utils'
+
+export function useNavigation() {
+  const [isNavigationFixed, setIsNavigationFixed] = useState(false)
+  const [activeSection, setActiveSection] = useState<Section>('home')
+  const initialOffsetTop = useRef<number | null>(null)
+  const navRef = useRef<HTMLElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  const handleScroll = useCallback(() => {
+    const navigationTop = navRef.current?.offsetTop ?? 0
+
+    if (initialOffsetTop.current === null)
+      initialOffsetTop.current = navigationTop
+
+    if (inputRef.current?.checked) inputRef.current.checked = false
+
+    const isFixed = window.scrollY >= (initialOffsetTop.current || 0)
+    if (isFixed !== isNavigationFixed) setIsNavigationFixed(isFixed)
+
+    const scrollY = window.scrollY
+    let currentActiveSection = 'home' as Section
+    for (const item of NAV_ITEMS) {
+      const section = document.querySelector(
+        `#${slugify(item.label)}`,
+      ) as HTMLElement
+      const sectionTop =
+        section?.getBoundingClientRect().top + scrollY - SCROLL_OFFSET
+
+      if (scrollY >= sectionTop) currentActiveSection = item.label
+    }
+
+    setActiveSection(currentActiveSection)
+    // requestAnimationFrame(() => {
+    //   const navigationTop = navRef.current?.offsetTop ?? 0
+
+    //   if (initialOffsetTop.current === null)
+    //     initialOffsetTop.current = navigationTop
+
+    //   if (inputRef.current?.checked) inputRef.current.checked = false
+
+    //   const isFixed = window.scrollY >= (initialOffsetTop.current || 0)
+    //   if (isFixed !== isNavigationFixed) setIsNavigationFixed(isFixed)
+
+    //   const scrollY = window.scrollY
+    //   for (const item of NAV_ITEMS) {
+    //     const section = document.querySelector(
+    //       `#${slugify(item.label)}`,
+    //     ) as HTMLElement
+    //     const sectionTop =
+    //       section?.getBoundingClientRect().top + scrollY - SCROLL_OFFSET
+
+    //     if (scrollY >= sectionTop) setActiveSection(item.label as Section)
+    //   }
+    // })
+  }, [isNavigationFixed])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [handleScroll])
+
+  return {
+    isNavigationFixed,
+    activeSection,
+    navRef,
+    inputRef,
+  }
+}
