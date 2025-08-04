@@ -1,3 +1,16 @@
+## [1.2.3](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.2...v1.2.3) (2025-08-04)
+
+
+### Bug Fixes
+
+* **zod:** :ambulance: update use `result.error.issues` instead of `erros` ([22e5603](https://github.com/bmmedina99/bmmedina.dev/commit/22e56032b8f325cbbb04a063dd0081490abea65f))
+* **zod:** :bug: replace deprecated `z.string().email()` to `z.email()` ([f738c63](https://github.com/bmmedina99/bmmedina.dev/commit/f738c633caee4b7a86c4a8ab61c96f9b660055d9))
+
+
+### Performance Improvements
+
+* **navigation:** replace JS with CSS peer utilities ([#50](https://github.com/bmmedina99/bmmedina.dev/issues/50)) ([b60f346](https://github.com/bmmedina99/bmmedina.dev/commit/b60f34632cddaa4f616eaa6fa78c19afb3549455))
+
 ## [1.2.2](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.1...v1.2.2) (2025-07-30)
 
 
