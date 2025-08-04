@@ -3,7 +3,7 @@ import { Image } from 'astro:assets'
 import { PROJECTS } from '@/constants'
 import Section from '../Section.astro'
 import Badge from '../ui/Badge'
-import SvgIcon from '../ui/SvgIcon'
+import Icon from '../ui/Icon'
 ---
 
 <Section
@@ -43,7 +43,7 @@ import SvgIcon from '../ui/SvgIcon'
                 rel="noopener noreferrer nofollow"
                 class={`font-medium text-current btn ${project.gradient} border-none`}
               >
-                <SvgIcon name="github" variant="icon" />
+                <Icon name="github" variant="icon" />
                 <span>Código</span>
               </a>
             )}
@@ -54,7 +54,7 @@ import SvgIcon from '../ui/SvgIcon'
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <SvgIcon name="website" variant="icon" />
+                <Icon name="website" variant="icon" />
                 <span>Demo</span>
               </a>
             )}

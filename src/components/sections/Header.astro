@@ -1,7 +1,8 @@
 ---
 import { NAV_ITEMS } from '@/constants'
-import Navbar from '../ui/Navbar'
-import SvgIcon from '../ui/SvgIcon'
+import Icon from '../ui/Icon'
+import Navigation from '../ui/Navigation'
+import ScrollToTop from '../ui/ScrollToTop.astro'
 
 const { label } = NAV_ITEMS[0]
 ---
@@ -28,12 +29,13 @@ const { label } = NAV_ITEMS[0]
       <span class="text-emerald-400">Backend</span>
     </p>
   </section>
-  <Navbar client:idle />
+  <Navigation client:idle />
+  <ScrollToTop />
   <a
     href={`#${label}`}
     class="absolute flex items-center w-6 h-10 border-4 rounded-full bottom-8 border-sky-400 animate-bounce"
     aria-label={`Ir a la sección de ${label}`}
   >
-    <SvgIcon name="scroll-down" variant="icon" />
+    <Icon name="scroll-down" variant="icon" />
   </a>
 </header>

@@ -1,0 +1,27 @@
+---
+import Icon from './Icon'
+---
+
+<input id="scroll-input" type="checkbox" class="hidden peer" />
+<button
+  id="scroll-to-top"
+  type="button"
+  aria-label="Volver al principio"
+  class="fixed z-50 invisible p-3 transition-opacity duration-300 border rounded-full shadow-lg opacity-0 bottom-6 right-6 text-sky-400 border-sky-400 shadow-sky-400/50 backdrop-blur-md peer-checked:opacity-100 peer-checked:visible"
+>
+  <Icon name="scroll-up" variant="icon" />
+</button>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollInput = document.querySelector("#scroll-input") as HTMLInputElement
+    const scrollToTopButton = document.querySelector("#scroll-to-top")
+
+    scrollToTopButton?.addEventListener("click", () =>
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    )
+
+    window.addEventListener("scroll", () => {
+      scrollInput.checked = window.scrollY > window.innerHeight - 96
+    })
+  })
+</script>
