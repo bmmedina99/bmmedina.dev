@@ -8,6 +8,8 @@ export const SCROLL_OFFSET = 96
 
 export const STARTS_COUNT = 1000
 
+export const HOME_SECTION = 'home'
+
 export const NAV_ITEMS = [
   { id: '01', label: 'experiencia' },
   { id: '02', label: 'proyectos' },
