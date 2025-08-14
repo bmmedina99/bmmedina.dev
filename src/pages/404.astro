@@ -1,17 +1,34 @@
 ---
+import StarFieldBackground from '@/components/ui/StarFieldBackground'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="404 - Página no encontrada | bmmedina">
-  <main class="relative flex flex-col items-center justify-center min-h-dvh">
-    <div class="z-10 px-4 text-center uppercase text-balance">
-      <h1 class="text-4xl font-bold md:text-7xl font-title">
+  <main
+    class="container relative flex flex-col items-center justify-center mx-auto min-h-dvh"
+  >
+    <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
+      <p
+        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-gradient-to-r from-indigo-200 to-rebecca-purple"
+      >
         404
-      </h1>
-      <p class="my-4 text-lg font-medium md:text-xl text-gray-300 ">
-        Lo sentimos, no pudimos encontrar la página que buscas.
       </p>
+      <section class="space-y-6">
+        <h1 class="font-bold font-title">Página no encontrada</h1>
+        <p
+          class="max-w-2xl mx-auto text-xl leading-relaxed text-indigo-200 text-pretty"
+        >
+          Lo sentimos, la página que estás buscando no existe o ha sido movida.
+          Pero no te preocupes, hay muchas otras cosas increíbles que puedes
+          explorar.
+        </p>
+      </section>
+      <div class="flex items-center justify-center">
+        <button type="button" onclick="window.history.back()" class="btn">
+          Volver a la página anterior
+        </button>
+      </div>
     </div>
-    <a href="/" class="btn">Volver al inicio</a>
+    <StarFieldBackground client:idle />
   </main>
 </Layout>
