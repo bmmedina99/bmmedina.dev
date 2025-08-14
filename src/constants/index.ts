@@ -234,6 +234,6 @@ export const SOCIAL_LINK: Social[] = [
     id: 5,
     name: 'Facebook',
     icon: 'facebook',
-    link: 'https://www.facebook.com/bmmedina99',
+    link: 'https://www.facebook.com/bmmedina.dev/',
   },
 ]
