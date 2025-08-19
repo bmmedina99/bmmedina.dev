@@ -117,7 +117,7 @@ export const PROJECTS: Project[] = [
     subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
       'Elige hiragana, katakana o ambos y evalúa tu conocimiento de japonés con pruebas visuales. ¿Te atreves?',
-    technologies: ['En desarrollo'],
+    technologies: ['Astro', 'React', 'TypeScript', 'TailwindCSS', 'Biome'],
     type: 'Frontend',
     gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
     githubURL: 'https://github.com/bmmedina99/kirakana.app',
