@@ -1,3 +1,12 @@
+## [1.2.5](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.4...v1.2.5) (2025-08-22)
+
+
+### Bug Fixes
+
+* **config:** :adhesive_bandage: ensure all code paths return a value ([8b7ada0](https://github.com/bmmedina99/bmmedina.dev/commit/8b7ada08ff0f942a69dba7cf99bd6abe4109cd80))
+* **projects:** :wrench: add badges for `KiraKana` project ([801fbfa](https://github.com/bmmedina99/bmmedina.dev/commit/801fbfa9fc81d2a3096224a455c03e7014cc9e1b))
+* **zod:** :bug: guard undefined before reading issue.message ([e83d927](https://github.com/bmmedina99/bmmedina.dev/commit/e83d92752ccc7963f49d940cd79ff1e34c687d3c))
+
 ## [1.2.4](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.3...v1.2.4) (2025-08-04)
 
 
