@@ -17,6 +17,7 @@ export default defineConfig({
               return 'three-fiber'
             if (id.includes('node_modules/three')) return 'three-core'
             if (id.includes('node_modules/sonner')) return 'sonner-core'
+            return
           },
         },
       },

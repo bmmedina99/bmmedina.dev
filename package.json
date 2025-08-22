@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "astro dev --port=4000",
     "build": "astro check && astro build",
-    "release": "pnpx semantic-release",
+    "release": "pnpm dlx semantic-release",
     "preview": "astro preview --port=5000",
     "fmt": "pnpm biome format --write .",
     "lint": "pnpm biome lint --write ."
@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "@astrojs/react": "4.3.0",
-    "@astrojs/sitemap": "3.4.2",
+    "@astrojs/sitemap": "3.5.0",
     "@emailjs/browser": "4.4.1",
     "@fontsource/onest": "5.2.9",
     "@fontsource/orbitron": "5.2.6",
     "@react-three/fiber": "9.3.0",
-    "astro": "5.12.8",
+    "astro": "5.13.0",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.1.0",
     "react": "19.1.1",
@@ -31,7 +31,7 @@
     "schema-dts": "1.1.5",
     "sonner": "2.0.7",
     "three": "0.179.1",
-    "zod": "4.0.14"
+    "zod": "4.0.17"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.4",
@@ -39,7 +39,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tailwindcss/vite": "4.1.11",
-    "@types/react": "19.1.9",
+    "@types/react": "19.1.10",
     "@types/react-dom": "19.1.7",
     "@types/three": "0.179.0",
     "semantic-release": "24.2.7",

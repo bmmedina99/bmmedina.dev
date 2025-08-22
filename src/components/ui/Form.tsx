@@ -23,7 +23,8 @@ function Form() {
 
     const result = formSchema.safeParse(data)
     if (!result.success) {
-      const { message } = result.error.issues[0]
+      const issue = result.error.issues[0]
+      const message = issue ? issue.message : 'Error en el formulario.'
       toast.warning(message)
       return
     }

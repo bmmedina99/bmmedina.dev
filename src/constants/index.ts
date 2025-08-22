@@ -8,6 +8,8 @@ export const SCROLL_OFFSET = 96
 
 export const STARTS_COUNT = 1000
 
+export const HOME_SECTION = 'home'
+
 export const NAV_ITEMS = [
   { id: '01', label: 'experiencia' },
   { id: '02', label: 'proyectos' },
@@ -115,7 +117,7 @@ export const PROJECTS: Project[] = [
     subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
       'Elige hiragana, katakana o ambos y evalúa tu conocimiento de japonés con pruebas visuales. ¿Te atreves?',
-    technologies: ['En desarrollo'],
+    technologies: ['Astro', 'React', 'TypeScript', 'TailwindCSS', 'Biome'],
     type: 'Frontend',
     gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
     githubURL: 'https://github.com/bmmedina99/kirakana.app',
@@ -232,6 +234,6 @@ export const SOCIAL_LINK: Social[] = [
     id: 5,
     name: 'Facebook',
     icon: 'facebook',
-    link: 'https://www.facebook.com/bmmedina99',
+    link: 'https://www.facebook.com/bmmedina.dev/',
   },
 ]

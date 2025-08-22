@@ -1,8 +1,8 @@
-import { STARTS_COUNT } from '@/constants'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { AdditiveBlending, TextureLoader } from 'three'
 import type { Points } from 'three/src/objects/Points.js'
+import { STARTS_COUNT } from '@/constants'
 
 function StarField() {
   const starsRef = useRef<Points>(null)
@@ -26,16 +26,17 @@ function StarField() {
 
   useFrame(() => {
     if (!starsRef.current) return
-    const positions = starsRef.current.geometry.attributes.position
-      .array as Float32Array
+    const position = starsRef.current.geometry.attributes.position
+    const positions = position?.array as Float32Array
 
+    if (!positions) return
     for (let i = 0; i < startsCount; i++) {
       const i3 = i * 3
       positions[i3 + 2] += 0.05
-
       if (positions[i3 + 2] > 50) positions[i3 + 2] = -50
     }
-    starsRef.current.geometry.attributes.position.needsUpdate = true
+
+    if (position) position.needsUpdate = true
   })
 
   return (
