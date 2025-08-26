@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 import { toast } from 'sonner'
 import Wormhole from '@/assets/video/wormhole.webm'
 import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
-import { formSchema } from '@/schemas'
+import { formSchema } from '@/schemas/contact'
 import Icon from './Icon'
 
 function Form() {
