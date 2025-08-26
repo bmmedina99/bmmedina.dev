@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { HOME_SECTION, NAV_ITEMS, SCROLL_OFFSET } from '@/constants'
+import { HOME_SECTION, SCROLL_OFFSET } from '@/constants'
+import { navLinks } from '@/site.config'
 import { slugify } from '@/utils'
 
 export function useNavigation() {
@@ -23,7 +24,7 @@ export function useNavigation() {
 
       const scrollY = window.scrollY
       let currentActiveSection = HOME_SECTION
-      for (const item of NAV_ITEMS) {
+      for (const item of navLinks) {
         const section = document.querySelector(
           `#${slugify(item.label)}`,
         ) as HTMLElement

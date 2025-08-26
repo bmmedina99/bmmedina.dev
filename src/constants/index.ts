@@ -10,12 +10,7 @@ export const STARTS_COUNT = 1000
 
 export const HOME_SECTION = 'home'
 
-export const NAV_ITEMS = [
-  { id: '01', label: 'experiencia' },
-  { id: '02', label: 'proyectos' },
-  { id: '03', label: 'sobre mí' },
-  { id: '04', label: 'contactáme' },
-] as const
+export const EXPERIENCES_SECTION = 'experiencia'
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -210,13 +205,13 @@ export const SOCIAL_LINK: Social[] = [
     id: 1,
     name: 'LinkedIn',
     icon: 'linkedin',
-    link: 'https://www.linkedin.com/in/bmmedina99/',
+    link: 'https://www.linkedin.com/in/bmmedina99',
   },
   {
     id: 2,
     name: 'Instagram',
     icon: 'instagram',
-    link: 'https://www.instagram.com/bmmedina99/',
+    link: 'https://www.instagram.com/bmmedina99',
   },
   {
     id: 3,

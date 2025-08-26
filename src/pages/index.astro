@@ -2,12 +2,13 @@
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 import Main from '@/components/layout/Main.astro'
+import { configSite } from '@/site.config'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout
-  title="Brandon Medina - Desarrollador Web Full Stack | bmmedina"
-  description="Brandon Medina, desarrollador web Full Stack con más de 3 años de experiencia en Next.js, Astro, React y Node.js. Enfocado en crear y optimizar sitios web."
+  title="Brandon Medina - Desarrollador Web Full Stack"
+  description={configSite.description}
 >
   <a href="#main-content" class="sr-only focus:not-sr-only">
     Ir al contenido principal

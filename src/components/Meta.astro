@@ -2,10 +2,13 @@
 import onestFont from '@fontsource/onest/files/onest-latin-400-normal.woff2?url'
 import orbitronFont from '@fontsource/orbitron/files/orbitron-latin-700-normal.woff2?url'
 import { Schema } from 'astro-seo-schema'
+import { configSite } from '@/site.config'
 import globalCSS from '@/styles/global.css?inline'
 
 const canonicalURL = new URL(Astro.request.url, Astro.site).toString()
 const { title, description } = Astro.props
+const siteTitle = `${title} | ${configSite.title}`
+const author = configSite.author
 ---
 
 <meta charset="utf-8" />
@@ -86,34 +89,28 @@ const { title, description } = Astro.props
 
 <style set:html={globalCSS}></style>
 
-<title>{title}</title>
+<title>{siteTitle}</title>
 <meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content="index, follow" />
-<meta name="author" content="Brandon Medina" />
+<meta name="author" content={author} />
 
-<meta property="og:title" content={title} />
+<meta property="og:title" content={siteTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:site_name" content="bmmedina.dev" />
-<meta
-  property="og:image"
-  content="https://bmmedina.dev/images/open-graph.webp"
-/>
+<meta property="og:image" content=`${canonicalURL}images/open-graph.webp` />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:type" content="website" />
 
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={title} />
+<meta property="twitter:title" content={siteTitle} />
 <meta property="twitter:description" content={description} />
-<meta
-  property="twitter:image"
-  content="https://bmmedina.dev/images/twitter-card.webp"
-/>
+<meta property="twitter:image" content=`${canonicalURL}images/twitter-card.webp` />
 <meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:site" content="@bmmedina99" />
-<meta property="twitter:creator" content="@bmmedina99" />
+<meta property="twitter:site" content={`@${author}`} />
+<meta property="twitter:creator" content={`@${author}`} />
 
 <meta name="theme-color" content="#003014" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -128,15 +125,15 @@ const { title, description } = Astro.props
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Brandon Medina",
-    url: "https://bmmedina.dev",
+    url: canonicalURL,
     image: "https://bmmedina.dev/images/profile.webp",
     sameAs: [
       "https://github.com/bmmedina99",
-      "https://www.linkedin.com/in/bmmedina99/",
-      "https://www.instagram.com/bmmedina99/",
+      "https://www.linkedin.com/in/bmmedina99",
+      "https://www.instagram.com/bmmedina99",
       "https://www.youtube.com/@bmmedina99",
       "https://x.com/bmmedina99",
-      "https://www.facebook.com/bmmedina99"
+      "https://www.facebook.com/bmmedina.dev"
     ],
     jobTitle: "Desarrollador Web Full Stack",
     worksFor: {
