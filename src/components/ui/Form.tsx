@@ -42,6 +42,8 @@ function Form() {
             { duration: 2000 },
           )
           form.reset()
+          setSubjectCharacterCount(0)
+          setMessageCharacterCount(0)
         },
         (error) => {
           toast.error(`Mensaje no enviado: ${error.text}`, { duration: 2000 })
