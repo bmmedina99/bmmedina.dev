@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react'
-import { EXPERIENCES } from '@/constants'
+import { Experiences } from '@/site.config'
 import Badge from './Badge'
 import Icon from './Icon'
 
 export default function ExperienceDetails() {
-  const [expanded, setExpanded] = useState(EXPERIENCES.length - 1)
+  const [expanded, setExpanded] = useState(Experiences.length - 1)
 
   const handleExpand = useCallback((id: number) => {
     setExpanded((prev) => (prev === id ? -1 : id))
@@ -12,7 +12,7 @@ export default function ExperienceDetails() {
 
   return (
     <>
-      {[...EXPERIENCES].reverse().map((experience) => (
+      {[...Experiences].reverse().map((experience) => (
         <article
           key={experience.id}
           className='mb-4'

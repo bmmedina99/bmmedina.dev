@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import techSkills from '@/assets/svg/tech-skills.svg'
-import { PROFILE } from '@/constants'
+import { aboutMe } from '@/site.config'
 import { slugify } from '@/utils'
 import Badge from '../ui/Badge'
 import Icon from '../ui/Icon'
@@ -16,7 +16,7 @@ import Section from './Section.astro'
   <div class="space-y-4 [&>p]:text-lg [&>p]:text-pretty">
     <div class="flex flex-col items-center gap-4 md:block">
       <Image
-        src={PROFILE.image}
+        src={aboutMe.image}
         alt="Brandon Medina - Desarrollador Web Full Stack"
         class="profile-img"
         width={192}
@@ -78,7 +78,7 @@ import Section from './Section.astro'
         class="grid grid-cols-3 md:grid-cols-5 gap-2 [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:text-center"
       >
         {
-          PROFILE.techSkills.map((tech) => (
+          aboutMe.techSkills.map((tech) => (
             <li>
               <Icon
                 name={slugify(tech)}
@@ -99,7 +99,7 @@ import Section from './Section.astro'
       >
         Habilidades blandas
       </h3>
-      <Badge items={PROFILE.softSkills} />
+      <Badge items={aboutMe.softSkills} />
     </section>
     <section aria-labelledby="education-heading">
       <h3
@@ -110,7 +110,7 @@ import Section from './Section.astro'
       </h3>
       <ul class="space-y-2">
         {
-          PROFILE.studies.map((study) => (
+          aboutMe.studies.map((study) => (
             <li class="p-4 mb-2 cursor-pointer card">
               <h4 class="text-sm font-semibold text-violet-300">
                 {study.title}

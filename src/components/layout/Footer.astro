@@ -1,5 +1,5 @@
 ---
-import { SOCIAL_LINK } from '@/constants'
+import { socialLinks } from '@/site.config'
 import Icon from '../ui/Icon'
 ---
 
@@ -9,9 +9,9 @@ import Icon from '../ui/Icon'
   <p class="text-lg font-medium text-center md:text-xl text-pretty">
     También puedes contactarme por estos medios:
   </p>
-  <div class="grid grid-cols-3 md:grid-cols-6 gap-y-4">
+  <div class="max-w-xl mx-auto grid grid-cols-3 md:grid-cols-6 space-y-4">
     {
-      SOCIAL_LINK.map((social) => (
+      socialLinks.map((social) => (
         <a
           href={social.link}
           target="_blank"

@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import { PROJECTS } from '@/constants'
+import { projects } from '@/site.config'
 import Badge from '../ui/Badge'
 import Icon from '../ui/Icon'
 import Section from './Section.astro'
@@ -12,7 +12,7 @@ import Section from './Section.astro'
   class="grid md:grid-cols-2 gap-x-4"
 >
   {
-    PROJECTS.map((project) => (
+    projects.map((project) => (
       <article class="p-4 space-y-4 text-center card">
         <Image
           src={project.image}
