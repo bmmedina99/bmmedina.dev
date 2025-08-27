@@ -2,7 +2,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { AdditiveBlending, TextureLoader } from 'three'
 import type { Points } from 'three/src/objects/Points.js'
-import { STARTS_COUNT } from '@/constants'
+import { STARTS_COUNT } from '@/lib/constants'
 
 function StarField() {
   const starsRef = useRef<Points>(null)

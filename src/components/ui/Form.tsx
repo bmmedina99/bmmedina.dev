@@ -2,8 +2,8 @@ import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
 import { toast } from 'sonner'
 import Wormhole from '@/assets/video/wormhole.webm'
-import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/constants'
-import { formSchema } from '@/schemas/contact'
+import { CHARACTER_LIMITS, EMAILJS_DATA } from '@/lib/constants'
+import { formSchema } from '@/lib/schemas/contact'
 import Icon from './Icon'
 
 function Form() {

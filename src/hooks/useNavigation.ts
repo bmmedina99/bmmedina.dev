@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { HOME_SECTION, SCROLL_OFFSET } from '@/constants'
+import { HOME_SECTION, SCROLL_OFFSET } from '@/lib/constants'
+import { slugify } from '@/lib/utils'
 import { navLinks } from '@/site.config'
-import { slugify } from '@/utils'
 
 export function useNavigation() {
   const [isNavigationFixed, setIsNavigationFixed] = useState(false)

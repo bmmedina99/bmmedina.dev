@@ -1,5 +1,5 @@
+import { capitalLetter, scrollSection, slugify } from '@/lib/utils'
 import { navLinks } from '@/site.config'
-import { capitalLetter, scrollSection, slugify } from '@/utils'
 
 interface NavItemsProps {
   active: string
