@@ -131,6 +131,7 @@ export const projects: Project[] = [
     type: 'Frontend',
     gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
     githubURL: 'https://github.com/bmmedina99/kirakana.app',
+    demoURL: 'https://kirakana.app',
   },
   {
     id: 1,
