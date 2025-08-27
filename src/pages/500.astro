@@ -1,0 +1,51 @@
+---
+import StarFieldBackground from '@/components/ui/StarFieldBackground'
+import Layout from '@/layouts/Layout.astro'
+
+const { error } = Astro.props
+---
+
+<Layout title="500 - Ha ocurrido un error">
+  <main
+    class="container relative flex flex-col items-center justify-center mx-auto min-h-dvh"
+  >
+    <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
+      <p
+        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-gradient-to-r from-indigo-200 to-rebecca-purple"
+      >
+        500
+      </p>
+      <section class="space-y-6">
+        <h1 class="font-bold font-title">Ha ocurrido un error</h1>
+        <p
+          class="max-w-2xl mx-auto text-xl leading-relaxed text-indigo-200 text-pretty"
+        >
+          Lo sentimos, ocurrio un error inesperado, pero no te preocupes,
+          nuestro equipo ha sido notificado y está trabajando para solucionarlo.
+        </p>
+        {
+          process.env.NODE_ENV === "development" && (
+            <details class="max-w-lg p-4 mx-auto mt-6 text-left border border-indigo-200 rounded-lg bg-indigo-50">
+              <summary class="font-medium text-indigo-700 cursor-pointer">
+                desarrollo: mensaje de error
+              </summary>
+              <pre class="mt-2 text-sm text-indigo-700 break-words whitespace-break-spaces">
+                {error.message}
+              </pre>
+            </details>
+          )
+        }
+      </section>
+      <div class="flex items-center justify-center">
+        <button
+          type="button"
+          onclick="window.location.reload()"
+          class="btn font-medium text-current"
+        >
+          Recargar página
+        </button>
+      </div>
+    </div>
+    <StarFieldBackground client:idle />
+  </main>
+</Layout>
