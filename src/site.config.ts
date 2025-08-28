@@ -203,7 +203,7 @@ export const socialLinks: Social[] = [
   {
     id: 0,
     name: 'GitHub',
-    icon: 'git-github',
+    icon: 'github',
     link: 'https://github.com/bmmedina99',
   },
   {
