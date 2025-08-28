@@ -45,7 +45,7 @@ import Section from './Section.astro'
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="cv_bmmedina.pdf" download class="btn">
-        <Icon name="download" variant="icon" />
+        <Icon name="download" />
         <span>Descagar CV</span>
       </a>
       <a
@@ -53,7 +53,7 @@ import Section from './Section.astro'
         class="btn"
         aria-label="Ir a la sección de contacto"
       >
-        <Icon name="contact" variant="icon" />
+        <Icon name="contact" />
         <span>Contáctame</span>
       </a>
     </div>
@@ -84,7 +84,6 @@ import Section from './Section.astro'
                 name={slugify(tech)}
                 width={48}
                 height={48}
-                variant="skill"
               />
               <p class="mt-2 text-sm">{tech}</p>
             </li>

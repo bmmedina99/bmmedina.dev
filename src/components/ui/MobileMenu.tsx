@@ -13,10 +13,7 @@ export const MobileMenuButton = () => {
       htmlFor='mobile-menu'
       className='relative mb-0 cursor-pointer md:hidden text-sky-400'
     >
-      <Icon
-        name='menu'
-        variant='icon'
-      />
+      <Icon name='menu' />
       <span className='sr-only'>Abrir menú</span>
     </label>
   )
@@ -43,10 +40,7 @@ export const MobileMenu = ({ active, inputRef }: MobileMenuProps) => {
           htmlFor='mobile-menu'
           className='relative mb-0 cursor-pointer text-sky-400'
         >
-          <Icon
-            name='menu-close'
-            variant='icon'
-          />
+          <Icon name='menu-close' />
           <span className='sr-only'>Cerrar menú</span>
         </label>
         <NavItems

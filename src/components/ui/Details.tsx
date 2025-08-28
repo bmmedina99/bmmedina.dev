@@ -40,15 +40,9 @@ export default function ExperienceDetails() {
                 aria-hidden='true'
               >
                 {expanded === experience.id ? (
-                  <Icon
-                    name='menu-collapse'
-                    variant='icon'
-                  />
+                  <Icon name='menu-collapse' />
                 ) : (
-                  <Icon
-                    name='menu-expand'
-                    variant='icon'
-                  />
+                  <Icon name='menu-expand' />
                 )}
               </span>
             </div>
@@ -65,18 +59,12 @@ export default function ExperienceDetails() {
             <Badge items={experience.technologies} />
             <div className='flex flex-wrap justify-between gap-4 text-sm'>
               <p className='flex items-center gap-2 text-emerald-200'>
-                <Icon
-                  name='location'
-                  variant='icon'
-                />
+                <Icon name='location' />
                 <span>{experience.location}</span>
               </p>
               {experience.website && (
                 <p className='flex items-center gap-2 text-cyan-200'>
-                  <Icon
-                    name='website'
-                    variant='icon'
-                  />
+                  <Icon name='website' />
                   <a
                     href={experience.website.link}
                     target='_blank'

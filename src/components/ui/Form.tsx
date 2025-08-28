@@ -155,10 +155,7 @@ function Form() {
           className='mx-auto btn'
           disabled={isSending}
         >
-          <Icon
-            name='send'
-            variant='icon'
-          />
+          <Icon name='send' />
           <span>{isSending ? 'Enviando mensaje...' : 'Enviar mensaje'}</span>
         </button>
       </div>
