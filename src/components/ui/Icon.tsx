@@ -2,31 +2,24 @@ interface IconProps {
   name: string
   width?: number
   height?: number
-  variant: 'icon' | 'skill'
+  className: string
 }
 
-const Icon = ({ name, width = 24, height = 24, variant }: IconProps) => {
-  const basePath = variant === 'icon' ? 'svg/icons.svg' : 'svg/skills.svg'
-
-  const attributes =
-    variant === 'icon'
-      ? {
-          fill: 'none',
-          stroke: 'currentColor',
-          strokeWidth: '2',
-        }
-      : {
-          fill: 'currentColor',
-        }
-
+const Icon = ({ name, width = 24, height = 24, className }: IconProps) => {
   return (
     <svg
       width={width}
       height={height}
-      {...attributes}
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth='2'
       aria-hidden='true'
+      className={className}
     >
-      <use href={`${basePath}#${name}`} />
+      <use href={`svg/sprite.svg#${name}`} />
     </svg>
   )
 }
