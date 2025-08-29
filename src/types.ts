@@ -38,7 +38,10 @@ export interface Project {
 
 export interface Profile {
   image: ImageMetadata
-  techSkills: string[]
+  techSkills: {
+    text: string
+    color: string
+  }[]
   softSkills: string[]
   studies: {
     title: string

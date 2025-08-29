@@ -81,12 +81,12 @@ import Section from './Section.astro'
           aboutMe.techSkills.map((tech) => (
             <li>
               <Icon
-                name={slugify(tech)}
+                name={slugify(tech.text)}
                 width={48}
                 height={48}
-                className='hover:-translate-y-1 hover:text-indigo-200 transition-all'
+                className={`hover:-translate-y-1 transition-all ${tech.color}`}
               />
-              <p class="mt-2 text-sm font-medium">{tech}</p>
+              <p class="mt-2 text-sm font-medium">{tech.text}</p>
             </li>
           ))
         }

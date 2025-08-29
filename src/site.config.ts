@@ -162,16 +162,46 @@ export const projects: Project[] = [
 export const aboutMe: Profile = {
   image: profile,
   techSkills: [
-    'Next.js',
-    'Astro',
-    'React',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'Python',
-    'TailwindCSS',
-    'PostgreSQL',
-    'Git & Github',
+    {
+      text: 'Next.js',
+      color: 'hover:text-indigo-400',
+    },
+    {
+      text: 'Astro',
+      color: 'hover:text-fuchsia-400',
+    },
+    {
+      text: 'React',
+      color: 'hover:text-cyan-400',
+    },
+    {
+      text: 'TypeScript',
+      color: 'hover:text-sky-600',
+    },
+    {
+      text: 'Node.js',
+      color: 'hover:text-green-600',
+    },
+    {
+      text: 'NestJS',
+      color: 'hover:text-rose-500 stroke-4',
+    },
+    {
+      text: 'Python',
+      color: 'hover:text-sky-600',
+    },
+    {
+      text: 'TailwindCSS',
+      color: 'hover:text-cyan-400',
+    },
+    {
+      text: 'PostgreSQL',
+      color: 'hover:text-indigo-500',
+    },
+    {
+      text: 'Git & Github',
+      color: 'hover:text-orange-600',
+    },
   ],
   softSkills: [
     'Trabajo en equipo',

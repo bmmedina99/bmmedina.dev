@@ -6,6 +6,7 @@
   --color-rebecca-purple: oklch(42.208% 0.17403 290.528);
 
   --font-title: Orbitron, sans-serif;
+  --color-temp: oklch(64.855% 0.20128 32.747);
 }
 
 @layer base {
