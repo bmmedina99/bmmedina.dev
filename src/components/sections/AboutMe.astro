@@ -60,7 +60,7 @@ import Section from './Section.astro'
   </div>
   <div class="relative space-y-4">
     <Image
-      class={"absolute bottom-0 opacity-40 -z-10 select-none"}
+      class={"absolute bottom-0 opacity-20 -z-10 select-none"}
       src={techSkills}
       alt={"Ilustración de habilidades técnicas"}
       aria-hidden="true"
@@ -84,8 +84,9 @@ import Section from './Section.astro'
                 name={slugify(tech)}
                 width={48}
                 height={48}
+                className='hover:-translate-y-1 hover:text-indigo-200 transition-all'
               />
-              <p class="mt-2 text-sm">{tech}</p>
+              <p class="mt-2 text-sm font-medium">{tech}</p>
             </li>
           ))
         }
