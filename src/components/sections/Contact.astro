@@ -1,16 +1,8 @@
 ---
-import { Toaster } from 'sonner'
 import Form from '../ui/Form'
 import Section from './Section.astro'
 ---
 
 <Section name="Contactáme" label="Formulario de contacto">
   <Form client:idle />
-  <Toaster
-    client:idle
-    position="bottom-center"
-    richColors
-    theme="light"
-    toastOptions={{ style: { textAlign: "center", textWrap: "pretty" } }}
-  />
 </Section>

@@ -3,7 +3,7 @@ import { z } from 'zod'
 export const formSchema = z.object({
   name: z
     .string()
-    .min(1, {
+    .min(2, {
       message: 'El nombre es obligatorio. Por favor, ingrese su nombre.',
     })
     .max(25, { message: 'El nombre no puede exceder los 50 caracteres.' }),

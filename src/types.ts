@@ -51,6 +51,13 @@ export interface Profile {
   }[]
 }
 
+export type FormField = {
+  name: string
+  email: string
+  subject: string
+  message: string
+}
+
 export interface Social {
   id: number
   name: string
