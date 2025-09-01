@@ -1,10 +1,10 @@
 import { useCallback, useState } from 'react'
-import { EXPERIENCES } from '@/constants'
+import { Experiences } from '@/site.config'
 import Badge from './Badge'
 import Icon from './Icon'
 
 export default function ExperienceDetails() {
-  const [expanded, setExpanded] = useState(EXPERIENCES.length - 1)
+  const [expanded, setExpanded] = useState(Experiences.length - 1)
 
   const handleExpand = useCallback((id: number) => {
     setExpanded((prev) => (prev === id ? -1 : id))
@@ -12,7 +12,7 @@ export default function ExperienceDetails() {
 
   return (
     <>
-      {[...EXPERIENCES].reverse().map((experience) => (
+      {[...Experiences].reverse().map((experience) => (
         <article
           key={experience.id}
           className='mb-4'
@@ -40,15 +40,9 @@ export default function ExperienceDetails() {
                 aria-hidden='true'
               >
                 {expanded === experience.id ? (
-                  <Icon
-                    name='menu-collapse'
-                    variant='icon'
-                  />
+                  <Icon name='menu-collapse' />
                 ) : (
-                  <Icon
-                    name='menu-expand'
-                    variant='icon'
-                  />
+                  <Icon name='menu-expand' />
                 )}
               </span>
             </div>
@@ -65,18 +59,12 @@ export default function ExperienceDetails() {
             <Badge items={experience.technologies} />
             <div className='flex flex-wrap justify-between gap-4 text-sm'>
               <p className='flex items-center gap-2 text-emerald-200'>
-                <Icon
-                  name='location'
-                  variant='icon'
-                />
+                <Icon name='location' />
                 <span>{experience.location}</span>
               </p>
               {experience.website && (
                 <p className='flex items-center gap-2 text-cyan-200'>
-                  <Icon
-                    name='website'
-                    variant='icon'
-                  />
+                  <Icon name='website' />
                   <a
                     href={experience.website.link}
                     target='_blank'

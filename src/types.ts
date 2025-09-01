@@ -1,3 +1,16 @@
+export interface Config {
+  title: string
+  description: string
+  lang: string
+  author: string
+  url: string
+}
+
+export interface Navigation {
+  id: number
+  label: string
+}
+
 export interface Experience {
   id: number
   title: string
@@ -25,7 +38,10 @@ export interface Project {
 
 export interface Profile {
   image: ImageMetadata
-  techSkills: string[]
+  techSkills: {
+    text: string
+    color: string
+  }[]
   softSkills: string[]
   studies: {
     title: string
@@ -33,6 +49,13 @@ export interface Profile {
     startDate: string
     endDate: string
   }[]
+}
+
+export type FormField = {
+  name: string
+  email: string
+  subject: string
+  message: string
 }
 
 export interface Social {

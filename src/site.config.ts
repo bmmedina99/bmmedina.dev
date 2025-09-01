@@ -1,23 +1,33 @@
-import ProfileImg from '@/assets/images/profile.png'
-import GrayGorilla from '@/assets/images/projects/app-graygorillafitness.jpg'
-import Japanese from '@/assets/images/projects/app-kirakana.jpg'
-import Finance from '@/assets/images/projects/app-kointa.jpg'
-import type { Experience, Profile, Project, Social } from '@/types'
+import profile from './assets/images/profile.png'
+import graygorillafitness from './assets/images/projects/app-graygorillafitness.jpg'
+import kirakana from './assets/images/projects/app-kirakana.jpg'
+import kointa from './assets/images/projects/app-kointa.jpg'
+import type {
+  Config,
+  Experience,
+  Navigation,
+  Profile,
+  Project,
+  Social,
+} from './types'
 
-export const SCROLL_OFFSET = 96
+export const configSite: Config = {
+  title: 'bmmedina',
+  description:
+    'Brandon Medina, desarrollador web Full Stack con más de 3 años de experiencia en Next.js, Astro, React y Node.js. Enfocado en crear y optimizar sitios web.',
+  lang: 'es',
+  author: 'bmmedina99',
+  url: 'https://bmmedina.dev',
+}
 
-export const STARTS_COUNT = 1000
+export const navLinks: Navigation[] = [
+  { id: 1, label: 'experiencia' },
+  { id: 2, label: 'proyectos' },
+  { id: 3, label: 'sobre mí' },
+  { id: 4, label: 'contactáme' },
+]
 
-export const HOME_SECTION = 'home'
-
-export const NAV_ITEMS = [
-  { id: '01', label: 'experiencia' },
-  { id: '02', label: 'proyectos' },
-  { id: '03', label: 'sobre mí' },
-  { id: '04', label: 'contactáme' },
-] as const
-
-export const EXPERIENCES: Experience[] = [
+export const Experiences: Experience[] = [
   {
     id: 0,
     title: 'Soporte CAU',
@@ -109,10 +119,10 @@ export const EXPERIENCES: Experience[] = [
   },
 ]
 
-export const PROJECTS: Project[] = [
+export const projects: Project[] = [
   {
     id: 0,
-    image: Japanese,
+    image: kirakana,
     title: 'KiraKana',
     subtitle: 'Aplicación para aprender con facilidad los silabarios japonés.',
     description:
@@ -121,10 +131,11 @@ export const PROJECTS: Project[] = [
     type: 'Frontend',
     gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
     githubURL: 'https://github.com/bmmedina99/kirakana.app',
+    demoURL: 'https://kirakana.app',
   },
   {
     id: 1,
-    image: GrayGorilla,
+    image: graygorillafitness,
     title: 'Gray Gorilla Fitness',
     subtitle: 'Ecommerce de accesorios de gimnasio utilizando Amazon FBA.',
     description:
@@ -135,7 +146,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
-    image: Finance,
+    image: kointa,
     title: 'Kointa Finance',
     subtitle:
       'Herramienta para el control y seguimiento de tus finanzas personales.',
@@ -148,19 +159,49 @@ export const PROJECTS: Project[] = [
   },
 ]
 
-export const PROFILE: Profile = {
-  image: ProfileImg,
+export const aboutMe: Profile = {
+  image: profile,
   techSkills: [
-    'Next.js',
-    'Astro',
-    'React',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'Python',
-    'TailwindCSS',
-    'PostgreSQL',
-    'Git & Github',
+    {
+      text: 'Next.js',
+      color: 'hover:text-indigo-400',
+    },
+    {
+      text: 'Astro',
+      color: 'hover:text-fuchsia-400',
+    },
+    {
+      text: 'React',
+      color: 'hover:text-cyan-400',
+    },
+    {
+      text: 'TypeScript',
+      color: 'hover:text-sky-600',
+    },
+    {
+      text: 'Node.js',
+      color: 'hover:text-green-600',
+    },
+    {
+      text: 'NestJS',
+      color: 'hover:text-rose-500 stroke-4',
+    },
+    {
+      text: 'Python',
+      color: 'hover:text-sky-600',
+    },
+    {
+      text: 'TailwindCSS',
+      color: 'hover:text-cyan-400',
+    },
+    {
+      text: 'PostgreSQL',
+      color: 'hover:text-indigo-500',
+    },
+    {
+      text: 'Git & Github',
+      color: 'hover:text-orange-600',
+    },
   ],
   softSkills: [
     'Trabajo en equipo',
@@ -188,18 +229,7 @@ export const PROFILE: Profile = {
   ],
 }
 
-export const CHARACTER_LIMITS = {
-  SUBJECT: 100,
-  MESSAGE: 1000,
-} as const
-
-export const EMAILJS_DATA = {
-  SERVICE: import.meta.env.PUBLIC_EMAILJS_SERVICE,
-  TEMPLATE: import.meta.env.PUBLIC_EMAILJS_TEMPLATE,
-  PUBLICKEY: import.meta.env.PUBLIC_EMAILJS_PUBLICKEY,
-} as const
-
-export const SOCIAL_LINK: Social[] = [
+export const socialLinks: Social[] = [
   {
     id: 0,
     name: 'GitHub',
@@ -210,13 +240,13 @@ export const SOCIAL_LINK: Social[] = [
     id: 1,
     name: 'LinkedIn',
     icon: 'linkedin',
-    link: 'https://www.linkedin.com/in/bmmedina99/',
+    link: 'https://www.linkedin.com/in/bmmedina99',
   },
   {
     id: 2,
     name: 'Instagram',
     icon: 'instagram',
-    link: 'https://www.instagram.com/bmmedina99/',
+    link: 'https://www.instagram.com/bmmedina99',
   },
   {
     id: 3,

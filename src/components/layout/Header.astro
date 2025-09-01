@@ -1,10 +1,8 @@
 ---
-import { HOME_SECTION, NAV_ITEMS } from '@/constants'
+import { EXPERIENCES_SECTION, HOME_SECTION } from '@/lib/constants'
 import Icon from '../ui/Icon'
 import Navigation from '../ui/Navigation'
 import ScrollToTop from '../ui/ScrollToTop.astro'
-
-const { label } = NAV_ITEMS[0]
 ---
 
 <header id={HOME_SECTION} class="relative flex flex-col items-center justify-center overflow-x-hidden min-h-dvh">
@@ -32,10 +30,10 @@ const { label } = NAV_ITEMS[0]
   <Navigation client:idle />
   <ScrollToTop />
   <a
-    href={`#${label}`}
+    href={`#${EXPERIENCES_SECTION}`}
     class="absolute flex items-center w-6 h-10 border-4 rounded-full bottom-8 border-sky-400 animate-bounce"
-    aria-label={`Ir a la sección de ${label}`}
+    aria-label={`Ir a la sección de ${EXPERIENCES_SECTION}`}
   >
-    <Icon name="scroll-down" variant="icon" />
+    <Icon name="scroll-down" />
   </a>
 </header>

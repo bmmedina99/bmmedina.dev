@@ -1,5 +1,5 @@
-import { NAV_ITEMS } from '@/constants'
-import { capitalLetter, scrollSection, slugify } from '@/utils'
+import { capitalLetter, scrollSection, slugify } from '@/lib/utils'
+import { navLinks } from '@/site.config'
 
 interface NavItemsProps {
   active: string
@@ -10,7 +10,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
   if (isMobile) {
     return (
       <ul className='flex flex-col gap-4 py-4'>
-        {NAV_ITEMS.map((item) => (
+        {navLinks.map((item) => (
           <li key={item.id}>
             <a
               href={`#${slugify(item.label)}`}
@@ -27,7 +27,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
 
   return (
     <ul className='hidden gap-8 md:flex'>
-      {NAV_ITEMS.map((item) => (
+      {navLinks.map((item) => (
         <li key={item.id}>
           <button
             type='button'

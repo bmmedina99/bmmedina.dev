@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 import techSkills from '@/assets/svg/tech-skills.svg'
-import { PROFILE } from '@/constants'
-import { slugify } from '@/utils'
+import { slugify } from '@/lib/utils'
+import { aboutMe } from '@/site.config'
 import Badge from '../ui/Badge'
 import Icon from '../ui/Icon'
 import Section from './Section.astro'
@@ -16,7 +16,7 @@ import Section from './Section.astro'
   <div class="space-y-4 [&>p]:text-lg [&>p]:text-pretty">
     <div class="flex flex-col items-center gap-4 md:block">
       <Image
-        src={PROFILE.image}
+        src={aboutMe.image}
         alt="Brandon Medina - Desarrollador Web Full Stack"
         class="profile-img"
         width={192}
@@ -45,7 +45,7 @@ import Section from './Section.astro'
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="cv_bmmedina.pdf" download class="btn">
-        <Icon name="download" variant="icon" />
+        <Icon name="download" />
         <span>Descagar CV</span>
       </a>
       <a
@@ -53,14 +53,14 @@ import Section from './Section.astro'
         class="btn"
         aria-label="Ir a la sección de contacto"
       >
-        <Icon name="contact" variant="icon" />
+        <Icon name="contact" />
         <span>Contáctame</span>
       </a>
     </div>
   </div>
   <div class="relative space-y-4">
     <Image
-      class={"absolute bottom-0 opacity-40 -z-10 select-none"}
+      class={"absolute bottom-0 opacity-20 -z-10 select-none"}
       src={techSkills}
       alt={"Ilustración de habilidades técnicas"}
       aria-hidden="true"
@@ -78,15 +78,15 @@ import Section from './Section.astro'
         class="grid grid-cols-3 md:grid-cols-5 gap-2 [&>li]:flex [&>li]:flex-col [&>li]:items-center [&>li]:text-center"
       >
         {
-          PROFILE.techSkills.map((tech) => (
+          aboutMe.techSkills.map((tech) => (
             <li>
               <Icon
-                name={slugify(tech)}
+                name={slugify(tech.text)}
                 width={48}
                 height={48}
-                variant="skill"
+                className={`hover:-translate-y-1 transition-all ${tech.color}`}
               />
-              <p class="mt-2 text-sm">{tech}</p>
+              <p class="mt-2 text-sm font-medium">{tech.text}</p>
             </li>
           ))
         }
@@ -99,7 +99,7 @@ import Section from './Section.astro'
       >
         Habilidades blandas
       </h3>
-      <Badge items={PROFILE.softSkills} />
+      <Badge items={aboutMe.softSkills} />
     </section>
     <section aria-labelledby="education-heading">
       <h3
@@ -110,7 +110,7 @@ import Section from './Section.astro'
       </h3>
       <ul class="space-y-2">
         {
-          PROFILE.studies.map((study) => (
+          aboutMe.studies.map((study) => (
             <li class="p-4 mb-2 cursor-pointer card">
               <h4 class="text-sm font-semibold text-violet-300">
                 {study.title}
