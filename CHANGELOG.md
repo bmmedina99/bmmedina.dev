@@ -1,3 +1,22 @@
+# [1.3.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.5...v1.3.0) (2025-09-01)
+
+
+### Bug Fixes
+
+* **form:** :bug: reset character counters after from submission ([f5b37b1](https://github.com/bmmedina99/bmmedina.dev/commit/f5b37b1f6fdfa9ce6135b5a4231d39a9479ac93c))
+
+
+### Features
+
+* **navigation:** :sparkles: add closing opacity animation to mobile navbar ([d17b314](https://github.com/bmmedina99/bmmedina.dev/commit/d17b3147f479342951e20531d71b48fc6d19b6b8))
+* **pages:** :sparkles: add custom 500 error page ([50af7f8](https://github.com/bmmedina99/bmmedina.dev/commit/50af7f89929418740187bbae668955a5208b6d50))
+* **ui:** :sparkles: add button to demo to Kirakana project ([61ede67](https://github.com/bmmedina99/bmmedina.dev/commit/61ede673dd7a709672a2e3bf99fb6db14876ae94))
+
+
+### Performance Improvements
+
+* **contact:** :zap: replace Sonner dependency with dialog in form ([cdda31f](https://github.com/bmmedina99/bmmedina.dev/commit/cdda31f2a99d4dc44024e66adde8a504186137e9))
+
 ## [1.2.5](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.4...v1.2.5) (2025-08-22)
 
 
