@@ -16,6 +16,9 @@
     "type": "git",
     "url": "https://github.com/bmmedina99/bmmedina.dev.git"
   },
+  "bugs": {
+    "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
+  },
   "dependencies": {
     "@astrojs/react": "4.3.0",
     "@astrojs/sitemap": "3.5.0",

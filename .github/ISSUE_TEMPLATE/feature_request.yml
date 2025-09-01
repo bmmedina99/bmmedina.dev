@@ -1,0 +1,39 @@
+name: "Feature Request"
+description: "Suggest a new feature or enhancement for the application."
+labels: ["enhancement"]
+title: "[feat] "
+body:
+  - type: textarea
+    id: feature_description
+    attributes:
+      label: "Feature Description"
+      description: "Describe the new feature or enhancement in detail."
+      placeholder: "A clear and concise description of the feature."
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: "Benefits"
+      description: "Explain the benefits of this feature."
+      placeholder: "How will this feature improve the application?"
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Provide any additional context or examples."
+      placeholder: "Is there a specific use case or scenario for this feature?"
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      description: "Select the priority level for this feature."
+      options:
+        - Low
+        - Medium
+        - High
+      default: 1
+    validations:
+      required: true
