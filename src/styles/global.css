@@ -112,7 +112,7 @@
   .error-field {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-    color: var(--color-red-500);
+    color: var(--color-red-400);
     border-radius: var(--radius-md);
     margin-top: calc(var(--spacing) * 1);
     padding-left: calc(var(--spacing) * 0.5);
