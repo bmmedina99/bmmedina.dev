@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rich-black: oklch(9.618% 0.0562 285.061);
-  --color-russian-violet: oklch(16.872% 0.07813 292.572);
-  --color-rebecca-purple: oklch(42.208% 0.17403 290.528);
-
-  --font-title: Orbitron, sans-serif;
+  --color-rich-black: oklch(0.0962 0.0562 285.05);
+  --color-russian-violet: oklch(0.1687 0.0781 292.57);
+  --color-rebecca-purple: oklch(0.4221 0.1739 290.53);
+  --font-title: "Orbitron", sans-serif;
 }
 
 @layer base {
