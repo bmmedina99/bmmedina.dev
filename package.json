@@ -20,13 +20,13 @@
     "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
   },
   "dependencies": {
-    "@astrojs/react": "4.3.0",
-    "@astrojs/sitemap": "3.5.0",
+    "@astrojs/react": "4.4.0",
+    "@astrojs/sitemap": "3.6.0",
     "@emailjs/browser": "4.4.1",
-    "@fontsource/onest": "5.2.9",
+    "@fontsource/onest": "5.2.11",
     "@fontsource/orbitron": "5.2.8",
     "@react-three/fiber": "9.4.0",
-    "astro": "5.13.0",
+    "astro": "5.15.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.1.0",
     "react": "19.2.0",
