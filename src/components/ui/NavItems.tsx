@@ -1,4 +1,4 @@
-import { capitalLetter, scrollSection, slugify } from '@/lib/utils'
+import { scrollSection, slugify } from '@/lib/utils'
 import { navLinks } from '@/site.config'
 
 interface NavItemsProps {
@@ -17,7 +17,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
               className={`flex items-center gap-2 hover:text-sky-400 transition-colors ${active === item.label ? 'text-sky-400' : 'text-neutral-100'}`}
               aria-label={`Ir a la sección ${item.label}`}
             >
-              {capitalLetter(slugify(item.label))}.tsx
+              {slugify(item.label)}.tsx
             </a>
           </li>
         ))}
@@ -36,7 +36,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
             onClick={() => scrollSection(`#${slugify(item.label)}`)}
           >
             <span className='text-sm opacity-50'>&lt;</span>
-            <span className='text-lg'>{capitalLetter(item.label)}</span>
+            <span className='text-lg capitalize'>{item.label}</span>
             <span className='text-sm opacity-50'>/&gt;</span>
           </button>
         </li>
