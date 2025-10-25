@@ -16,35 +16,38 @@
     "type": "git",
     "url": "https://github.com/bmmedina99/bmmedina.dev.git"
   },
+  "bugs": {
+    "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
+  },
   "dependencies": {
-    "@astrojs/react": "4.3.0",
-    "@astrojs/sitemap": "3.5.0",
+    "@astrojs/react": "4.4.0",
+    "@astrojs/sitemap": "3.6.0",
     "@emailjs/browser": "4.4.1",
-    "@fontsource/onest": "5.2.9",
-    "@fontsource/orbitron": "5.2.6",
-    "@react-three/fiber": "9.3.0",
-    "astro": "5.13.0",
+    "@fontsource/onest": "5.2.11",
+    "@fontsource/orbitron": "5.2.8",
+    "@react-three/fiber": "9.4.0",
+    "astro": "5.15.1",
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.1.0",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "schema-dts": "1.1.5",
-    "three": "0.179.1",
-    "zod": "4.1.1"
+    "three": "0.180.0",
+    "zod": "4.1.12"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.4",
-    "@biomejs/biome": "2.2.2",
+    "@astrojs/check": "0.9.5",
+    "@biomejs/biome": "2.2.7",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@tailwindcss/vite": "4.1.12",
-    "@types/react": "19.1.11",
-    "@types/react-dom": "19.1.7",
-    "@types/three": "0.179.0",
-    "semantic-release": "24.2.7",
-    "sharp": "0.34.3",
-    "tailwindcss": "4.1.12",
-    "typescript": "5.9.2"
+    "@tailwindcss/vite": "4.1.16",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@types/three": "0.180.0",
+    "semantic-release": "25.0.1",
+    "sharp": "0.34.4",
+    "tailwindcss": "4.1.16",
+    "typescript": "5.9.3"
   },
-  "packageManager": "pnpm@10.15.0"
+  "packageManager": "pnpm@10.19.0"
 }

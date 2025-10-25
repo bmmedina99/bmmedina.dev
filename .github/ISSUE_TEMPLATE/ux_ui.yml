@@ -1,0 +1,45 @@
+name: "UX / UI change"
+description: "Suggest a change to the user experience or user interface"
+labels: ["ux", "ui", "design"]
+title: "[ux/ui] "
+body:
+  - type: textarea
+    id: current_state
+    attributes:
+      label: "Current State"
+      description: "Describe the current user experience or interface."
+      placeholder: "What is the current state of the UX/UI?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: "Proposed Change"
+      description: "Describe the proposed change to the user experience or interface."
+      placeholder: "What change do you want to make?"
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Rationale"
+      description: "Explain the reasoning behind this change."
+      placeholder: "Improve the accessibility, usability, etc."
+  - type: textarea
+    id: references
+    attributes:
+      label: "References"
+      description: "Provide any relevant references or resources."
+      placeholder: "Links to designs, research, etc."
+  - type: dropdown
+    id: impact
+    attributes:
+      label: "Impact"
+      description: "Select the impact level of this change."
+      options:
+        - Low
+        - Medium
+        - High
+      default: 1
+    validations:
+      required: true
