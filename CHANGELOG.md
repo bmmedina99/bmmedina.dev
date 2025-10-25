@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.0...v1.3.1) (2025-10-25)
+
+
+### Performance Improvements
+
+* :zap: replace capitalize logic with CSS text transform ([bcb4ad9](https://github.com/bmmedina99/bmmedina.dev/commit/bcb4ad90526b1121ccf9a57ca8ab3ce802283c00))
+
 # [1.3.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.2.5...v1.3.0) (2025-09-01)
 
 
