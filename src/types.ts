@@ -55,6 +55,7 @@ export type FormField = {
   name: string
   email: string
   subject: string
+  hunted: string
   message: string
 }
 

@@ -18,6 +18,7 @@ export const formSchema = z.object({
         'El asunto es obligatorio. Por favor, indique el tema de su mensaje.',
     })
     .max(100, { message: 'El asunto no puede exceder los 100 caracteres.' }),
+  example: z.string().max(0, { message: 'No complete este campo.' }),
   message: z
     .string()
     .min(1, {
