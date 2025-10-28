@@ -9,9 +9,6 @@
     <symbol id="menu-expand">
       <path d="M4 11l8 3l8 -3" />
     </symbol>
-    <symbol id="menu-collapse">
-      <path d="M4 13l8 -3l8 3" />
-    </symbol>
     <symbol id="menu">
       <path d="M7 6h10" />
       <path d="M4 12h16" />
