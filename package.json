@@ -32,7 +32,7 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "schema-dts": "1.1.5",
-    "three": "0.180.0",
+    "three": "0.181.1",
     "zod": "4.1.12"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "@types/three": "0.180.0",
-    "semantic-release": "25.0.1",
+    "semantic-release": "25.0.2",
     "sharp": "0.34.4",
     "tailwindcss": "4.1.16",
     "typescript": "5.9.3"
