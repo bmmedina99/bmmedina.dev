@@ -24,17 +24,22 @@ import Icon from '../ui/Icon'
               class="flex items-center justify-center rounded-full size-12 group bg-rebecca-purple/60"
               aria-label={social.name}
             >
-              <Icon name={social.icon} width={32} height={32} className="group-hover:-translate-y-1 group-hover:text-zinc-400 transition-all" />
+              <Icon
+                name={social.icon}
+                width={32}
+                height={32}
+                className="group-hover:-translate-y-1 group-hover:text-zinc-400 transition-all"
+              />
             </a>
             <span class="mt-2 text-sm">{social.name}</span>
           </div>
         ))
       }
     </div>
-    <div class="w-full pt-8 border-t border-zinc-400/40">
-      <p class="text-sm text-center text-zinc-400 text-pretty">
-        {new Date().getFullYear()}. Diseñado y desarrollado por Brandon Medina.
-      </p>
-    </div>
+    <p
+      class="w-full pt-8 border-t border-zinc-400/40 text-sm text-center text-zinc-400 text-pretty"
+    >
+      {new Date().getFullYear()}. Diseñado y desarrollado por Brandon Medina.
+    </p>
   </div>
 </footer>
