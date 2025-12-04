@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.1...v1.3.2) (2025-12-04)
+
+
+### Bug Fixes
+
+* **contact:** :bug: prevent bot submissions with input honeypot ([cf89494](https://github.com/bmmedina99/bmmedina.dev/commit/cf89494794a1f8267b790fa16d503e1d8345e444))
+* **deps:** :ambulance: resolve critical vulnerability React ([3d7a840](https://github.com/bmmedina99/bmmedina.dev/commit/3d7a8401c7e462893d30bfc15de637c281e09922))
+* **form:** add 'hunted' input field to form and update schema validation ([b8039c6](https://github.com/bmmedina99/bmmedina.dev/commit/b8039c65a8b57977bfee99beef173d1150e7b71f))
+
 ## [1.3.1](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.0...v1.3.1) (2025-10-25)
 
 
