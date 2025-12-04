@@ -30,7 +30,7 @@
     "astro-robots-txt": "1.0.0",
     "astro-seo-schema": "5.1.0",
     "react": "19.2.1",
-    "react-dom": "19.2.0",
+    "react-dom": "19.2.1",
     "schema-dts": "1.1.5",
     "three": "0.181.2",
     "zod": "4.1.13"
@@ -48,5 +48,5 @@
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3"
   },
-  "packageManager": "pnpm@10.23.0"
+  "packageManager": "pnpm@10.24.0"
 }
