@@ -1,8 +1,64 @@
 ---
-import ExperienceDetails from '../ui/Details'
+import Details from '../ui/Details.astro'
 import Section from './Section.astro'
 ---
 
 <Section name="Experiencia" label="Experiencia profesional">
-  <ExperienceDetails client:idle />
+  <Details />
 </Section>
+<script>
+  const buttons = Array.from(
+    document.querySelectorAll("button.card[data-id]"),
+  ) as HTMLButtonElement[];
+  let expanded = buttons.length ? buttons[0].dataset.id : -1;
+
+  function handleExpand(id: string | undefined) {
+    expanded = expanded === id ? -1 : id;
+    updateUI();
+  }
+
+  function updateUI() {
+    buttons.forEach((btn) => {
+      const id = btn.dataset.id;
+      const isExpanded = expanded === id;
+
+      btn.setAttribute("aria-expanded", String(isExpanded));
+      const title = btn.dataset.title || "esta experiencia";
+      const company = btn.dataset.company ? ` en ${btn.dataset.company}` : "";
+      btn.setAttribute(
+        "aria-label",
+        `${isExpanded ? "Contraer" : "Expandir"} detalles de ${title}${company}`,
+      );
+
+      const panelId = btn.getAttribute("aria-controls");
+      const panel = panelId && document.getElementById(panelId);
+      if (panel) {
+        panel.hidden = !isExpanded;
+        panel.setAttribute("aria-hidden", String(!isExpanded));
+      }
+
+      const iconSpan = btn.querySelector('[aria-hidden="true"]');
+      if (iconSpan) {
+        if (isExpanded) {
+          iconSpan.classList.add("rotate-180");
+        } else {
+          iconSpan.classList.remove("rotate-180");
+        }
+      }
+    });
+  }
+
+  buttons.forEach((btn) => {
+    const id: string | undefined = btn.dataset.id;
+    if (!btn.id) btn.id = `btn-${id}`;
+    const panelId = btn.getAttribute("aria-controls");
+    const panel = panelId && document.getElementById(panelId);
+    if (panel && !panel.getAttribute("aria-labelledby")) {
+      panel.setAttribute("aria-labelledby", btn.id);
+    }
+
+    btn.addEventListener("click", () => handleExpand(id));
+  });
+
+  updateUI();
+</script>

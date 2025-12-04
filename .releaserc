@@ -16,6 +16,7 @@
         "assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
         "message": "chore(release): :bookmark: ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
-    ]
+    ],
+    "@semantic-release/github"
   ]
 }

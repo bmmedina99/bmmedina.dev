@@ -28,9 +28,6 @@ Validación y análisis de datos en el formulario de contacto, asegurando enviar
 - **[EmailJS](https://www.emailjs.com/docs/tutorial/overview/)**
 Servicio cliente‑side para enviar correos desde el formulario sin necesidad de montar un backend.
 
-- **[Sonner](https://sonner.emilkowal.ski/getting-started)**
-Sistema de notificaciones “toast” que informa al usuario sobre el éxito o fallo en el envío de formularios.
-
 ## Características principales
 
 - **Diseño espacial y futurista:**

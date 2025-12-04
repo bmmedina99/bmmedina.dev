@@ -24,4 +24,5 @@ export const formSchema = z.object({
       message: 'El mensaje es obligatorio. Por favor, redacte su mensaje.',
     })
     .max(1000, { message: 'El mensaje no puede exceder los 1000 caracteres.' }),
+  hunted: z.string().max(0, { message: 'No complete este campo.' }),
 })

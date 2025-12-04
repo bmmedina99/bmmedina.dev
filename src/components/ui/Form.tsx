@@ -184,6 +184,14 @@ function Form() {
           {errors.message}
         </p>
       </div>
+      <input
+        type='text'
+        id='hunted'
+        name='hunted'
+        tabIndex={-1}
+        autoComplete='off'
+        className='absolute left-0 -z-10'
+      />
       <div className='space-y-4 text-center'>
         <p className='text-xs font-medium text-indigo-200 md:text-sm text-pretty'>
           Toda la información del formulario se enviará a mi correo personal y
