@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.2...v1.3.3) (2025-12-14)
+
+
+### Bug Fixes
+
+* **deps:** :ambulance: update React to address another critical vulnerability ([cabebb0](https://github.com/bmmedina99/bmmedina.dev/commit/cabebb01e790a5df3121684bfd404c8e090b2e64))
+* **deps:** :ambulance: update React to address another critical vulnerability ([#56](https://github.com/bmmedina99/bmmedina.dev/issues/56)) ([f921247](https://github.com/bmmedina99/bmmedina.dev/commit/f92124787a8dd4d00842df9821b716c92e33e7f4))
+
 ## [1.3.2](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.1...v1.3.2) (2025-12-04)
 
 
