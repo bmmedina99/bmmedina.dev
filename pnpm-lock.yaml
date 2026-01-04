@@ -24,17 +24,17 @@ importers:
         specifier: 5.2.8
         version: 5.2.8
       '@react-three/fiber':
-        specifier: 9.4.2
-        version: 9.4.2(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(three@0.182.0)
+        specifier: 9.5.0
+        version: 9.5.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(three@0.182.0)
       astro:
-        specifier: 5.16.0
-        version: 5.16.0(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
+        specifier: 5.16.6
+        version: 5.16.6(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       astro-robots-txt:
         specifier: 1.0.0
         version: 1.0.0
       astro-seo-schema:
         specifier: 5.1.0
-        version: 5.1.0(astro@5.16.0(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5)
+        version: 5.1.0(astro@5.16.6(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5)
       react:
         specifier: 19.2.3
         version: 19.2.3
@@ -48,12 +48,12 @@ importers:
         specifier: 0.182.0
         version: 0.182.0
       zod:
-        specifier: 4.1.13
-        version: 4.1.13
+        specifier: 4.3.5
+        version: 4.3.5
     devDependencies:
       '@astrojs/check':
-        specifier: 0.9.5
-        version: 0.9.5(prettier@3.7.4)(typescript@5.9.3)
+        specifier: 0.9.6
+        version: 0.9.6(prettier@3.7.4)(typescript@5.9.3)
       '@biomejs/biome':
         specifier: 2.3.7
         version: 2.3.7
@@ -99,8 +99,8 @@ packages:
   '@actions/io@2.0.0':
     resolution: {integrity: sha512-Jv33IN09XLO+0HS79aaODsvIRyduiF7NY/F6LYeK5oeUmrsz7aFdRphQjFoESF4jS7lMauDOttKALcpapVDIAg==}
 
-  '@astrojs/check@0.9.5':
-    resolution: {integrity: sha512-88vc8n2eJ1Oua74yXSGo/8ABMeypfQPGEzuoAx2awL9Ju8cE6tZ2Rz9jVx5hIExHK5gKVhpxfZj4WXm7e32g1w==}
+  '@astrojs/check@0.9.6':
+    resolution: {integrity: sha512-jlaEu5SxvSgmfGIFfNgcn5/f+29H61NJzEMfAZ82Xopr4XBchXB1GVlcJsE+elUlsYSbXlptZLX+JMG3b/wZEA==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
@@ -123,8 +123,8 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdown-remark@6.3.9':
-    resolution: {integrity: sha512-hX2cLC/KW74Io1zIbn92kI482j9J7LleBLGCVU9EP3BeH5MVrnFawOnqD0t/q6D1Z+ZNeQG2gNKMslCcO36wng==}
+  '@astrojs/markdown-remark@6.3.10':
+    resolution: {integrity: sha512-kk4HeYR6AcnzC4QV8iSlOfh+N8TZ3MEStxPyenyCtemqn8IpEATBFMTJcfrNW32dgpt6MY3oCkMM/Tv3/I4G3A==}
 
   '@astrojs/prism@3.3.0':
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
@@ -722,15 +722,15 @@ packages:
     resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
     engines: {node: '>=12'}
 
-  '@react-three/fiber@9.4.2':
-    resolution: {integrity: sha512-H4B4+FDNHpvIb4FmphH4ubxOfX5bxmfOw0+3pkQwR9u9wFiyMS7wUDkNn0m4RqQuiLWeia9jfN1eBvtyAVGEog==}
+  '@react-three/fiber@9.5.0':
+    resolution: {integrity: sha512-FiUzfYW4wB1+PpmsE47UM+mCads7j2+giRBltfwH7SNhah95rqJs3ltEs9V3pP8rYdS0QlNne+9Aj8dS/SiaIA==}
     peerDependencies:
       expo: '>=43.0'
       expo-asset: '>=8.4'
       expo-file-system: '>=11.0'
       expo-gl: '>=11.0'
-      react: ^19.0.0
-      react-dom: ^19.0.0
+      react: '>=19 <19.3'
+      react-dom: '>=19 <19.3'
       react-native: '>=0.78'
       three: '>=0.156'
     peerDependenciesMeta:
@@ -1093,11 +1093,6 @@ packages:
     peerDependencies:
       '@types/react': '*'
 
-  '@types/react-reconciler@0.32.3':
-    resolution: {integrity: sha512-cMi5ZrLG7UtbL7LTK6hq9w/EZIRk4Mf1Z5qHoI+qBh7/WkYkFXQ7gOto2yfUvPzF5ERMAhaXS5eTQ2SAnHjLzA==}
-    peerDependencies:
-      '@types/react': '*'
-
   '@types/react@19.2.7':
     resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
 
@@ -1244,8 +1239,8 @@ packages:
       astro: ^5.0.0
       schema-dts: ^1.1.0
 
-  astro@5.16.0:
-    resolution: {integrity: sha512-GaDRs2Mngpw3dr2vc085GnORh98NiXxwIjg/EoQQQl/icZt3Z7s0BRsYHDZ8swkZbOA6wZsqWJdrNirl+iKcDg==}
+  astro@5.16.6:
+    resolution: {integrity: sha512-6mF/YrvwwRxLTu+aMEa5pwzKUNl5ZetWbTyZCs9Um0F12HUmxUiF5UHiZPy4rifzU3gtpM3xP2DfdmkNX9eZRg==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2686,12 +2681,6 @@ packages:
     peerDependencies:
       react: ^19.2.3
 
-  react-reconciler@0.31.0:
-    resolution: {integrity: sha512-7Ob7Z+URmesIsIVRjnLoDGwBEG/tVitidU0nMsqX/eeJaLY89RISO/10ERe0MqmzuKUUB1rmY+h1itMbUHg9BQ==}
-    engines: {node: '>=0.10.0'}
-    peerDependencies:
-      react: ^19.0.0
-
   react-refresh@0.17.0:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
@@ -2827,9 +2816,6 @@ packages:
 
   sax@1.4.3:
     resolution: {integrity: sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==}
-
-  scheduler@0.25.0:
-    resolution: {integrity: sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==}
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
@@ -3541,8 +3527,8 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.1.13:
-    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
+  zod@4.3.5:
+    resolution: {integrity: sha512-k7Nwx6vuWx1IJ9Bjuf4Zt1PEllcwe7cls3VNzm4CQ1/hgtFUK2bRNG3rvnpPUhFjmqJKAKtjV576KnUkHocg/g==}
 
   zustand@5.0.9:
     resolution: {integrity: sha512-ALBtUj0AfjJt3uNRQoL1tL2tMvj6Gp/6e39dnfT6uzpelGru8v1tPOGBzayOWbPJvujM8JojDk3E1LxeFisBNg==}
@@ -3583,7 +3569,7 @@ snapshots:
 
   '@actions/io@2.0.0': {}
 
-  '@astrojs/check@0.9.5(prettier@3.7.4)(typescript@5.9.3)':
+  '@astrojs/check@0.9.6(prettier@3.7.4)(typescript@5.9.3)':
     dependencies:
       '@astrojs/language-server': 2.16.2(prettier@3.7.4)(typescript@5.9.3)
       chokidar: 4.0.3
@@ -3623,7 +3609,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@6.3.9':
+  '@astrojs/markdown-remark@6.3.10':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
       '@astrojs/prism': 3.3.0
@@ -4170,18 +4156,16 @@ snapshots:
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
 
-  '@react-three/fiber@9.4.2(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(three@0.182.0)':
+  '@react-three/fiber@9.5.0(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(three@0.182.0)':
     dependencies:
       '@babel/runtime': 7.28.4
-      '@types/react-reconciler': 0.32.3(@types/react@19.2.7)
       '@types/webxr': 0.5.24
       base64-js: 1.5.1
       buffer: 6.0.3
       its-fine: 2.0.0(@types/react@19.2.7)(react@19.2.3)
       react: 19.2.3
-      react-reconciler: 0.31.0(react@19.2.3)
       react-use-measure: 2.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
-      scheduler: 0.25.0
+      scheduler: 0.27.0
       suspend-react: 0.1.3(react@19.2.3)
       three: 0.182.0
       use-sync-external-store: 1.6.0(react@19.2.3)
@@ -4540,10 +4524,6 @@ snapshots:
     dependencies:
       '@types/react': 19.2.7
 
-  '@types/react-reconciler@0.32.3(@types/react@19.2.7)':
-    dependencies:
-      '@types/react': 19.2.7
-
   '@types/react@19.2.7':
     dependencies:
       csstype: 3.2.3
@@ -4705,16 +4685,16 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.25.76
 
-  astro-seo-schema@5.1.0(astro@5.16.0(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5):
+  astro-seo-schema@5.1.0(astro@5.16.6(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2))(schema-dts@1.1.5):
     dependencies:
-      astro: 5.16.0(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
+      astro: 5.16.6(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2)
       schema-dts: 1.1.5
 
-  astro@5.16.0(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2):
+  astro@5.16.6(@types/node@25.0.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.53.3)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
-      '@astrojs/markdown-remark': 6.3.9
+      '@astrojs/markdown-remark': 6.3.10
       '@astrojs/telemetry': 3.3.0
       '@capsizecss/unpack': 3.0.1
       '@oslojs/encoding': 1.1.0
@@ -6329,11 +6309,6 @@ snapshots:
       react: 19.2.3
       scheduler: 0.27.0
 
-  react-reconciler@0.31.0(react@19.2.3):
-    dependencies:
-      react: 19.2.3
-      scheduler: 0.25.0
-
   react-refresh@0.17.0: {}
 
   react-use-measure@2.1.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
@@ -6540,8 +6515,6 @@ snapshots:
   safe-buffer@5.1.2: {}
 
   sax@1.4.3: {}
-
-  scheduler@0.25.0: {}
 
   scheduler@0.27.0: {}
 
@@ -7222,7 +7195,7 @@ snapshots:
 
   zod@3.25.76: {}
 
-  zod@4.1.13: {}
+  zod@4.3.5: {}
 
   zustand@5.0.9(@types/react@19.2.7)(react@19.2.3)(use-sync-external-store@1.6.0(react@19.2.3)):
     optionalDependencies:
