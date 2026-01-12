@@ -1,3 +1,10 @@
+## [1.3.4](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.3...v1.3.4) (2026-01-12)
+
+
+### Bug Fixes
+
+* **ui:** improve layout and structure of experience details ([a40b619](https://github.com/bmmedina99/bmmedina.dev/commit/a40b6190b6bc449d9f18509c2551549ffe67c0d4))
+
 ## [1.3.3](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.2...v1.3.3) (2025-12-14)
 
 
