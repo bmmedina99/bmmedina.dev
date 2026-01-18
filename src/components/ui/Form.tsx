@@ -190,7 +190,7 @@ function Form() {
         name='hunted'
         tabIndex={-1}
         autoComplete='off'
-        className='absolute left-0 -z-10'
+        className='absolute left-0 opacity-0 -z-10'
       />
       <div className='space-y-4 text-center'>
         <p className='text-xs font-medium text-indigo-200 md:text-sm text-pretty'>
@@ -200,7 +200,7 @@ function Form() {
         </p>
         <button
           type='submit'
-          className='mx-auto btn'
+          className='shadow-md btn hover:shadow-inner disabled:opacity-50 disabled:cursor-not-allowed shadow-rebecca-purple/30'
           disabled={isSending}
         >
           <Icon name='send' />
@@ -230,7 +230,7 @@ function Form() {
           >
             {showDialog.title}
           </h3>
-          <p className='text-neutral-200 font-medium leading-relaxed text-pretty'>
+          <p className='font-medium leading-relaxed text-neutral-200 text-pretty'>
             {showDialog.message}
           </p>
         </div>
