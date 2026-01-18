@@ -62,6 +62,7 @@ export type FormField = {
 export interface Social {
   id: number
   name: string
+  color: string
   icon: string
   link: string
 }
