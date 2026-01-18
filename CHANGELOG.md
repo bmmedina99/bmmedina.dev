@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.4...v1.3.5) (2026-01-18)
+
+
+### Bug Fixes
+
+* **ui:** adjust form input styling for improved accessibility ([fea4766](https://github.com/bmmedina99/bmmedina.dev/commit/fea4766cbe87c95981d1b0bc6d4698f28ef18807))
+
 ## [1.3.4](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.3...v1.3.4) (2026-01-12)
 
 
