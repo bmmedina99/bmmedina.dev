@@ -1,6 +1,6 @@
 # Porfolio Personal
 
-¡Bienvenidos a mi porfolio! He diseñado y desarrollado este proyecto para destacar mis habilidades como desarrollador web y mostrar los proyectos en los que he trabajado.
+¡Bienvenidos a mi porfolio! He diseñado y desarrollado este porfolio para destacar mis habilidades como desarrollador web y mostrar los proyectos en los que he trabajado.
 
 ## Tecnologías utilizadas
 
@@ -45,21 +45,45 @@ Secciones y UI separadas en componentes reutilizables, lo que facilita el manten
 - **Imágenes optimizadas:**
 Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamaño para reducir el ancho de banda y prevenir cambios de diseño.
 
-## Cómo usar
+## Cómo Contribuir
 
-1. Clona el repositorio mediante SSH:
-   ```bash
-   git clone git@github.com:bmmedina99/bmmedina.dev.git
-   ```
-2. Instala las dependencias:
-   ```bash
-   pnpm i
-   ```
-3. Inicia el servidor de desarrollo:
-   ```bash
-   pnpm run dev
-   ```
-4. Abre tu navegador y visita http://localhost:4000/
+¿Encontraste un bug o tienes una idea para mejorar mi porfolio? ¡Se agradecen las contribuciones!
+
+### Configuración del proyecto
+
+1. Haz un fork de este repositorio.
+2. Clona tu fork localmente mediante SSH:
+```bash
+git clone git@github.com:[tu-usuario]/bmmedina.dev.git
+```
+3. Instala las dependencias:
+```bash
+pnpm i
+```
+4. Crea una rama para tu contribución según el proposito:
+```bash
+git switch -c feature/nombre-de-la-rama
+```
+```bash
+git switch -c fix/nombre-de-la-rama
+```
+5. Inicia el servidor de desarrollo:
+```bash
+pnpm run dev
+```
+6. Abre tu navegador y visita http://localhost:4000/
+
+### Envia tus cambios
+
+1. Realiza tus cambios y haz commmit usando **conventional-commits**:
+```bash
+git commit -m "feat: descripción de la característica"
+```
+2. Sube tu rama a tu fork:
+```bash
+git push origin nombre-de-la-rama
+```
+3. Abre un Pull Request en este repositorio describiendo tus cambios.
 
 ## Contacto
 
