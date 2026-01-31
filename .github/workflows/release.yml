@@ -5,6 +5,10 @@ on:
     branches:
       - production
 
+env:
+  NODE_VERSION: "lts/*"
+  PNPM_VERSION: "10.28.0"
+
 jobs:
   release:
     name: Release
@@ -19,12 +23,12 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10.28.0
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "pnpm"
 
       - name: Install dependencies
