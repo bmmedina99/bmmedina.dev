@@ -91,7 +91,4 @@ Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamañ
 - Porfolio: [bmmedina.dev](https://bmmedina.dev)
 - LinkedIn: [/in/bmmedina99](https://www.linkedin.com/in/bmmedina99/)
 - Instagram: [@bmmedina99](https://www.instagram.com/bmmedina99/)
-
-## Ajustes:
-
-Si tienes alguna sugerencia en mente o un diseño que quieras destacar, avísame y lo adaptaré.
+- Facebook: [fb.com/bmmedina99](https://www.facebook.com/bmmedina.dev)
