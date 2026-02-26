@@ -129,7 +129,7 @@ export const projects: Project[] = [
       'Elige hiragana, katakana o ambos y evalúa tu conocimiento de japonés con pruebas visuales. ¿Te atreves?',
     technologies: ['Astro', 'React', 'TypeScript', 'TailwindCSS', 'Biome'],
     type: 'Frontend',
-    gradient: 'bg-gradient-to-r from-amber-600 to-pink-600',
+    gradient: 'bg-linear-to-r from-amber-600 to-pink-600',
     githubURL: 'https://github.com/bmmedina99/kirakana.app',
     demoURL: 'https://kirakana.app',
   },
@@ -142,7 +142,7 @@ export const projects: Project[] = [
       'Explora un catálogo de artículos de gimnasio y obtén información; compra fácilmente en Amazon con seguridad y rapidez.',
     technologies: ['En reconstrucción'],
     type: 'Frontend',
-    gradient: 'bg-gradient-to-r from-zinc-400 to-zinc-600',
+    gradient: 'bg-linear-to-r from-zinc-400 to-zinc-600',
   },
   {
     id: 2,
@@ -154,7 +154,7 @@ export const projects: Project[] = [
       'Gestiona tus finanzas con esta herramienta. Simplifica la gestión de gastos y analiza los gráficos de manera fácil.',
     technologies: ['En desarrollo'],
     type: 'Full Stack',
-    gradient: 'bg-gradient-to-r from-emerald-600 to-sky-600',
+    gradient: 'bg-linear-to-r from-emerald-600 to-sky-600',
     githubURL: 'https://github.com/bmmedina99/kointa-finance',
   },
 ]
