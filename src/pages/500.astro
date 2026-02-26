@@ -1,8 +1,8 @@
 ---
-import StarFieldBackground from '@/components/ui/StarFieldBackground'
-import Layout from '@/layouts/Layout.astro'
+import StarFieldBackground from "@/components/ui/StarFieldBackground";
+import Layout from "@/layouts/Layout.astro";
 
-const { error } = Astro.props
+const { error } = Astro.props;
 ---
 
 <Layout title="500 - Ha ocurrido un error">
@@ -11,7 +11,7 @@ const { error } = Astro.props
   >
     <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
       <p
-        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-gradient-to-r from-indigo-200 to-rebecca-purple"
+        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-linear-to-r from-indigo-200 to-rebecca-purple"
       >
         500
       </p>
@@ -29,7 +29,7 @@ const { error } = Astro.props
               <summary class="font-medium text-indigo-700 cursor-pointer">
                 desarrollo: mensaje de error
               </summary>
-              <pre class="mt-2 text-sm text-indigo-700 break-words whitespace-break-spaces">
+              <pre class="mt-2 text-sm text-indigo-700 wrap-break-word whitespace-break-spaces">
                 {error.message}
               </pre>
             </details>
