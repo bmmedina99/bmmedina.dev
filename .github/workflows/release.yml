@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: "lts/*"
-  PNPM_VERSION: "10.28.0"
+  PNPM_VERSION: "10.30.3"
 
 jobs:
   release:
