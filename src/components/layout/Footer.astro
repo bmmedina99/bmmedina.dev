@@ -6,7 +6,7 @@ import Icon from '../ui/Icon'
 <footer
   class="backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
 >
-  <div class="max-w-6xl px-4 py-12 text-center mx-auto space-y-6">
+  <div class="px-4 py-12 space-y-6 text-center">
     <h3 class="mb-2 text-2xl font-bold font-title">Brandon Medina</h3>
     <p class="text-lg text-pretty">
       También puedes contactarme por estos medios
@@ -26,7 +26,7 @@ import Icon from '../ui/Icon'
                 name={social.icon}
                 width={32}
                 height={32}
-                className="group-hover:-translate-y-1 group-hover:text-zinc-400 transition-all"
+                className={`group-hover:-translate-y-1 transition-all ${social.color}`}
               />
             </a>
             <span class="mt-2 text-sm">{social.name}</span>
@@ -35,7 +35,7 @@ import Icon from '../ui/Icon'
       }
     </div>
     <p
-      class="w-full pt-8 border-t border-zinc-400/40 text-sm text-zinc-400 text-pretty"
+      class="w-full pt-8 text-sm border-t border-zinc-400/40 text-zinc-400 text-pretty"
     >
       {new Date().getFullYear()}. Diseñado y desarrollado por Brandon Medina.
     </p>
