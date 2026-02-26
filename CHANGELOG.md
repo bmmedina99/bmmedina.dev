@@ -1,3 +1,11 @@
+## [1.3.6](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.5...v1.3.6) (2026-02-26)
+
+
+### Bug Fixes
+
+* update gradient class for 404 and 500 error pages ([7f7bcc7](https://github.com/bmmedina99/bmmedina.dev/commit/7f7bcc7093d655e18cb526511b6eb178e543898f))
+* update gradient class syntax in site.config.ts ([6fc359b](https://github.com/bmmedina99/bmmedina.dev/commit/6fc359b9f159254f0ba545d64d1bb8a6589a8172))
+
 ## [1.3.5](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.4...v1.3.5) (2026-01-18)
 
 
