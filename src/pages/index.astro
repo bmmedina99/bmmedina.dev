@@ -2,8 +2,12 @@
 import Footer from '@/components/layout/Footer.astro'
 import Header from '@/components/layout/Header.astro'
 import Main from '@/components/layout/Main.astro'
+import AboutMe from '@/components/sections/AboutMe.astro'
+import Contact from '@/components/sections/Contact.astro'
+import Experience from '@/components/sections/Experience.astro'
+import Projects from '@/components/sections/Projects.astro'
+import Layout from '@/layouts/Layout.astro'
 import { configSite } from '@/site.config'
-import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout
@@ -14,6 +18,11 @@ import Layout from '../layouts/Layout.astro'
     Ir al contenido principal
   </a>
   <Header />
-  <Main />
+  <Main>
+    <Experience />
+    <Projects />
+    <AboutMe />
+    <Contact />
+  </Main>
   <Footer />
 </Layout>
