@@ -6,17 +6,19 @@ const { error } = Astro.props
 ---
 
 <Layout title="500 - Ha ocurrido un error">
-  <Main class="flex items-center justify-center grow overflow-hidden">
-    <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
-      <p
-        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-linear-to-r from-indigo-200 to-rebecca-purple"
-      >
-        Opps!
-      </p>
-      <section class="space-y-6">
-        <h1 class="font-bold font-title">Algo salió mal</h1>
+  <Main class="flex items-center justify-center grow overflow-hidden min-h-dvh">
+    <div class="max-w-2xl mx-auto space-y-4 text-center">
+      <section class="space-y-4">
+        <h1
+          class="font-bold text-transparent bg-linear-to-r bg-clip-text from-indigo-200 to-rebecca-purple"
+        >
+          Opps!
+        </h1>
+        <h2 class="text-3xl font-semibold font-title text-neutral-200">
+          Algo salió mal
+        </h2>
         <p
-          class="max-w-2xl mx-auto text-xl leading-relaxed text-indigo-200 text-pretty"
+          class="max-w-md mx-auto text-lg leading-relaxed text-indigo-200 text-pretty"
         >
           Ha ocurrido un error inesperado. No te preocupes, nuestro equipo ha
           sido notificado y está trabajando para solucionarlo.
@@ -25,23 +27,29 @@ const { error } = Astro.props
           process.env.NODE_ENV === "development" && (
             <details class="max-w-lg p-4 mx-auto mt-6 text-left border border-indigo-200 rounded-lg bg-indigo-50">
               <summary class="font-medium text-indigo-700 cursor-pointer">
-                desarrollo: mensaje de error
+                Detalles del error (desarrollo)
               </summary>
-              <pre class="mt-2 text-sm text-indigo-700 wrap-break-word whitespace-break-spaces">
+              <pre class="mt-2 text-sm text-indigo-700 wrap-break-word whitespace-pre-wrap">
                 {error.message}
               </pre>
             </details>
           )
         }
       </section>
-      <div class="flex items-center justify-center">
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <button
           type="button"
           onclick="window.location.reload()"
-          class="btn font-medium text-current"
+          class="btn font-medium text-neutral-200"
         >
           Recargar página
         </button>
+        <a
+          href="/"
+          class="btn text-indigo-700 bg-indigo-50 border-2 border-gray-200 shadow-lg"
+        >
+          Volver al inicio
+        </a>
       </div>
     </div>
   </Main>
