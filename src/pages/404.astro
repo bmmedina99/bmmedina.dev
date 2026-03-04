@@ -1,12 +1,10 @@
 ---
-import StarFieldBackground from '@/components/ui/StarFieldBackground'
+import Main from '@/components/layout/Main.astro'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="404 - Página no encontrada">
-  <main
-    class="container relative flex flex-col items-center justify-center mx-auto min-h-dvh"
-  >
+  <Main class="flex items-center justify-center grow overflow-hidden">
     <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
       <p
         class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-linear-to-r from-indigo-200 to-rebecca-purple"
@@ -29,6 +27,5 @@ import Layout from '@/layouts/Layout.astro'
         </button>
       </div>
     </div>
-    <StarFieldBackground client:idle />
-  </main>
+  </Main>
 </Layout>

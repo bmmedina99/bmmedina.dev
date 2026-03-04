@@ -1,27 +1,25 @@
 ---
-import StarFieldBackground from '@/components/ui/StarFieldBackground'
+import Main from '@/components/layout/Main.astro'
 import Layout from '@/layouts/Layout.astro'
 
 const { error } = Astro.props
 ---
 
 <Layout title="500 - Ha ocurrido un error">
-  <main
-    class="container relative flex flex-col items-center justify-center mx-auto min-h-dvh"
-  >
+  <Main class="flex items-center justify-center grow overflow-hidden">
     <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
       <p
         class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-linear-to-r from-indigo-200 to-rebecca-purple"
       >
-        500
+        Opps!
       </p>
       <section class="space-y-6">
-        <h1 class="font-bold font-title">Ha ocurrido un error</h1>
+        <h1 class="font-bold font-title">Algo salió mal</h1>
         <p
           class="max-w-2xl mx-auto text-xl leading-relaxed text-indigo-200 text-pretty"
         >
-          Lo sentimos, ocurrio un error inesperado, pero no te preocupes,
-          nuestro equipo ha sido notificado y está trabajando para solucionarlo.
+          Ha ocurrido un error inesperado. No te preocupes, nuestro equipo ha
+          sido notificado y está trabajando para solucionarlo.
         </p>
         {
           process.env.NODE_ENV === "development" && (
@@ -46,6 +44,5 @@ const { error } = Astro.props
         </button>
       </div>
     </div>
-    <StarFieldBackground client:idle />
-  </main>
+  </Main>
 </Layout>
