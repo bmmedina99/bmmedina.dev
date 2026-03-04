@@ -190,6 +190,7 @@ function Form() {
         name='hunted'
         tabIndex={-1}
         autoComplete='off'
+        aria-hidden='true'
         className='absolute left-0 opacity-0 -z-10'
       />
       <div className='space-y-4 text-center'>
