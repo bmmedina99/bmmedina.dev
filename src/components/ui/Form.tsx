@@ -13,13 +13,13 @@ function Form() {
     Partial<Record<keyof FormField, string>>
   >({})
   const [isSending, setIsSending] = useState(false)
-  const formRef = useRef<HTMLFormElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [showDialog, setShowDialog] = useState({
     title: '',
     message: '',
     type: '',
   })
+  const formRef = useRef<HTMLFormElement>(null)
 
   useEffect(() => {
     let timer: NodeJS.Timeout
