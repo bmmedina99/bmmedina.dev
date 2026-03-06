@@ -13,13 +13,13 @@ function Form() {
     Partial<Record<keyof FormField, string>>
   >({})
   const [isSending, setIsSending] = useState(false)
-  const formRef = useRef<HTMLFormElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const [showDialog, setShowDialog] = useState({
     title: '',
     message: '',
     type: '',
   })
+  const formRef = useRef<HTMLFormElement>(null)
 
   useEffect(() => {
     let timer: NodeJS.Timeout
@@ -190,6 +190,7 @@ function Form() {
         name='hunted'
         tabIndex={-1}
         autoComplete='off'
+        aria-hidden='true'
         className='absolute left-0 opacity-0 -z-10'
       />
       <div className='space-y-4 text-center'>

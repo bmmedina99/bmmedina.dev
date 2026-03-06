@@ -1,26 +1,25 @@
 ---
-import StarFieldBackground from '@/components/ui/StarFieldBackground'
+import Main from '@/components/layout/Main.astro'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title="404 - Página no encontrada">
-  <main
-    class="container relative flex flex-col items-center justify-center mx-auto min-h-dvh"
-  >
-    <div class="relative z-10 w-full max-w-4xl space-y-12 text-center">
-      <p
-        class="text-6xl font-bold leading-none text-transparent sm:text-8xl bg-clip-text bg-linear-to-r from-indigo-200 to-rebecca-purple"
-      >
-        404
-      </p>
-      <section class="space-y-6">
-        <h1 class="font-bold font-title">Página no encontrada</h1>
-        <p
-          class="max-w-2xl mx-auto text-xl leading-relaxed text-indigo-200 text-pretty"
+  <Main class="flex items-center justify-center grow overflow-hidden min-h-dvh">
+    <div class="max-w-2xl mx-auto space-y-4 text-center">
+      <section class="space-y-4">
+        <h1
+          class="font-bold text-transparent bg-linear-to-r bg-clip-text from-indigo-200 to-rebecca-purple"
         >
-          Lo sentimos, la página que estás buscando no existe o ha sido movida.
-          Pero no te preocupes, hay muchas otras cosas increíbles que puedes
-          explorar.
+          404
+        </h1>
+        <h2 class="text-3xl font-semibold font-title text-neutral-200">
+          Página no encontrada
+        </h2>
+        <p
+          class="max-w-md mx-auto text-lg leading-relaxed text-indigo-200 text-pretty"
+        >
+          La página que estás buscando no existe o ha sido movida, pero no te
+          preocupes, hay muchas otras cosas increíbles que puedes explorar.
         </p>
       </section>
       <div class="flex items-center justify-center">
@@ -29,6 +28,5 @@ import Layout from '@/layouts/Layout.astro'
         </button>
       </div>
     </div>
-    <StarFieldBackground client:idle />
-  </main>
+  </Main>
 </Layout>

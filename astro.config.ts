@@ -13,11 +13,10 @@ export default defineConfig({
       chunkSizeWarningLimit: 800,
       rollupOptions: {
         output: {
-          manualChunks(id) {
+          manualChunks(id: string) {
             if (id.includes('node_modules/@react-three/fiber'))
               return 'three-fiber'
             if (id.includes('node_modules/three')) return 'three-core'
-            if (id.includes('node_modules/sonner')) return 'sonner-core'
             return
           },
         },
