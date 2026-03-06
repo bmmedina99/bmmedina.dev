@@ -1,3 +1,11 @@
+## [1.3.7](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.6...v1.3.7) (2026-03-06)
+
+
+### Bug Fixes
+
+* update dependencies in pnpm-lock.yaml ([33710a8](https://github.com/bmmedina99/bmmedina.dev/commit/33710a834334b694dfe979df25b76a4b675cf958))
+* update import syntax in 500.astro for consistency ([2de80c0](https://github.com/bmmedina99/bmmedina.dev/commit/2de80c0487e559ba5ccb8d5ecc97f38d5a9a7d20))
+
 ## [1.3.6](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.5...v1.3.6) (2026-02-26)
 
 
