@@ -31,7 +31,7 @@
     "@astrojs/check": "0.9.8",
     "@astrojs/react": "5.0.4",
     "@astrojs/sitemap": "3.7.2",
-    "@biomejs/biome": "2.4.5",
+    "@biomejs/biome": "2.4.13",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tailwindcss/vite": "4.2.4",
