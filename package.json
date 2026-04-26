@@ -20,22 +20,22 @@
     "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
   },
   "dependencies": {
-    "@astrojs/react": "5.0.0",
-    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/react": "5.0.4",
+    "@astrojs/sitemap": "3.7.2",
     "@emailjs/browser": "4.4.1",
     "@fontsource/onest": "5.2.11",
     "@fontsource/orbitron": "5.2.8",
     "@react-three/fiber": "9.5.0",
-    "astro": "6.0.4",
+    "astro": "6.1.9",
     "astro-robots-txt": "1.0.0",
-    "astro-seo-schema": "5.2.0",
+    "astro-seo-schema": "6.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "schema-dts": "1.1.5",
     "three": "0.183.2"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.7",
+    "@astrojs/check": "0.9.8",
     "@biomejs/biome": "2.4.5",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
