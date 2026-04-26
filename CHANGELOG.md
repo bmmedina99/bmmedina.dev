@@ -1,3 +1,10 @@
+## [1.3.9](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.8...v1.3.9) (2026-04-26)
+
+
+### Bug Fixes
+
+* **deps:** :ambulance: resolve critical vulnerability in Astro ([fd97336](https://github.com/bmmedina99/bmmedina.dev/commit/fd973366914d0084de775b6eb6ff0886afe8e4f7))
+
 ## [1.3.8](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.7...v1.3.8) (2026-04-26)
 
 
