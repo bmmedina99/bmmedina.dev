@@ -1,3 +1,11 @@
+## [1.3.8](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.7...v1.3.8) (2026-04-26)
+
+
+### Bug Fixes
+
+* correct max length message for name field ([e76c64b](https://github.com/bmmedina99/bmmedina.dev/commit/e76c64b2dce50b4d64b713c580a5a959d97b2251))
+* update build configuration to allow esbuild and sharp ([e15d570](https://github.com/bmmedina99/bmmedina.dev/commit/e15d5709fdee0c4043b55a4f4551ad37ac671153))
+
 ## [1.3.7](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.6...v1.3.7) (2026-03-06)
 
 
