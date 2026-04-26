@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'astro/zod'
 
 export const formSchema = z.object({
   name: z
@@ -6,7 +6,7 @@ export const formSchema = z.object({
     .min(2, {
       message: 'El nombre es obligatorio. Por favor, ingrese su nombre.',
     })
-    .max(25, { message: 'El nombre no puede exceder los 50 caracteres.' }),
+    .max(25, { message: 'El nombre no puede exceder los 25 caracteres.' }),
   email: z.email({
     message:
       'El correo electrónico ingresado no es válido. Asegúrese de utilizar el formato ejemplo@correo.com',
