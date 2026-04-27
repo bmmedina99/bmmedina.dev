@@ -32,7 +32,7 @@ function Form() {
     return () => clearTimeout(timer)
   }, [showDialog])
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     const form = formRef.current
@@ -82,7 +82,7 @@ function Form() {
   }
 
   const onInput = useCallback(
-    (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    (e: React.InputEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const field = e.currentTarget
       const id = field.id as keyof FormField
 
