@@ -4,7 +4,6 @@
   --color-rich-black: oklch(0.0962 0.0562 285.05);
   --color-russian-violet: oklch(16.872% 0.07813 292.572);
   --color-rebecca-purple: oklab(42.208% 0.06103 -0.16298);
-  --font-title: "Orbitron", sans-serif;
 }
 
 @layer base {
