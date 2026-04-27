@@ -1,6 +1,4 @@
 ---
-import onestFont from '@fontsource/onest/files/onest-latin-400-normal.woff2?url'
-import orbitronFont from '@fontsource/orbitron/files/orbitron-latin-700-normal.woff2?url'
 import { Schema } from 'astro-seo-schema'
 import { configSite } from '@/site.config'
 import globalCSS from '@/styles/global.css?inline'
@@ -13,79 +11,6 @@ const author = configSite.author
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<link
-  rel="preload"
-  href={orbitronFont}
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  href={onestFont}
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-
-<style>
-  @font-face {
-    font-family: "Orbitron";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-    src: url(@fontsource/orbitron/files/orbitron-latin-600-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Orbitron";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 700;
-    src: url(@fontsource/orbitron/files/orbitron-latin-700-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src: url(@fontsource/onest/files/onest-latin-400-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 500;
-    src: url(@fontsource/onest/files/onest-latin-500-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-    src: url(@fontsource/onest/files/onest-latin-600-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-</style>
 
 <style set:html={globalCSS}></style>
 
@@ -107,7 +32,10 @@ const author = configSite.author
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content={siteTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content=`${canonicalURL}images/twitter-card.webp` />
+<meta
+  property="twitter:image"
+  content=`${canonicalURL}images/twitter-card.webp`
+/>
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:site" content={`@${author}`} />
 <meta property="twitter:creator" content={`@${author}`} />
@@ -133,12 +61,12 @@ const author = configSite.author
       "https://www.instagram.com/bmmedina99",
       "https://www.youtube.com/@bmmedina99",
       "https://x.com/bmmedina99",
-      "https://www.facebook.com/bmmedina.dev"
+      "https://www.facebook.com/bmmedina.dev",
     ],
     jobTitle: "Desarrollador Web Full Stack",
     worksFor: {
       "@type": "Organization",
-      name: "Izertis"
+      name: "Izertis",
     },
     skills: [
       "Next.js",
