@@ -11,12 +11,6 @@ importers:
       '@emailjs/browser':
         specifier: 4.4.1
         version: 4.4.1
-      '@fontsource/onest':
-        specifier: 5.2.11
-        version: 5.2.11
-      '@fontsource/orbitron':
-        specifier: 5.2.8
-        version: 5.2.8
       react:
         specifier: 19.2.5
         version: 19.2.5
@@ -494,12 +488,6 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
-
-  '@fontsource/onest@5.2.11':
-    resolution: {integrity: sha512-YDOHuJ+HFf4rl6+vBzEoAGul+GyEOIlziepq+7UDT4839LyiFU1clVZqNmqmCRjwWidPTMUJIv1k9e+5UtuQOw==}
-
-  '@fontsource/orbitron@5.2.8':
-    resolution: {integrity: sha512-ruzrDl5vnqNykk5DZWY0Ezj4aeFZSbCnwJTc/98ojNJHSsHhlhT2r7rwQrA5sptmF8JtB8TQTAvlfRvcV28RPw==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -3941,10 +3929,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.7':
     optional: true
-
-  '@fontsource/onest@5.2.11': {}
-
-  '@fontsource/orbitron@5.2.8': {}
 
   '@img/colour@1.1.0':
     optional: true

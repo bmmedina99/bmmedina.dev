@@ -20,12 +20,10 @@
     "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
   },
   "dependencies": {
-    "@emailjs/browser": "4.4.1",
-    "@fontsource/onest": "5.2.11",
-    "@fontsource/orbitron": "5.2.8",
     "react": "19.2.5",
     "react-dom": "19.2.5",
-    "three": "0.184.0"
+    "three": "0.184.0",
+    "@emailjs/browser": "4.4.1"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.8",
