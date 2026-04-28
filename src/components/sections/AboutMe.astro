@@ -70,7 +70,7 @@ import Section from './Section.astro'
     <section aria-labelledby="tech-skills-heading">
       <h3
         id="tech-skills-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Habilidades técnicas
       </h3>
@@ -79,14 +79,16 @@ import Section from './Section.astro'
       >
         {
           aboutMe.techSkills.map((tech) => (
-            <li>
+            <li class="group">
               <Icon
                 name={slugify(tech.text)}
-                width={48}
-                height={48}
-                className={`hover:-translate-y-1 transition-all ${tech.color}`}
+                className={`size-12 group-hover:-translate-y-2 transition-all ${tech.color} ${tech.hover}`}
               />
-              <p class="mt-2 text-sm font-medium">{tech.text}</p>
+              <p
+                class={`select-none mt-2 text-sm font-medium transition-colors ${tech.color} ${tech.hover}`}
+              >
+                {tech.text}
+              </p>
             </li>
           ))
         }
@@ -95,7 +97,7 @@ import Section from './Section.astro'
     <section aria-labelledby="soft-skills-heading">
       <h3
         id="soft-skills-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Habilidades blandas
       </h3>
@@ -104,7 +106,7 @@ import Section from './Section.astro'
     <section aria-labelledby="education-heading">
       <h3
         id="education-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Estudios
       </h3>
