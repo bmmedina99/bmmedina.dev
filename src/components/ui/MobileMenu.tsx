@@ -31,7 +31,7 @@ export const MobileMenu = ({ active, inputRef }: MobileMenuProps) => {
       />
       <label
         htmlFor='mobile-menu'
-        className='fixed inset-0 z-40 hidden backdrop-blur-sm peer-checked:block md:peer-checked:hidden'
+        className='fixed inset-0 z-40 hidden backdrop-blur-md peer-checked:block md:peer-checked:hidden'
         aria-controls='mobile-menu'
         aria-label='Cerrar menú móvil'
       />
