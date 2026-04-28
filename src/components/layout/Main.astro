@@ -4,7 +4,10 @@ import StarFieldBackground from '../ui/StarFieldBackground'
 const { class: classes } = Astro.props
 ---
 
-<main id="main-content" class:list={["relative", { [classes]: classes }]}>
+<main
+  id="main-content"
+  class:list={["relative flex-1 overflow-hidden", { [classes]: classes }]}
+>
   <slot />
   <StarFieldBackground client:idle />
 </main>
