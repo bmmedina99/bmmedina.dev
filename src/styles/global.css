@@ -14,16 +14,21 @@
       var(--color-indigo-600) 40%,
       transparent
     );
-    color: var(--color-neutral-100);
   }
 
   ::-webkit-scrollbar {
     width: calc(var(--spacing) * 3);
+    background-color: color-mix(
+      in oklab,
+      var(--color-rebecca-purple) 60%,
+      transparent
+    );
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--color-rebecca-purple);
-    border: 2px solid var(--color-rich-black);
+    background-color: var(--color-russian-violet);
+    border: 2px solid
+      color-mix(in oklab, var(--color-rebecca-purple) 60%, transparent);
     border-radius: var(--radius-sm);
   }
 
@@ -80,6 +85,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  #home {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100dvh;
+    padding: clamp(1.5rem, 5vh, 4rem) clamp(1rem, 5vw, 5rem);
   }
 }
 
