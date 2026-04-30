@@ -27,7 +27,7 @@ export const navLinks: Navigation[] = [
   { id: 4, label: 'contactáme' },
 ]
 
-export const Experiences: Experience[] = [
+export const experiences: Experience[] = [
   {
     id: 0,
     title: 'Soporte CAU',
