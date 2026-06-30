@@ -14,7 +14,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
           <li key={item.id}>
             <a
               href={`#${slugify(item.label)}`}
-              className={`flex items-center gap-2 hover:text-sky-400 transition-colors ${active === item.label ? 'text-sky-400' : 'text-neutral-100'}`}
+              className={`flex items-center gap-2 hover:text-violet-300 transition-colors ${active === item.label ? 'text-violet-300' : ''}`}
               aria-label={`Ir a la sección ${item.label}`}
             >
               {slugify(item.label)}.tsx
@@ -31,7 +31,7 @@ const NavItems = ({ active, isMobile = false }: NavItemsProps) => {
         <li key={item.id}>
           <button
             type='button'
-            className={`flex items-center gap-2 hover:text-sky-400 transition-colors ${active === item.label ? 'text-sky-400' : 'text-neutral-100'}`}
+            className={`flex items-center gap-2 hover:text-violet-300 transition-colors ${active === item.label ? 'text-violet-300' : ''}`}
             aria-label={`Ir a la sección ${item.label}`}
             onClick={() => scrollSection(`#${slugify(item.label)}`)}
           >

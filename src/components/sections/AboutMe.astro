@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets'
-import techSkills from '@/assets/svg/tech-skills.svg'
 import { slugify } from '@/lib/utils'
 import { aboutMe } from '@/site.config'
 import Badge from '../ui/Badge.astro'
@@ -13,35 +12,34 @@ import Section from './Section.astro'
   label="Información personal"
   class="grid gap-4 lg:grid-cols-2"
 >
-  <div class="space-y-4 [&>p]:text-lg [&>p]:text-pretty">
-    <div class="flex flex-col items-center gap-4 md:block">
+  <div class="space-y-4">
+    <div class="flex flex-col items-centerw md:block">
       <Image
         src={aboutMe.image}
         alt="Brandon Medina - Desarrollador Web Full Stack"
-        class="profile-img"
+        class="profile-image"
         width={192}
         height={192}
       />
-      <p>
+      <p class="text-lg text-pretty">
         <strong>Desarrollador Web Full Stack</strong> con más de 3 años de experiencia
-        especializado en <strong>Next.js</strong>, <strong>Astro</strong>, <strong
-          >React</strong
-        > y <strong>Node.js</strong>. Durante mi trayectoria, he desarrollado
-        proyectos como el sitio web para Gray Gorilla Fitness y automatizado
-        tareas con Python.
+        especializado en <strong>Next.js</strong>, <strong>Astro</strong>,
+        <strong>React</strong> y <strong>Node.js</strong>. Durante mi
+        trayectoria, he desarrollado proyectos como el sitio web para Gray
+        Gorilla Fitness y automatizado tareas con Python.
       </p>
     </div>
-    <p>
+    <p class="text-lg text-pretty">
       Disfruto investigando y trabajando de forma independiente; no obstante,
-      aprecio el <strong>trabajo colaborativo</strong>. Actualmente, superviso y
-      coordino operadores en un entorno técnico, garantizando la continuidad del
-      servicio.
+      aprecio el <span class="text-violet-300">trabajo colaborativo</span>.
+      Actualmente, superviso y coordino operadores en un entorno técnico,
+      garantizando la continuidad del servicio.
     </p>
-    <p>
+    <p class="text-lg text-pretty">
       Si tuviera que describirme en pocas palabras, diría que soy analítico,
-      metódico y resolutivo. Fuera del ámbito laboral, me apasionan el <strong
-        >ajedrez y la música clásica</strong
-      >, aficiones que potencian mis habilidades blandas.
+      metódico y resolutivo. Fuera del ámbito laboral, me apasionan el
+      <span class="text-violet-300">ajedrez y la música clásica</span>,
+      aficiones que potencian mis habilidades blandas.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
       <a href="cv_bmmedina.pdf" download class="btn">
@@ -59,18 +57,10 @@ import Section from './Section.astro'
     </div>
   </div>
   <div class="relative space-y-4">
-    <Image
-      class={"absolute bottom-0 opacity-20 -z-10 select-none"}
-      src={techSkills}
-      alt={"Ilustración de habilidades técnicas"}
-      aria-hidden="true"
-      width={600}
-      height={600}
-    />
     <section aria-labelledby="tech-skills-heading">
       <h3
         id="tech-skills-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Habilidades técnicas
       </h3>
@@ -79,14 +69,16 @@ import Section from './Section.astro'
       >
         {
           aboutMe.techSkills.map((tech) => (
-            <li>
+            <li class="group">
               <Icon
                 name={slugify(tech.text)}
-                width={48}
-                height={48}
-                className={`hover:-translate-y-1 transition-all ${tech.color}`}
+                className={`size-12 group-hover:-translate-y-2 transition-all ${tech.color} ${tech.hover}`}
               />
-              <p class="mt-2 text-sm font-medium">{tech.text}</p>
+              <p
+                class={`select-none mt-2 text-sm font-medium transition-colors ${tech.color} ${tech.hover}`}
+              >
+                {tech.text}
+              </p>
             </li>
           ))
         }
@@ -95,7 +87,7 @@ import Section from './Section.astro'
     <section aria-labelledby="soft-skills-heading">
       <h3
         id="soft-skills-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Habilidades blandas
       </h3>
@@ -104,18 +96,18 @@ import Section from './Section.astro'
     <section aria-labelledby="education-heading">
       <h3
         id="education-heading"
-        class="mb-4 text-xl font-semibold text-zinc-300"
+        class="mb-4 text-xl font-semibold text-zinc-100"
       >
         Estudios
       </h3>
-      <ul class="space-y-2">
+      <ul class="space-y-6">
         {
           aboutMe.studies.map((study) => (
-            <li class="p-4 mb-2 cursor-pointer card">
-              <h4 class="text-sm font-semibold text-violet-300">
+            <li class="p-4 card">
+              <h4 class="text-sm font-semibold text-violet-300 mb-2">
                 {study.title}
               </h4>
-              <p class="text-xs text-gray-300">
+              <p class="text-xs text-slate-300">
                 {study.institution} • {study.startDate}-{study.endDate}
               </p>
             </li>

@@ -1,64 +1,71 @@
 ---
-import Details from '../ui/Details.astro'
+import { experiences } from '@/site.config'
+import Badge from '../ui/Badge.astro'
+import Icon from '../ui/Icon'
 import Section from './Section.astro'
 ---
 
 <Section name="Experiencia" label="Experiencia profesional">
-  <Details />
+  <p class="max-w-xl mx-auto text-lg text-center text-pretty">
+    Mi experiencia como <strong>desarrollador web</strong> freelance y en empresas
+    me ha dado una comprensión completa del
+    <span class="text-violet-300">ciclo de vida </span> de un proyecto.
+  </p>
+  {
+    [...experiences].reverse().map((experience) => (
+      <details
+        name="experience"
+        class="experience-details group"
+        open={experience.id === experiences.length - 1}
+      >
+        <summary class="flex items-center justify-between p-5 list-none card">
+          <div>
+            <h3 class="text-xl font-semibold text-violet-400">
+              {experience.title}
+            </h3>
+            <p class="text-slate-300">{experience.company}</p>
+            <p class="text-sm text-slate-400">
+              {experience.startDate} - {experience.endDate}
+            </p>
+          </div>
+          <span
+            aria-hidden="true"
+            class="grid transition-transform duration-300 size-8 place-items-center text-violet-300 group-open:rotate-x-180"
+          >
+            <Icon name="menu-expand" />
+          </span>
+        </summary>
+        <article class="mt-4 experience-details-content">
+          <div class="p-5 border rounded-lg bg-rebecca-purple/40 border-russian-violet">
+            <ul class="pl-4 space-y-2 list-disc text-slate-300 text-pretty">
+              {experience.description.map((description) => (
+                <li>{description}</li>
+              ))}
+            </ul>
+            <Badge items={experience.technologies} />
+            <footer class="flex flex-wrap justify-between gap-4 text-sm">
+              <p class="flex items-center gap-2 text-emerald-200">
+                <Icon name="location" />
+                <span>{experience.location}</span>
+              </p>
+              {experience.website && (
+                <p class="flex items-center gap-2 text-cyan-200">
+                  <Icon name="website" />
+                  <a
+                    href={experience.website.link}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    class="hover:underline"
+                    aria-label={`Visitar sitio web de ${experience.company}`}
+                  >
+                    {experience.website.text}
+                  </a>
+                </p>
+              )}
+            </footer>
+          </div>
+        </article>
+      </details>
+    ))
+  }
 </Section>
-<script>
-  const buttons = Array.from(
-    document.querySelectorAll("button.card[data-id]"),
-  ) as HTMLButtonElement[];
-  let expanded = buttons.length ? buttons[0].dataset.id : -1;
-
-  function handleExpand(id: string | undefined) {
-    expanded = expanded === id ? -1 : id;
-    updateUI();
-  }
-
-  function updateUI() {
-    buttons.forEach((btn) => {
-      const id = btn.dataset.id;
-      const isExpanded = expanded === id;
-
-      btn.setAttribute("aria-expanded", String(isExpanded));
-      const title = btn.dataset.title || "esta experiencia";
-      const company = btn.dataset.company ? ` en ${btn.dataset.company}` : "";
-      btn.setAttribute(
-        "aria-label",
-        `${isExpanded ? "Contraer" : "Expandir"} detalles de ${title}${company}`,
-      );
-
-      const panelId = btn.getAttribute("aria-controls");
-      const panel = panelId && document.getElementById(panelId);
-      if (panel) {
-        panel.hidden = !isExpanded;
-        panel.setAttribute("aria-hidden", String(!isExpanded));
-      }
-
-      const iconSpan = btn.querySelector('[aria-hidden="true"]');
-      if (iconSpan) {
-        if (isExpanded) {
-          iconSpan.classList.add("rotate-180");
-        } else {
-          iconSpan.classList.remove("rotate-180");
-        }
-      }
-    });
-  }
-
-  buttons.forEach((btn) => {
-    const id: string | undefined = btn.dataset.id;
-    if (!btn.id) btn.id = `btn-${id}`;
-    const panelId = btn.getAttribute("aria-controls");
-    const panel = panelId && document.getElementById(panelId);
-    if (panel && !panel.getAttribute("aria-labelledby")) {
-      panel.setAttribute("aria-labelledby", btn.id);
-    }
-
-    btn.addEventListener("click", () => handleExpand(id));
-  });
-
-  updateUI();
-</script>

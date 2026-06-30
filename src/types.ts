@@ -41,6 +41,7 @@ export interface Profile {
   techSkills: {
     text: string
     color: string
+    hover: string
   }[]
   softSkills: string[]
   studies: {

@@ -1,116 +1,44 @@
 ---
-import onestFont from '@fontsource/onest/files/onest-latin-400-normal.woff2?url'
-import orbitronFont from '@fontsource/orbitron/files/orbitron-latin-700-normal.woff2?url'
+import { Font } from 'astro:assets'
 import { Schema } from 'astro-seo-schema'
 import { configSite } from '@/site.config'
 import globalCSS from '@/styles/global.css?inline'
 
-const canonicalURL = new URL(Astro.request.url, Astro.site).toString()
 const { title, description } = Astro.props
 const siteTitle = `${title} | ${configSite.title}`
-const author = configSite.author
+const siteURL = new URL(Astro.request.url, Astro.site).toString()
+const siteAuthor = configSite.author
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link
-  rel="preload"
-  href={orbitronFont}
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-<link
-  rel="preload"
-  href={onestFont}
-  as="font"
-  type="font/woff2"
-  crossorigin="anonymous"
-/>
-
-<style>
-  @font-face {
-    font-family: "Orbitron";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-    src: url(@fontsource/orbitron/files/orbitron-latin-600-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Orbitron";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 700;
-    src: url(@fontsource/orbitron/files/orbitron-latin-700-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src: url(@fontsource/onest/files/onest-latin-400-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 500;
-    src: url(@fontsource/onest/files/onest-latin-500-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-  @font-face {
-    font-family: "Onest";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 600;
-    src: url(@fontsource/onest/files/onest-latin-600-normal.woff2)
-      format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-</style>
-
+<Font cssVariable="--font-orbitron" />
+<Font cssVariable="--font-onest" />
 <style set:html={globalCSS}></style>
 
 <title>{siteTitle}</title>
 <meta name="description" content={description} />
 <meta name="generator" content={Astro.generator} />
 <meta name="robots" content="index, follow" />
-<meta name="author" content={author} />
+<meta name="author" content={siteAuthor} />
 
 <meta property="og:title" content={siteTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:site_name" content="bmmedina.dev" />
-<meta property="og:image" content=`${canonicalURL}images/open-graph.webp` />
+<meta property="og:image" content={`${siteURL}images/open-graph.webp`} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content={canonicalURL} />
+<meta property="og:url" content={siteURL} />
 <meta property="og:type" content="website" />
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:title" content={siteTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content=`${canonicalURL}images/twitter-card.webp` />
-<meta property="twitter:url" content={canonicalURL} />
-<meta property="twitter:site" content={`@${author}`} />
-<meta property="twitter:creator" content={`@${author}`} />
+<meta property="twitter:image" content={`${siteURL}images/twitter-card.webp`} />
+<meta property="twitter:url" content={siteURL} />
+<meta property="twitter:site" content={`@${siteAuthor}`} />
+<meta property="twitter:creator" content={`@${siteAuthor}`} />
 
 <meta name="theme-color" content="#003014" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -118,14 +46,14 @@ const author = configSite.author
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="canonical" href={canonicalURL} />
+<link rel="canonical" href={siteURL} />
 
 <Schema
   item={{
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Brandon Medina",
-    url: canonicalURL,
+    url: siteURL,
     image: "https://bmmedina.dev/images/profile.webp",
     sameAs: [
       "https://github.com/bmmedina99",
@@ -133,12 +61,12 @@ const author = configSite.author
       "https://www.instagram.com/bmmedina99",
       "https://www.youtube.com/@bmmedina99",
       "https://x.com/bmmedina99",
-      "https://www.facebook.com/bmmedina.dev"
+      "https://www.facebook.com/bmmedina.dev",
     ],
     jobTitle: "Desarrollador Web Full Stack",
     worksFor: {
       "@type": "Organization",
-      name: "Izertis"
+      name: "Izertis",
     },
     skills: [
       "Next.js",

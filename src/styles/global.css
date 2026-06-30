@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
+  --font-title: var(--font-orbitron);
   --color-rich-black: oklch(0.0962 0.0562 285.05);
-  --color-russian-violet: oklch(16.872% 0.07813 292.572);
-  --color-rebecca-purple: oklab(42.208% 0.06103 -0.16298);
-  --font-title: "Orbitron", sans-serif;
+  --color-russian-violet: oklch(0.1687 0.0781 292.57);
+  --color-rebecca-purple: oklch(0.4221 0.1739 290.53);
 }
 
 @layer base {
@@ -14,21 +14,25 @@
       var(--color-indigo-600) 40%,
       transparent
     );
-    color: var(--color-neutral-100);
   }
 
   ::-webkit-scrollbar {
     width: calc(var(--spacing) * 3);
+    background-color: color-mix(
+      in oklab,
+      var(--color-rebecca-purple) 60%,
+      transparent
+    );
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--color-violet-400);
-    border-radius: var(--radius-md);
-    border: 4px solid var(--color-rich-black);
+    background-color: var(--color-russian-violet);
+    border: 2px solid
+      color-mix(in oklab, var(--color-rebecca-purple) 60%, transparent);
+    border-radius: var(--radius-sm);
   }
 
   strong {
-    font-weight: var(--font-weight-medium);
     color: var(--color-violet-300);
   }
 
@@ -82,6 +86,17 @@
     height: 100%;
     object-fit: cover;
   }
+
+  #home {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100dvh;
+    padding: clamp(1.5rem, 5vh, 4rem) clamp(1rem, 5vw, 5rem);
+  }
 }
 
 @layer components {
@@ -90,13 +105,11 @@
     right: calc(var(--spacing) * 3);
     bottom: calc(var(--spacing) * 3);
     font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
     color: var(--color-indigo-200);
   }
 
   .error-field {
     font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
     color: var(--color-red-400);
     border-radius: var(--radius-md);
     margin-top: calc(var(--spacing) * 1);
@@ -105,10 +118,10 @@
     user-select: none;
   }
 
-  .profile-img {
+  .profile-image {
     shape-outside: circle(50%);
     clip-path: circle(50%);
-    margin-right: calc(var(--spacing) * 6);
+    margin-right: calc(var(--spacing) * 4);
     margin-bottom: calc(var(--spacing) * 0);
     float: left;
   }
@@ -125,22 +138,35 @@
 
   .btn {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    padding-inline: calc(var(--spacing) * 6);
-    font-weight: var(--font-weight-medium);
+    justify-content: center;
+    padding: calc(var(--spacing) * 2.75) calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-semibold);
     border: 1px solid var(--color-rebecca-purple);
-    height: calc(var(--spacing) * 11);
     gap: calc(var(--spacing) * 2);
     border-radius: var(--radius-md);
     color: var(--color-indigo-200);
-    -webkit-user-select: none;
-    user-select: none;
     cursor: default;
     transition: all 0.2s;
 
     &:hover {
       translate: 0 4px;
     }
+  }
+
+  @keyframes details-content-show {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .experience-details[open] .experience-details-content {
+    animation: details-content-show 300ms ease-out;
   }
 }

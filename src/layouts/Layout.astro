@@ -1,4 +1,5 @@
 ---
+import Footer from '@/components/layout/Footer.astro'
 import Meta from '../components/Meta.astro'
 
 const { ...meta } = Astro.props
@@ -11,17 +12,21 @@ const { ...meta } = Astro.props
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 4.75rem;
   }
   body {
-    background-color: oklch(0.0962 0.0562 285.05);
-    color: oklch(0.9702 0 0);
-    font-family: "Onest", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    color: var(--color-mauve-50);
+    font-family: var(--font-onest);
+    background-color: var(--color-rich-black);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

@@ -5,7 +5,7 @@ const { items } = Astro.props
 <ul class="flex flex-wrap items-center justify-center gap-2 my-4">
   {
     items.map((item: string) => (
-      <li class="me-2 px-2.5 py-0.5 text-xs font-medium bg-indigo-900 rounded-sm text-indigo-200">
+      <li class="me-2 px-2.5 py-0.5 text-xs font-medium bg-indigo-900/60 rounded-sm text-indigo-200">
         {item}
       </li>
     ))
