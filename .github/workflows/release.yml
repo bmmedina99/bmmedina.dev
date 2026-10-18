@@ -2,39 +2,34 @@ name: Release Porfolio
 
 on:
   push:
-    branches:
-      - production
+    branches: [production]
 
 env:
-  NODE_VERSION: "lts/*"
-  PNPM_VERSION: "10.33.2"
+  NODE_VERSION: 24
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Usando Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Instalando dependencias
+        run: pnpm ci
 
-      - name: Run Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lanzando release
         run: pnpm run release
