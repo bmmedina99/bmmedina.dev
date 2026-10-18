@@ -1,7 +1,7 @@
-import profile from './assets/images/profile.png'
-import graygorillafitness from './assets/images/projects/app-graygorillafitness.jpg'
-import kirakana from './assets/images/projects/app-kirakana.jpg'
-import kointa from './assets/images/projects/app-kointa.jpg'
+import profile from './assets/images/bmmedina-profile.webp'
+import graygorillafitness from './assets/images/projects/app-graygorillafitness.webp'
+import kirakana from './assets/images/projects/app-kirakana.webp'
+import kointa from './assets/images/projects/app-kointa.webp'
 import type {
   Config,
   Experience,
