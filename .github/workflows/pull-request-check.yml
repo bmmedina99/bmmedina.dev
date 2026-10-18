@@ -1,0 +1,76 @@
+name: Pull Request Check
+
+run-name: "Validate PR #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: 24
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Code quality
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+
+      - name: Usando Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm ci
+
+      - name: Run Biome checks
+        run: pnpm run lint
+
+      - name: Run Astro diagnostics
+        run: pnpm exec astro check
+
+  build:
+    name: Production build
+    needs: [quality]
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+
+      - name: Usando Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm ci
+
+      - name: Build static site
+        run: pnpm exec astro build
+
+      - name: Upload production build
+        uses: actions/upload-artifact@v7
+        with:
+          name: production-build-pr-${{ github.event.pull_request.number }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
