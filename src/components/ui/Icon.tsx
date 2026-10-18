@@ -19,7 +19,7 @@ const Icon = ({ name, width = 24, height = 24, className }: IconProps) => {
       aria-hidden='true'
       className={className}
     >
-      <use href={`svg/sprites.svg#${name}`} />
+      <use href={`assets/svg/sprites.svg#${name}`} />
     </svg>
   )
 }
