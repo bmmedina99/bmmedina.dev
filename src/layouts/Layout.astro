@@ -1,5 +1,6 @@
 ---
 import Footer from '@/components/layout/Footer.astro'
+import Header from '@/components/layout/Header.astro'
 import Meta from '../components/Meta.astro'
 
 const { ...meta } = Astro.props
@@ -14,6 +15,7 @@ const { ...meta } = Astro.props
     <a href="#main-content" class="sr-only focus:not-sr-only">
       Ir al contenido principal
     </a>
+    <Header />
     <slot />
     <Footer />
   </body>
