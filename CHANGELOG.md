@@ -1,3 +1,30 @@
+# [1.4.0](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.9...v1.4.0) (2026-10-19)
+
+
+### Bug Fixes
+
+* **deps:** update p-queue to version 9.2.0 ([b8b7b5c](https://github.com/bmmedina99/bmmedina.dev/commit/b8b7b5c97a81e680ba0fcc99d7578d55e99054aa))
+* **deps:** update vulnerable dependecies ([f0c8b4a](https://github.com/bmmedina99/bmmedina.dev/commit/f0c8b4ac32618abd3efa3528d26281c823b8d2ca))
+* **meta:** update URL references ([9488200](https://github.com/bmmedina99/bmmedina.dev/commit/94882008c17bd16ae2d0ec5deddec78526bbeac0))
+* **profile:** add hover property to techSkills interface ([0a3676c](https://github.com/bmmedina99/bmmedina.dev/commit/0a3676c894bba79848ffb76642e0dd1c87bd160c))
+* **types:** replace deprecated FormEvent usage ([2363c11](https://github.com/bmmedina99/bmmedina.dev/commit/2363c11d02b88dd7673ad027a3ee64eef87f5a79))
+* update copyright owner ([3ceb55a](https://github.com/bmmedina99/bmmedina.dev/commit/3ceb55a358ad019958fe4e10f383a16e73e0438e))
+* update image sizes Projects section ([e83a841](https://github.com/bmmedina99/bmmedina.dev/commit/e83a84155c4e536cca6959514bab46da265a0658))
+* update profile image  dimensions in AboutMe section ([a13c1b7](https://github.com/bmmedina99/bmmedina.dev/commit/a13c1b7c604cd1b875505e999a8b345658793d19))
+* update StarFieldBackground client prop ([fab8950](https://github.com/bmmedina99/bmmedina.dev/commit/fab8950b1fc53725e3b7ae9e58918f3ff43e8491))
+
+
+### Features
+
+* add pull request check workflow ([1836f1c](https://github.com/bmmedina99/bmmedina.dev/commit/1836f1c942de6a119e7a865cb17f34f5026b7fea))
+* **scroll-to-top:** add subtle pulse animation ([0aeded3](https://github.com/bmmedina99/bmmedina.dev/commit/0aeded32921d04cb47b052ec46b8520eaa1463b4))
+
+
+### Performance Improvements
+
+* **experience:** replace script behavior with native details elements ([aea25fd](https://github.com/bmmedina99/bmmedina.dev/commit/aea25fd89764e0d3a970788eb26920dc1b1c8302))
+* **starfield:** smooth star appearance animation ([86edebe](https://github.com/bmmedina99/bmmedina.dev/commit/86edebe562837bde26c181d2e8b5b5c28a7e03c2))
+
 ## [1.3.9](https://github.com/bmmedina99/bmmedina.dev/compare/v1.3.8...v1.3.9) (2026-04-26)
 
 
