@@ -144,6 +144,8 @@
     margin-right: calc(var(--spacing) * 4);
     margin-bottom: calc(var(--spacing) * 0);
     float: left;
+    width: 192px;
+    height: 192px;
   }
 
   .card {
