@@ -9,8 +9,11 @@
     "build": "astro check && astro build",
     "release": "pnpm dlx semantic-release",
     "preview": "astro preview --port=5000",
-    "fmt": "pnpm biome format --write .",
-    "lint": "pnpm biome lint --write ."
+    "fmt": "biome format --write .",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,32 +23,32 @@
     "url": "https://github.com/bmmedina99/bmmedina.dev/issues"
   },
   "dependencies": {
-    "@astrojs/react": "5.0.4",
-    "@astrojs/sitemap": "3.7.2",
-    "@emailjs/browser": "4.4.1",
-    "@fontsource/onest": "5.2.11",
-    "@fontsource/orbitron": "5.2.8",
-    "@react-three/fiber": "9.5.0",
-    "astro": "6.1.9",
+    "@astrojs/react": "7.1.0",
+    "@astrojs/sitemap": "3.7.4",
+    "@emailjs/browser": "5.0.3",
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.4.0",
     "astro-robots-txt": "1.0.0",
-    "astro-seo-schema": "6.0.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "schema-dts": "1.1.5",
-    "three": "0.183.2"
+    "astro-seo-schema": "7.0.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.3",
+    "three": "0.186.1"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.8",
-    "@biomejs/biome": "2.4.5",
-    "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/git": "10.0.1",
-    "@tailwindcss/vite": "4.2.1",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@types/three": "0.183.1",
-    "sharp": "0.34.5",
-    "tailwindcss": "4.2.1",
-    "typescript": "5.9.3"
+    "@astrojs/check": "0.9.10",
+    "@biomejs/biome": "2.5.15",
+    "@react-three/fiber": "9.8.2",
+    "@semantic-release/changelog": "7.0.0",
+    "@semantic-release/git": "11.0.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@vitest/coverage-v8": "5.0.5",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
   },
-  "packageManager": "pnpm@10.32.1"
+  "packageManager": "pnpm@12.14.0"
 }

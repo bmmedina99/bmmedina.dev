@@ -1,43 +1,76 @@
 ---
-import { socialLinks } from '@/site.config'
+import { slugify } from '@/lib/utils'
+import { navLinks, socialLinks } from '@/site.config'
 import Icon from '../ui/Icon'
 ---
 
 <footer
-  class="backdrop-blur-md bg-linear-to-r from-indigo-900/40 to-rich-black/20"
+  class="w-full pt-8 pb-10 mt-auto text-center border-t bg-rich-black/60 shadow-rebecca-purple/40 border-rebecca-purple"
 >
-  <div class="px-4 py-12 space-y-6 text-center">
-    <h3 class="mb-2 text-2xl font-bold font-title">Brandon Medina</h3>
-    <p class="text-lg text-pretty">
-      También puedes contactarme por estos medios
-    </p>
+  <div class="container flex flex-col items-center gap-6 mx-auto">
+    <div class="text-pretty">
+      <p class="text-3xl font-semibold font-title">Brandon Medina</p>
+      <p class="mt-2">
+        Desarrollador Web Full Stack freelance en Madrid
+      </p>
+      <p class="mt-4">
+        También puedes contactarme por estos medios
+      </p>
+    </div>
     <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
       {
         socialLinks.map((social) => (
-          <div class="flex flex-col items-center justify-center">
+          <div class="flex flex-col items-center group">
             <a
               href={social.link}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              class="flex items-center justify-center rounded-full size-12 group bg-rebecca-purple/60"
               aria-label={social.name}
             >
-              <Icon
-                name={social.icon}
-                width={32}
-                height={32}
-                className={`group-hover:-translate-y-1 transition-all ${social.color}`}
-              />
+              <span class="flex items-center justify-center mb-2 transition-transform rounded-full size-16 bg-rebecca-purple/40 group-hover:bg-transparent">
+                <Icon
+                  name={social.icon}
+                  className={`size-8 group-hover:size-10 group-hover:-translate-y-2 transition-all ${social.color}`}
+                />
+              </span>
+              <span class={`text-sm transition-colors ${social.color}`}>
+                {social.name}
+              </span>
             </a>
-            <span class="mt-2 text-sm">{social.name}</span>
           </div>
         ))
       }
     </div>
-    <p
-      class="w-full pt-8 text-sm border-t border-zinc-400/40 text-zinc-400 text-pretty"
+    <span class="w-24 h-px bg-rebecca-purple" aria-hidden="true"></span>
+    <nav
+      class="flex flex-wrap justify-center text-sm gap-x-4 gap-y-2"
+      aria-label="Navegación secundaria"
     >
-      {new Date().getFullYear()}. Diseñado y desarrollado por Brandon Medina.
-    </p>
+      {
+        navLinks.map((item) => (
+          <a
+            href={`#${slugify(item.label)}`}
+            class="transition-colors border-b hover:text-violet-300 hover:border-violet-300"
+          >
+            <span class="capitalize">{item.label}</span>
+          </a>
+        ))
+      }
+    </nav>
+    <address
+      class="flex flex-wrap items-center justify-center gap-1 text-xs not-italic"
+    >
+      <span>{new Date().getFullYear()} bmmedina.</span>
+      <span>Diseñado y desarrollado por</span>
+      <a
+        href="https://github.com/bmmedina99"
+        target="_blank"
+        rel="noopener noreferrer author"
+        class="font-semibold transition-colors text-violet-300 hover:text-mauve-50"
+        aria-label="Portfolio de bmmedina"
+      >
+        @bmmedina99
+      </a>
+    </address>
   </div>
 </footer>

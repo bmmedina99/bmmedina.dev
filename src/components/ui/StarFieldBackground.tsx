@@ -4,15 +4,29 @@ import { AdditiveBlending, TextureLoader } from 'three'
 import type { Points } from 'three/src/objects/Points.js'
 import { STARTS_COUNT } from '@/lib/constants'
 
-function StarField() {
-  const starsRef = useRef<Points>(null)
-  const starsTexture = useLoader(TextureLoader, '/images/star.webp')
+const CAMERA = { position: [0, 0, 1] as [number, number, number], fov: 75 }
+const PERFORMANCE = { min: 0.5 }
+const GL = {
+  antialias: false,
+  powerPreference: 'high-performance' as const,
+}
 
-  const [startsCount, setStartsCount] = useState(STARTS_COUNT)
+function StarField({ onReady }: { onReady: (ready: boolean) => void }) {
+  const starsRef = useRef<Points>(null)
+  const starsTexture = useLoader(
+    TextureLoader,
+    'assets/images/background-star.webp',
+  )
 
   useEffect(() => {
-    if (window.innerWidth < 768) setStartsCount(STARTS_COUNT / 2)
-  }, [])
+    onReady(true)
+  }, [onReady])
+
+  const [startsCount] = useState(() =>
+    window.matchMedia('(max-width: 767px)').matches
+      ? STARTS_COUNT / 2
+      : STARTS_COUNT,
+  )
 
   const starsPositions = useMemo(() => {
     const positions = new Float32Array(startsCount * 3)
@@ -27,16 +41,14 @@ function StarField() {
   useFrame(() => {
     if (!starsRef.current) return
     const position = starsRef.current.geometry.attributes.position
-    const positions = position?.array as Float32Array
+    if (!position) return
 
-    if (!positions) return
-    for (let i = 0; i < startsCount; i++) {
-      const i3 = i * 3
-      positions[i3 + 2] += 0.05
-      if (positions[i3 + 2] > 50) positions[i3 + 2] = -50
+    for (let i = 2; i < starsPositions.length; i += 3) {
+      starsPositions[i] += 0.05
+      if (starsPositions[i] > 50) starsPositions[i] = -50
     }
 
-    if (position) position.needsUpdate = true
+    position.needsUpdate = true
   })
 
   return (
@@ -44,7 +56,7 @@ function StarField() {
       ref={starsRef}
       frustumCulled={false}
     >
-      <bufferGeometry onUpdate={(self) => self.computeBoundingSphere()}>
+      <bufferGeometry>
         <bufferAttribute
           attach='attributes-position'
           count={starsPositions.length / 3}
@@ -66,18 +78,19 @@ function StarField() {
 }
 
 function StarFieldBackground() {
+  const [isReady, setIsReady] = useState(false)
+
   return (
-    <div className='fixed inset-0 size-auto -z-10 pointer-events-none'>
+    <div
+      className={`fixed inset-0 size-auto -z-10 pointer-events-none transition-opacity duration-1000 ease-out motion-reduce:transition-none ${isReady ? 'opacity-100' : 'opacity-0'}`}
+    >
       <Canvas
-        camera={{ position: [0, 0, 1], fov: 75 }}
-        performance={{ min: 0.5 }}
-        gl={{
-          antialias: false,
-          powerPreference: 'high-performance',
-        }}
+        camera={CAMERA}
+        performance={PERFORMANCE}
+        gl={GL}
       >
         <Suspense fallback={null}>
-          <StarField />
+          <StarField onReady={setIsReady} />
         </Suspense>
       </Canvas>
     </div>

@@ -17,9 +17,10 @@ import Section from './Section.astro'
         <Image
           src={project.image}
           alt={`Proyecto ${project.title}: ${project.subtitle}`}
-          widths={[578, 834, 1280]}
-          sizes="(min-width: 1060px) 390px, (min-width: 780px) calc(40.77vw - 34px), (min-width: 520px) 398px, calc(98vw - 92px)"
           class="rounded-lg aspect-video"
+          widths={[578, 834, 1280]}
+          sizes="(min-width: 1060px) 406px, (min-width: 780px) calc(40.77vw - 18px), (min-width: 420px) calc(100vw - 82px), calc(5vw + 298px)"
+          format="avif"
         />
         <h3
           class={`text-3xl font-bold ${project.gradient} bg-clip-text text-transparent font-title`}
@@ -55,7 +56,7 @@ import Section from './Section.astro'
                 class="btn"
               >
                 <Icon name="website" />
-                <span>Demo</span>
+                <span>Visitar</span>
               </a>
             )}
           </div>
