@@ -22,9 +22,6 @@ Biblioteca para renderizar el efecto 3D/espacial que adorna el fondo y refuerza 
 - **[Biome](https://biomejs.dev/)**
 Linter y formatter rápido para JavaScript/TypeScript, ahorrando tiempo para desarrolladores y para el CI.
 
-- **[Zod](https://zod.dev/)**
-Validación y análisis de datos en el formulario de contacto, asegurando enviar únicamente consultas correctamente estructuradas.
-
 - **[EmailJS](https://www.emailjs.com/docs/tutorial/overview/)**
 Servicio cliente‑side para enviar correos desde el formulario sin necesidad de montar un backend.
 
@@ -92,3 +89,7 @@ Imágenes utilizando lazy‑loading, tamaños predefinidas y variantes de tamañ
 - LinkedIn: [/in/bmmedina99](https://www.linkedin.com/in/bmmedina99/)
 - Instagram: [@bmmedina99](https://www.instagram.com/bmmedina99/)
 - Facebook: [fb.com/bmmedina99](https://www.facebook.com/bmmedina.dev)
+
+## Apoyar los proyectos
+
+☕ [Apoyar proyectos](https://ko-fi.com/bmmedina99)
